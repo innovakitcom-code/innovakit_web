@@ -1,203 +1,744 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#7eb74a">
-    <title>Innovakit - Electrónica en Paraguay</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+  <meta name="google-site-verification" content="EiJS3vrDBp48nr8GCk2C2M1wp6Px_FZTEcfZTaapAbM" />
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKS4HGY5XD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RKS4HGY5XD');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- ========================================== -->
+  <!-- FAVICON -->
+  <!-- ========================================== -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#7eb74a">
+  
+  <!-- ========================================== -->
+  <!-- META TAGS -->
+  <!-- ========================================== -->
+  <title>Innovakit - Kits de Electrónica en Paraguay</title>
+  <meta name="description" content="🤖 Innovakit - Kits de electrónica en Paraguay ✅ Arduino, Motores, Sensores, robótica educativa ✅ Envíos a Asunción y todo el país ✅ Asesoría técnica para proyectos y ferias científicas">
+  <meta name="keywords" content="Arduino paraguay, kits electrónica Asunción, sensores, motores, robótica educativa, componentes electrónicos Paraguay, feria científica, proyectos escolares, innovakit Paraguay">
+  <meta name="author" content="Innovakit">
+  <meta name="robots" content="index, follow">
+  
+  <!-- PWA Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Innovakit">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Innovakit - Kits y componentes de Electrónica en Paraguay">
+  <meta property="og:description" content="Aprende, crea y destaca con los kits de Innovakit. Proyectos electrónicos con acompañamiento profesional en Paraguay.">
+  <meta property="og:image" content="https://wwwinnovakit.com/png/wthpp_web.png">
+  <meta property="og:url" content="https://wwwinnovakit.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Innovakit">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Innovakit - Kits de Electrónica en Paraguay">
+  <meta name="twitter:description" content="Aprende electrónica de forma simple con kits completos y asesoría profesional.">
+  <meta name="twitter:image" content="https://wwwinnovakit.com/png/wthpp_web.png">
+  
+  <!-- ========================================== -->
+  <!-- CSS - EXTERNO (ESTILOS EXTRAÍDOS) -->
+  <!-- ========================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tus estilos extraídos -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'innovakit-green': '#7eb74a',
+            'innovakit-yellow': '#fdc344',
+            'innovakit-blue': '#3b82f6'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-800">
+  
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  
+  <!-- ========================================== -->
+  <!-- HEADER -->
+  <!-- ========================================== -->
+  <header class="bg-white shadow-md p-4 sticky top-0 z-20 backdrop-blur bg-white/95" role="banner">
     
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-40">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <a href="/" class="flex items-center">
-                    <h1 class="text-2xl md:text-3xl font-bold">
-                        <span style="color:#7eb74a">Inn</span>
-                        <span style="color:#fdc344">o</span>
-                        <span style="color:#7eb74a">va</span>
-                        <span class="text-blue-600">kit</span>
-                    </h1>
-                </a>
-                
-                <nav class="hidden md:flex items-center gap-6">
-                    <a href="#inicio" class="nav-link">Inicio</a>
-                    <a href="#productos" class="nav-link">Productos</a>
-                    <a href="#kits" class="nav-link">Kits</a>
-                    <a href="#contacto" class="nav-link">Contacto</a>
-                </nav>
-                
-                <div class="flex items-center gap-4">
-                    <div id="user-menu" class="relative">
-                        <button id="user-btn" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
-                            <i class="fas fa-user-circle text-2xl"></i>
-                            <span id="user-name" class="hidden md:inline text-sm">Invitado</span>
-                        </button>
-                    </div>
-                    
-                    <button id="cart-btn" class="relative text-gray-700 hover:text-blue-600">
-                        <i class="fas fa-shopping-cart text-xl"></i>
-                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                    </button>
-                    
-                    <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <nav id="mobile-nav" class="hidden md:hidden mt-4 pb-2 flex flex-col gap-2">
-                <a href="#inicio" class="nav-link py-2">Inicio</a>
-                <a href="#productos" class="nav-link py-2">Productos</a>
-                <a href="#kits" class="nav-link py-2">Kits</a>
-                <a href="#contacto" class="nav-link py-2">Contacto</a>
-            </nav>
+    <!-- Desktop -->
+    <div class="hidden sm:flex justify-between items-center">
+      <a href="#main-content" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded btn-hover ml-3" onclick="volverAlInicio(); return false;">
+        <h1 class="text-3xl lg:text-4xl font-bold">
+          <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
+        </h1>
+      </a>
+      
+      <nav class="flex items-center text-base" aria-label="Navegación principal">
+        <a href="#mision" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Misión |</a>
+        <a href="#vision" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Visión |</a>
+        <a href="#productos" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Productos |</a>
+        <a href="#asesorias-preview" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Asesoría |</a>
+        <a href="#contacto" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Contacto</a>
+        
+        <!-- Carrito Desktop -->
+        <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-3 py-2 rounded-lg shadow hover:bg-yellow-400 font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500 btn-hover" aria-label="Ver carrito de compras">
+          🛒 Carrito (<span id="carrito-count-desktop" aria-live="polite">0</span>)
+        </button>
+        
+        <!-- Login/Usuario Desktop -->
+        <div id="user-desktop" class="ml-4">
+          <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-semibold btn-hover">
+            <i class="fas fa-user"></i> Ingresar
+          </button>
         </div>
-    </header>
+      </nav>
+    </div>
     
-    <main>
-        <!-- Hero -->
-        <section id="inicio" class="bg-gradient-to-r from-blue-900 to-green-800 text-white">
-            <div class="container mx-auto px-4 py-16 md:py-24">
-                <div class="text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
-                        Aprende electrónica de forma 
-                        <span class="text-yellow-300">simple</span>
-                    </h1>
-                    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-                        Kits completos, asesoría profesional y soporte para transformar tus ideas en proyectos reales.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#productos" class="btn-primary">Ver productos</a>
-                        <a href="https://wa.me/595972292392" class="btn-secondary" target="_blank">Solicitar asesoría</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Productos -->
-        <section id="productos" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Nuestros Productos</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Componentes electrónicos de alta calidad para tus proyectos
-                </p>
-                <div id="productos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <div class="col-span-full text-center py-12">
-                        <i class="fas fa-spinner fa-spin text-3xl text-blue-600"></i>
-                        <p class="mt-2 text-gray-500">Cargando productos...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Kits -->
-        <section id="kits" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Kits Educativos</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Todo lo que necesitas para empezar en electrónica y robótica
-                </p>
-                <div id="kits-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="col-span-full text-center py-12">
-                        <i class="fas fa-spinner fa-spin text-3xl text-blue-600"></i>
-                        <p class="mt-2 text-gray-500">Cargando kits...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contacto -->
-        <section id="contacto" class="py-16 bg-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">Contáctanos</h2>
-                <div class="flex justify-center gap-8 text-4xl">
-                    <a href="https://www.facebook.com/share/15HSQmpG2Z8/" target="_blank" class="text-blue-600 hover:text-blue-700 transition">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://wa.me/595972292392" target="_blank" class="text-green-500 hover:text-green-600 transition">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.instagram.com/innovakit_ofc" target="_blank" class="text-pink-500 hover:text-pink-600 transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Innovakit - Todos los derechos reservados</p>
-            <p class="text-gray-400 text-sm mt-2">Kits de electrónica y robótica educativa en Paraguay</p>
+    <!-- Móvil -->
+    <div class="sm:hidden">
+      <div class="flex justify-between items-center mb-3">
+        <div class="flex-1">
+          <a href="#main-content" class="flex items-center" onclick="volverAlInicio(); return false;">
+            <h1 class="text-2xl font-bold">
+              <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
+            </h1>
+          </a>
         </div>
-    </footer>
+        
+        <button onclick="verCarrito()" class="bg-yellow-300 text-gray-900 px-2 py-1 rounded-lg text-sm font-semibold ml-4 focus:outline-none focus:ring-2 focus:ring-yellow-400" aria-label="Ver carrito">
+          🛍️ (<span id="carrito-count-mobile" aria-live="polite">0</span>)
+        </button>
+        
+        <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-2 py-1 rounded-lg text-sm font-semibold ml-2">
+          <i class="fas fa-user"></i>
+        </button>
+      </div>
+      
+      <nav class="flex flex-wrap justify-center gap-0.5 items-center text-sm overflow-x-auto py-1.5" aria-label="Navegación móvil">
+        <a href="#mision" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Misión |</a>
+        <a href="#vision" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Visión |</a>
+        <a href="#productos" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Productos |</a>
+        <a href="#asesorias-preview" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Asesoría |</a>
+        <a href="#contacto" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- ========================================== -->
+  <!-- CONTENIDO PRINCIPAL -->
+  <!-- ========================================== -->
+  <main id="main-content" role="main" class="page-transition">
     
-    <!-- Modales (se agregan dinámicamente con JS) -->
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative overflow-hidden bg-animated text-white min-h-[51vh] flex items-center" aria-labelledby="hero-heading">
+      <div class="absolute inset-0 bg-black/20" aria-hidden="true"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 relative z-10 w-full">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="animate-fade-in-up">
+            <h1 id="hero-heading" class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">Aprende electrónica de forma <span class="text-yellow-300 animate-pulse-soft">simple</span></h1>
+            <p class="mt-4 text-lg sm:text-xl opacity-95 max-w-prose mx-auto md:mx-0 text-readable">
+              Con <strong>Innovakit</strong> tienes kits completos, asesoría y soporte para transformar tus ideas en proyectos reales.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a href="#productos" class="btn-hover inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-blue-700 hover:bg-blue-800 text-white font-semibold shadow-lg transition btn-icon">
+                <span>Ver nuestros kits</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </a>
+              <a href="#asesorias-preview" class="btn-hover inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#FFD84D] hover:bg-yellow-400 text-gray-900 font-semibold shadow-lg transition btn-icon">
+                <span>Solicita asesoría</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+              </a>
+            </div>
+          </div>
+          <div class="hidden md:block animate-slide-in-right" aria-hidden="true">
+            <img src="vector-electrónica-tablet.svg" alt="Electrónica desktop" class="w-64 md:w-80 h-auto object-contain drop-shadow-xl mx-auto contrast-enhanced">
+          </div>
+          <div class="imagen-tablet hidden md:hidden lg:hidden animate-slide-in-right" aria-hidden="true">
+            <img src="vector-electrónica.svg" alt="Electrónica tablet" class="w-64 md:w-80 h-auto object-contain drop-shadow-xl mx-auto contrast-enhanced">
+          </div>
+        </div>
+      </div>
+      <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-16 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
+    </section>
     
-    <!-- WhatsApp flotante -->
-    <a href="https://wa.me/595972292392" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-40 animate-bounce">
+    <hr class="my-6 border-gray-300">
+    
+    <!-- MISIÓN -->
+    <section id="mision" class="p-6 sm:p-12 text-center bg-white scroll-mt-20 card-elevated mx-4">
+      <i class="fas fa-bullseye text-4xl sm:text-5xl text-green-600 mb-4 animate-bounce-subtle"></i>
+      <h3 class="text-xl sm:text-2xl font-bold mb-2">Nuestra Misión</h3>
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-readable">
+        Nuestra misión es <strong>hacer que aprender electrónica sea accesible y emocionante</strong>, brindando herramientas prácticas que impulsen la creatividad.
+      </p>
+    </section>
+    
+    <hr class="my-6 border-gray-300">
+    
+    <!-- VISIÓN -->
+    <section id="vision" class="p-6 sm:p-12 text-center bg-gradient-to-br from-blue-50 to-indigo-100 scroll-mt-20 card-elevated mx-4">
+      <i class="fas fa-lightbulb text-4xl sm:text-5xl text-yellow-500 mb-4 animate-bounce-subtle"></i>
+      <h3 class="text-xl sm:text-2xl font-bold mb-2">Nuestra Visión</h3>
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-readable">
+        Queremos ser <strong>referentes en educación tecnológica en Paraguay</strong>, inspirando a nuevas generaciones.
+      </p>
+    </section>
+    
+    <hr class="my-6 border-gray-300">
+    
+    <!-- BENEFICIOS -->
+    <section class="p-4 sm:p-6 text-center bg-white mb-6">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-6 animate-fade-in-up">¿Por qué elegir Innovakit?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card-elevated p-6 rounded-2xl transition duration-300 product-hover text-center">
+          <i class="fas fa-graduation-cap text-blue-600 text-4xl mb-4 animate-bounce-subtle"></i>
+          <h4 class="font-bold text-xl mb-4">Educativo</h4>
+          <p class="text-readable text-gray-700 leading-relaxed">Material diseñado para aprender electrónica paso a paso.</p>
+        </div>
+        <div class="card-elevated p-6 rounded-2xl transition duration-300 product-hover text-center">
+          <i class="fas fa-microchip text-green-600 text-4xl mb-4 animate-bounce-subtle"></i>
+          <h4 class="font-bold text-xl mb-4">Tecnología Real</h4>
+          <p class="text-readable text-gray-700 leading-relaxed">Componentes de calidad profesional para proyectos reales.</p>
+        </div>
+        <div class="card-elevated p-6 rounded-2xl transition duration-300 product-hover text-center">
+          <i class="fas fa-handshake text-yellow-500 text-4xl mb-4 animate-bounce-subtle"></i>
+          <h4 class="font-bold text-xl mb-4">Soporte Personalizado</h4>
+          <p class="text-readable text-gray-700 leading-relaxed">Acompañamiento técnico en cada etapa de tu proyecto.</p>
+        </div>
+      </div>
+    </section>
+    
+    <hr class="my-4 border-gray-300">
+    
+    <!-- PRODUCTOS (KITS) -->
+    <section id="productos" class="p-6 sm:p-6 bg-gradient-to-br from-blue-50 to-indigo-100 scroll-mt-20 mt-6">
+      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Nuestros Productos</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 place-items-center justify-center">
+        
+        <!-- Kit 1 -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-4 flex flex-col items-center w-full max-w-xs mx-auto mb-4 h-96">
+          <img src="png/Kounshun.svg" alt="Kit de electrónica Innovakit" class="w-48 h-48 object-contain mb-3 rounded-lg" loading="lazy">
+          <h4 class="text-lg font-bold mb-2 text-center">Kit de Electrónica Básico</h4>
+          <p class="mb-3 text-center text-sm">Incluye componentes esenciales para aprender electrónica desde cero.</p>
+          <button onclick="verProductosKit(1)" class="w-full bg-blue-600 text-white px-3 py-2 rounded-lg shadow hover:bg-blue-700 mt-auto text-sm">Ver más</button>
+        </div>
+        
+        <!-- Kit 3 -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-4 flex flex-col items-center w-full max-w-xs mx-auto mb-4 h-96">
+          <img src="png/Acebott.svg" alt="Kit de Robótica Acebott" class="w-48 h-48 object-contain mb-3 rounded-lg" loading="lazy">
+          <h4 class="text-lg font-bold mb-2 text-center">Kit de Robótica Acebott</h4>
+          <p class="mb-3 text-center text-sm">Componentes avanzados para proyectos más complejos y creativos.</p>
+          <button onclick="verProductosKit(3)" class="w-full bg-blue-600 text-white px-3 py-2 rounded-lg shadow hover:bg-blue-700 mt-auto text-sm">Ver más</button>
+        </div>
+        
+        <!-- Componentes Sueltos -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-4 flex flex-col items-center w-full max-w-xs mx-auto mb-4 h-96">
+          <img src="png/Producto4.svg" alt="Componentes Sueltos" class="w-48 h-48 object-contain mb-3 rounded-lg" loading="lazy">
+          <h4 class="text-lg font-bold mb-2 text-center">Componentes</h4>
+          <p class="mb-3 text-center text-sm">Compra sensores, motores, displays y componentes varios, individuales.</p>
+          <button onclick="verComponentesSueltos()" class="w-full bg-blue-600 text-white px-3 py-2 rounded-lg shadow hover:bg-blue-700 mt-auto text-sm">Ver componentes</button>
+        </div>
+      </div>
+    </section>
+    
+    <hr class="my-6 border-gray-300">
+    
+    <!-- ASESORÍAS PREVIEW -->
+    <section id="asesorias-preview" class="p-6 sm:p-8 text-center scroll-mt-20 bg-white rounded-2xl mx-4 mb-4">
+      <i class="fas fa-chalkboard-teacher text-4xl sm:text-5xl text-blue-600 mb-2 animate-bounce-subtle"></i>
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4 animate-fade-in-up">Asesoría para Proyectos Técnicos</h3>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-700 mb-6 text-readable leading-relaxed">
+        ¿Vas a una <strong class="text-blue-700">feria científica</strong> o necesitas presentar un proyecto técnico? 
+        Con nuestra asesoría tendrás <strong class="text-blue-700">acompañamiento profesional</strong> para que tu idea destaque.
+      </p>
+      <button onclick="verAsesorias()" class="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg btn-hover touch-target btn-icon transition-all duration-300 transform hover:scale-105">
+        <i class="fas fa-calendar-check mr-2"></i>Solicitar asesoría
+      </button>
+    </section>
+    
+    <hr class="my-8 border-gray-300">
+    
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="pt-8 pb-12 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div class="max-w-6xl mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-4 animate-fade-in-up">Proyectos de Nuestros Clientes</h3>
+        <p class="text-gray-700 text-center mb-6 max-w-3xl mx-auto text-base">
+          Descubre lo que han creado estudiantes, makers y emprendedores con Innovakit
+        </p>
+        
+        <div class="text-center mb-8">
+          <button onclick="mostrarModalProyecto()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl font-semibold text-base btn-hover touch-target btn-icon transition-all duration-300 transform hover:scale-105">
+            <i class="fas fa-camera mr-2"></i>Comparte tu proyecto
+          </button>
+          <p class="text-gray-700 text-sm mt-1">Muestra al mundo lo que creaste</p>
+        </div>
+        
+        <div id="testimonios-reales" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+    
+    <hr class="my-6 border-gray-300">
+    
+    <!-- CONTACTO -->
+    <section id="contacto" class="p-3 bg-gradient-to-br from-white to-gray-50 sm:p-6 text-center rounded-2xl mx-4 mb-4">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-8 animate-fade-in-up">Contáctanos</h3>
+      <p class="mb-8 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto text-readable leading-relaxed">
+        ¿Quieres más información o una <strong class="text-blue-600">cotización rápida</strong>? Escríbenos ahora.
+      </p>
+      
+      <div class="contactos-movil flex flex-col sm:flex-row items-center justify-center gap-8">
+        <a href="https://www.facebook.com/share/15HSQmpG2Z8/" target="_blank" class="text-blue-600 text-5xl hover:text-blue-700 transition-all duration-300 transform hover:scale-110 product-hover">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://wa.me/595972292392" target="_blank" class="whatsapp-desktop bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg flex items-center justify-center btn-hover touch-target btn-icon transition-all duration-300 transform hover:scale-105">
+          <i class="fab fa-whatsapp mr-3 text-xl"></i>WhatsApp
+        </a>
+        <a href="https://wa.me/595972292392" target="_blank" class="whatsapp-movil bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300" style="display: none;">
+          <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="https://www.instagram.com/innovakit_ofc?igsh=N2ZsNjh4YWo4MDBs" target="_blank" class="text-pink-500 text-5xl hover:text-pink-600 transition-all duration-300 transform hover:scale-110 product-hover">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+    
+    <!-- WhatsApp Flotante -->
+    <div class="fixed bottom-6 right-6 z-50 animate-bounce-subtle">
+      <a href="https://wa.me/595972292392?text=¡Hola! Quiero más información sobre los kits de Innovakit" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center w-16 h-16 btn-hover touch-target">
         <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
+      </a>
+      <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-7 h-7 flex items-center justify-center animate-pulse-soft shadow-md">💬</div>
+    </div>
+  </main>
+  
+  <!-- ========================================== -->
+  <!-- VISTAS OCULTAS (Kits, Asesorías, Componentes) -->
+  <!-- ========================================== -->
+  
+  <!-- Vista de productos kit -->
+  <section id="vista-productoskit" class="hidden p-6 sm:p-12 bg-gradient-to-br from-gray-50 to-white min-h-screen">
+    <div id="productoskit-content" class="max-w-7xl mx-auto"></div>
+    <div class="mt-12 flex justify-center animate-fade-in-up">
+      <button onclick="volverAlInicio()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg btn-hover touch-target btn-icon">
+        <i class="fas fa-arrow-left mr-2"></i>Volver al inicio
+      </button>
+    </div>
+  </section>
+  
+  <!-- Modal descripción -->
+  <div id="modal-descripcion" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50 backdrop-blur-sm">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-60 transition-opacity duration-300"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-4xl mx-auto rounded-2xl shadow-2xl z-50 overflow-y-auto transform transition-all duration-300 scale-95">
+      <div class="modal-close absolute top-4 right-4 cursor-pointer flex flex-col items-center text-white text-sm z-50 btn-hover">
+        <div class="bg-gray-700 hover:bg-gray-800 rounded-full p-3 transition-all duration-300">
+          <svg class="fill-current text-white w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+          </svg>
+        </div>
+        <span class="text-xs mt-1 text-gray-300">(Esc)</span>
+      </div>
+      <div class="modal-content py-6 text-left px-8">
+        <div class="flex justify-between items-center pb-4 mb-6 border-b border-gray-200">
+          <p class="text-2xl md:text-3xl font-bold text-gray-800" id="modal-titulo"></p>
+        </div>
+        <div id="modal-contenido" class="mb-8 text-readable text-gray-700 leading-relaxed"></div>
+        <div id="modal-documentos" class="mb-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
+          <h3 class="text-lg font-semibold mb-4 text-blue-800 flex items-center"><i class="fas fa-file-download mr-2"></i>Documentos del producto</h3>
+          <div id="documentos-lista" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-end gap-4 pt-6 border-t border-gray-200">
+          <button class="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-xl font-semibold transition-all duration-300 btn-hover" onclick="toggleModal()">
+            <i class="fas fa-times mr-2"></i>Cerrar
+          </button>
+          <a id="modal-whatsapp" href="#" target="_blank" class="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold flex items-center justify-center btn-hover touch-target btn-icon">
+            <i class="fab fa-whatsapp mr-2"></i>Comprar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Carrito -->
+  <div id="modal-carrito" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50 backdrop-blur-sm">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-60 transition-opacity duration-300"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-2xl shadow-2xl z-50 overflow-y-auto transform transition-all duration-300 scale-95 max-h-[90vh]">
+      <div class="py-6 px-8">
+        <div class="flex justify-between items-center pb-4 mb-6 border-b border-gray-200">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 flex items-center"><i class="fas fa-shopping-cart mr-3 text-blue-600"></i>Tu carrito</h2>
+          <button class="modal-carrito-close text-gray-500 hover:text-gray-700 text-2xl font-bold transition-colors duration-300 btn-hover p-2 rounded-full hover:bg-gray-100">✕</button>
+        </div>
+        <div id="carrito-lista" class="divide-y divide-gray-200 max-h-96 overflow-y-auto"></div>
+        <div class="flex flex-col sm:flex-row items-center justify-between mt-8 pt-6 border-t border-gray-200 gap-4">
+          <div class="text-xl font-bold text-gray-800">Total: <span id="carrito-total" class="text-green-600 text-2xl">Gs. 0</span></div>
+          <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+            <button onclick="vaciarCarrito()" class="px-4 py-2.5 rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold flex items-center justify-center btn-hover touch-target transition-all duration-300 text-sm">
+              <i class="fas fa-trash mr-1.5"></i>Vaciar Carrito
+            </button>
+            <button onclick="enviarCarritoWhatsAppMejorado()" class="px-4 py-2.5 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold flex items-center justify-center btn-hover touch-target transition-all duration-300 text-sm">
+              <i class="fab fa-whatsapp mr-1.5"></i>Comprar por Whatsapp
+            </button>
+            <button class="modal-carrito-close px-4 py-2.5 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold transition-all duration-300 btn-hover text-sm">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Producto Individual -->
+  <div id="modal-producto" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50 backdrop-blur-sm">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-60 transition-opacity duration-300"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-5xl mx-auto rounded-2xl shadow-2xl z-50 overflow-y-auto max-h-[95vh] transform transition-all duration-300 scale-95">
+      <div class="modal-close absolute top-2 right-2 cursor-pointer z-50">
+        <div class="bg-gray-700 hover:bg-gray-800 rounded-full p-2 transition-all duration-300">
+          <svg class="fill-current text-white w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-content py-4 text-left px-4">
+        <div class="flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-6">
+          <div class="space-y-3">
+            <img id="modal-producto-imagen" src="" alt="" class="w-full h-48 md:h-80 object-contain rounded-xl bg-gray-50 contrast-enhanced">
+            <div class="grid grid-cols-4 gap-2">
+              <img id="modal-producto-thumb1" src="" alt="" class="h-16 md:h-20 object-contain rounded-lg border border-gray-200 cursor-pointer hover:border-blue-500 transition-all">
+              <img id="modal-producto-thumb2" src="" alt="" class="h-16 md:h-20 object-contain rounded-lg border border-gray-200 cursor-pointer hover:border-blue-500 transition-all">
+              <img id="modal-producto-thumb3" src="" alt="" class="h-16 md:h-20 object-contain rounded-lg border border-gray-200 cursor-pointer hover:border-blue-500 transition-all">
+              <img id="modal-producto-thumb4" src="" alt="" class="h-16 md:h-20 object-contain rounded-lg border border-gray-200 cursor-pointer hover:border-blue-500 transition-all">
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <h2 id="modal-producto-nombre" class="text-xl md:text-2xl font-bold text-gray-800 mb-2 line-clamp-2"></h2>
+              <div class="flex items-center mb-4">
+                <span id="modal-producto-precio" class="text-2xl md:text-3xl font-bold text-green-600"></span>
+                <span id="modal-producto-stock" class="ml-3 px-2 py-1 text-xs rounded-full bg-green-100 text-green-800 font-semibold"></span>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div><p id="modal-producto-descripcion" class="text-gray-700 text-sm md:text-base leading-relaxed line-clamp-4 md:line-clamp-none"></p></div>
+              <div id="modal-producto-especificaciones" class="space-y-2 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                <h4 class="font-semibold text-blue-800 text-sm md:text-base flex items-center"><i class="fas fa-list-ul mr-2 text-xs"></i>Especificaciones</h4>
+                <div class="space-y-1 text-xs md:text-sm text-gray-700 max-h-32 overflow-y-auto"></div>
+              </div>
+            </div>
+            <div class="reviews-section mt-6 pt-4 border-t border-gray-200">
+              <div id="modal-producto-reviews"></div>
+            </div>
+            <div class="space-y-3 pt-2">
+              <button onclick="comprarProductoWhatsApp()" class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold text-sm md:text-base flex items-center justify-center btn-hover touch-target">
+                <i class="fab fa-whatsapp mr-2 text-lg"></i>Comprar por WhatsApp
+              </button>
+              <button onclick="agregarProductoAlCarrito()" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-sm md:text-base flex items-center justify-center btn-hover touch-target">
+                <i class="fas fa-cart-plus mr-2 text-lg"></i>Agregar al carrito
+              </button>
+              <button onclick="toggleModalProducto()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg font-semibold text-sm md:text-base transition-all btn-hover">Seguir viendo productos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Vista Asesorías -->
+  <section id="vista-asesorias" class="hidden p-4 sm:p-6 lg:p-12 bg-cover bg-center bg-fixed min-h-screen" style="background-image: url('png/Fondo_web.svg');">
+    <div class="bg-white bg-opacity-90 rounded-2xl p-8 backdrop-blur-sm border border-gray-200">
+      <div class="flex flex-col lg:flex-row justify-between items-center mb-12 gap-6">
+        <div class="text-center lg:text-left">
+          <h3 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 animate-fade-in-up">Asesoría para Proyectos Técnicos</h3>
+          <p class="text-xs text-gray-700 max-w-2xl text-readable leading-relaxed">¿Participas en una feria científica o expo técnica? Nuestros expertos te ayudan a desarrollar tu proyecto con Innovakit.</p>
+        </div>
+        <button onclick="volverAlInicio()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg flex items-center btn-hover touch-target btn-icon whitespace-nowrap">
+          <i class="fas fa-arrow-left mr-2"></i>Volver al inicio
+        </button>
+      </div>
+      
+      <div class="mb-16">
+        <h4 class="text-2xl sm:text-3xl font-bold mb-12 text-center text-gray-800 animate-fade-in-up">Nuestros Asesores</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+          <div class="card-elevated p-8 rounded-2xl transition duration-300 product-hover text-center">
+            <div class="w-24 h-24 md:w-36 md:h-36 rounded-full mx-auto mb-4 md:mb-6 overflow-hidden border-4 border-blue-200 shadow-lg">
+              <img src="asesores/icono_hombre.jpg" alt="Ing. Carlos Mendoza" class="w-full h-full object-cover object-top contrast-enhanced" loading="lazy">
+            </div>
+            <h5 class="font-bold text-xl text-gray-800 mb-3">Ing. Carlos Mendoza</h5>
+            <p class="text-sm text-blue-600 font-semibold mb-4">Especialista en Robótica Educativa</p>
+            <p class="text-gray-700 text-readable leading-relaxed mb-6">+5 años asesorando proyectos escolares. Experto en Arduino y automatización.</p>
+            <div class="flex justify-center space-x-3">
+              <span class="bg-blue-100 text-blue-800 text-xs px-3 py-2 rounded-full font-semibold border border-blue-200">Electrónica</span>
+              <span class="bg-green-100 text-green-800 text-xs px-3 py-2 rounded-full font-semibold border border-green-200">Programación</span>
+            </div>
+          </div>
+          <div class="card-elevated p-8 rounded-2xl transition duration-300 product-hover text-center">
+            <div class="w-24 h-24 md:w-36 md:h-36 rounded-full mx-auto mb-4 md:mb-6 overflow-hidden border-4 border-blue-200 shadow-lg">
+              <img src="asesores/icono_mujer.jpg" alt="Lic. Ana Torres" class="w-full h-full object-cover object-top contrast-enhanced" loading="lazy">
+            </div>
+            <h5 class="font-bold text-xl text-gray-800 mb-3">Lic. Ana Torres</h5>
+            <p class="text-sm text-purple-600 font-semibold mb-4">Pedagoga Tecnológica</p>
+            <p class="text-gray-700 text-readable leading-relaxed mb-6">Especializada en metodologías de aprendizaje STEM para proyectos educativos.</p>
+            <div class="flex justify-center space-x-3">
+              <span class="bg-purple-100 text-purple-800 text-xs px-3 py-2 rounded-full font-semibold border border-purple-200">STEM</span>
+              <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-2 rounded-full font-semibold border border-yellow-200">Metodología</span>
+            </div>
+          </div>
+          <div class="card-elevated p-8 rounded-2xl transition duration-300 product-hover text-center">
+            <div class="w-24 h-24 md:w-36 md:h-36 rounded-full mx-auto mb-4 md:mb-6 overflow-hidden border-4 border-blue-200 shadow-lg">
+              <img src="asesores/icono_hombre2.jpg" alt="Ing. Roberto Díaz" class="w-full h-full object-cover object-top contrast-enhanced" loading="lazy">
+            </div>
+            <h5 class="font-bold text-xl text-gray-800 mb-3">Ing. Roberto Díaz</h5>
+            <p class="text-sm text-red-600 font-semibold mb-4">Experto en IoT</p>
+            <p class="text-gray-700 text-readable leading-relaxed mb-6">Desarrollador de proyectos con sensores y aplicaciones IoT para ferias científicas.</p>
+            <div class="flex justify-center space-x-3">
+              <span class="bg-red-100 text-red-800 text-xs px-3 py-2 rounded-full font-semibold border border-red-200">IoT</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-2 rounded-full font-semibold border border-indigo-200">Sensores</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <form class="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-lg border border-gray-200" action="https://formsubmit.co/innovakit.com@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva solicitud de asesoría - Innovakit">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://tuweb.com/gracias.html">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div><label class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo</label><input type="text" name="nombre" class="form-input-enhanced w-full" required></div>
+          <div><label class="block text-sm font-semibold text-gray-700 mb-2">Colegio/Institución</label><input type="text" name="institucion" class="form-input-enhanced w-full" required></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div><label class="block text-sm font-semibold text-gray-700 mb-2">Email</label><input type="email" name="email" class="form-input-enhanced w-full" required></div>
+          <div><label class="block text-sm font-semibold text-gray-700 mb-2">Teléfono</label><input type="tel" name="telefono" class="form-input-enhanced w-full" required></div>
+        </div>
+        <div class="mb-6"><label class="block text-sm font-semibold text-gray-700 mb-3">Tipo de proyecto</label><select name="tipo_proyecto" class="form-input-enhanced w-full"><option>Feria científica</option><option>Expo técnica</option><option>Proyecto escolar</option><option>Competencia de robótica</option><option>Otro</option></select></div>
+        <div class="mb-6"><label class="block text-sm font-semibold text-gray-700 mb-3">Describe tu proyecto o idea</label><textarea name="proyecto" rows="5" class="form-input-enhanced w-full resize-none" placeholder="Qué quieres hacer, qué materiales tienes, qué necesitas..." required></textarea></div>
+        <div class="mb-8"><label class="block text-sm font-semibold text-gray-700 mb-3">Fecha límite (si aplica)</label><input type="date" name="fecha_limite" class="form-input-enhanced w-full"></div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button type="submit" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg btn-hover touch-target btn-icon"><i class="fas fa-paper-plane mr-3"></i>Enviar solicitud</button>
+          <button type="button" onclick="enviarPorWhatsApp()" class="flex-1 bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg btn-hover touch-target btn-icon"><i class="fab fa-whatsapp mr-3"></i>Contactar por WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Vista Componentes Sueltos -->
+  <section id="vista-componentes-sueltos" class="hidden bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <div class="bg-white shadow-sm border-b"><div class="container mx-auto px-4 py-3"><nav class="text-sm text-gray-700 flex items-center space-x-2"><a href="#" onclick="volverAlInicio()" class="hover:text-blue-600"><i class="fas fa-home mr-2"></i>Inicio</a><span class="text-gray-400">/</span><span class="text-gray-800 font-semibold">Componentes Sueltos</span></nav></div></div>
+    <div class="page-container"><div class="products-container"><div class="container mx-auto px-4 py-6">
+      <div class="bg-white rounded-lg shadow-sm border p-4 mb-6"><div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center">
+        <div class="flex-1 md:max-w-[990px]"><input type="text" id="buscar-componente" placeholder="🔍 Buscar componentes..." class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"></div>
+        <button onclick="mostrarModalFiltros()" class="md:hidden bg-blue-500 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2"><i class="fas fa-filter"></i>Filtros</button>
+        <div class="hidden md:flex flex-row gap-3">
+          <div class="relative group" id="filtro-categoria-container"><button class="px-4 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 flex items-center gap-2"><i class="fas fa-layer-group"></i>Categorías<i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i></button>
+            <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right scale-95 group-hover:scale-100 z-50">
+              <div class="p-3"><div class="space-y-1">
+                <div class="relative subcategory-group"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-between group"><span class="flex items-center gap-2"><i class="fas fa-microchip text-green-500"></i>Sensores</span><i class="fas fa-chevron-right text-xs text-gray-400 group-hover:text-blue-500 transition-transform duration-300 group-hover:translate-x-1"></i></button>
+                  <div class="absolute left-full top-0 ml-1 w-56 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible subcategory-panel transition-all duration-300 transform origin-top-left scale-95"><div class="p-3"><div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Tipos de Sensores</div><div class="space-y-1"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Temperatura')"><i class="fas fa-thermometer-half text-orange-500"></i>Temperatura</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Humedad')"><i class="fas fa-tint text-blue-500"></i>Humedad</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Movimiento')"><i class="fas fa-running text-purple-500"></i>Movimiento</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Luz')"><i class="fas fa-sun text-yellow-500"></i>Luz</button></div></div></div>
+                </div>
+                <div class="relative subcategory-group"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-between group"><span class="flex items-center gap-2"><i class="fas fa-cog text-red-500"></i>Motores</span><i class="fas fa-chevron-right text-xs text-gray-400 group-hover:text-blue-500 transition-transform duration-300 group-hover:translate-x-1"></i></button>
+                  <div class="absolute left-full top-0 ml-1 w-56 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible subcategory-panel transition-all duration-300 transform origin-top-left scale-95"><div class="p-3"><div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Tipos de Motores</div><div class="space-y-1"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-red-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Servo Motores')"><i class="fas fa-robot text-red-400"></i>Servo Motores</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-red-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Stepper')"><i class="fas fa-sync-alt text-red-400"></i>Stepper</button></div></div></div>
+                </div>
+                <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center gap-2" onclick="aplicarFiltroCategoria('Displays')"><i class="fas fa-tv text-purple-500"></i>Displays</button>
+                <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center gap-2" onclick="aplicarFiltroCategoria('Placas')"><i class="fas fa-microchip text-gray-500"></i>Placas</button>
+                <div class="border-t my-2"></div>
+                <button onclick="limpiarFiltros()" class="w-full text-center px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200 text-sm font-semibold text-gray-700"><i class="fas fa-th-list mr-2"></i>Ver todas las categorías</button>
+              </div></div>
+            </div>
+          </div>
+          <select id="filtro-precio" class="px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white shadow-sm"><option value="todos">💎 Todos los precios</option><option value="0-50000">💰 Gs. 0 - 50.000</option><option value="50000-100000">💵 Gs. 50.000 - 100.000</option><option value="100000-200000">💳 Gs. 100.000 - 200.000</option></select>
+        </div>
+      </div></div>
+      <div id="modal-filtros" class="fixed inset-0 z-50 hidden"><div class="absolute inset-0 bg-black bg-opacity-50" onclick="cerrarModalFiltros()"></div><div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6 max-h-[80vh] overflow-y-auto"><div class="flex items-center mb-6 pb-4 border-b"><button id="btn-volver-categorias" class="text-gray-500 mr-3 hidden"><i class="fas fa-chevron-left text-xl"></i></button><h3 id="modal-filtros-titulo" class="text-xl font-bold flex-1">Filtros</h3><button onclick="cerrarModalFiltros()" class="text-gray-500 text-2xl">×</button></div><div id="contenido-filtros"></div><div class="mt-6 pt-4 border-t"><div class="mb-6"><h4 class="font-semibold mb-3 text-lg">💰 Precio</h4><select id="filtro-precio-mobile" class="w-full p-3 border rounded-lg text-base"><option value="todos">💎 Todos los precios</option><option value="0-50000">💰 Gs. 0 - 50.000</option><option value="50000-100000">💵 Gs. 50.000 - 100.000</option><option value="100000-200000">💳 Gs. 100.000 - 200.000</option></select></div><button onclick="aplicarFiltrosMovil()" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg">Aplicar Filtros</button></div></div></div>
+      <div id="grid-componentes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+      <div id="loading-componentes" class="text-center py-16 hidden"><div class="inline-block animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mb-6"></div><p class="text-gray-700 text-lg font-medium">Cargando componentes...</p><p class="text-gray-500 text-sm mt-2">Buscando los mejores productos para ti</p></div>
+    </div></div></div>
+    <div class="pagination-fixed backdrop-blur bg-white/90 border-t border-gray-200 safe-bottom mb-2 md:mb-4"><div class="container mx-auto px-4"><div class="hidden sm:flex justify-center items-center space-x-6"><button onclick="cambiarPagina(paginaActual - 1)" class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-xl shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 btn-hover font-semibold flex items-center gap-2"><i class="fas fa-chevron-left text-sm"></i>Anterior</button><span id="info-paginacion" class="text-base text-gray-700 font-semibold bg-gray-100 px-4 py-2 rounded-lg">Página <span class="text-blue-600">1</span> de <span class="text-blue-600">1</span></span><button onclick="cambiarPagina(paginaActual + 1)" class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-xl shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 btn-hover font-semibold flex items-center gap-2">Siguiente<i class="fas fa-chevron-right text-sm"></i></button></div><div class="sm:hidden flex justify-between items-center py-2 px-3"><button onclick="cambiarPagina(paginaActual - 1)" class="px-3 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg disabled:opacity-50 transition-all font-semibold text-sm flex items-center touch-target min-w-[70px] justify-center"><i class="fas fa-chevron-left mr-1"></i>Ant.</button><span id="info-paginacion-mobile" class="text-sm text-gray-700 font-medium px-3 py-1 bg-gray-100 rounded"><span class="text-blue-600">1</span>/<span class="text-blue-600">1</span></span><button onclick="cambiarPagina(paginaActual + 1)" class="px-3 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg disabled:opacity-50 transition-all font-semibold text-sm flex items-center touch-target min-w-[70px] justify-center">Sig.<i class="fas fa-chevron-right ml-1"></i></button></div></div></div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="bg-gradient-to-b from-gray-800 to-gray-900 text-white text-center p-4" role="contentinfo">
+    <div class="hidden sm:block"><div class="max-w-5xl mx-auto"><div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-6"><div class="flex items-center"><span class="text-4xl font-bold"><span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-400">kit</span></span></div><div class="flex flex-wrap justify-center gap-6 text-sm"><a href="#mision" onclick="volverAlInicio()" class="hover:text-blue-300">Misión</a><a href="#productos" onclick="volverAlInicio()" class="hover:text-blue-300">Productos</a><a href="#contacto" onclick="volverAlInicio()" class="hover:text-blue-300">Contacto</a><a href="#asesorias-preview" onclick="volverAlInicio()" class="hover:text-blue-300">Asesorías</a></div></div><div class="border-t border-gray-700 my-6"></div><div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400"><p>&copy; 2025 Innovakit. <strong>Todos los derechos reservados.</strong></p><p class="md:ml-auto">Kits de electrónica y robótica educativa en Paraguay</p><div class="flex gap-4"><a href="https://www.facebook.com/share/15HSQmpG2Z8/" target="_blank" class="hover:text-blue-400"><i class="fab fa-facebook text-lg"></i></a><a href="https://www.instagram.com/innovakit_ofc?igsh=N2ZsNjh4YWo4MDBs" target="_blank" class="hover:text-pink-400"><i class="fab fa-instagram text-lg"></i></a></div></div></div></div>
+    <div class="sm:hidden"><div class="text-center mb-4"><button onclick="instalarPWA()" class="text-sm text-blue-400 hover:text-blue-300 font-semibold transition mb-1">📲 Instalar App</button><p class="text-xs text-gray-500">Acceso rápido desde tu celular</p></div><div class="text-sm text-gray-400"><p>&copy; 2025 Innovakit. Todos los derechos reservados.</p></div></div>
+  </footer>
+  
+  <!-- ========================================== -->
+  <!-- MODAL LOGIN (agregado para Supabase) -->
+  <!-- ========================================== -->
+  <div id="modal-login" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="cerrarModalLogin(event)">
+    <div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6" onclick="event.stopPropagation()">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-2xl font-bold">Iniciar Sesión</h3>
+        <button onclick="cerrarModalLogin()" class="text-2xl">&times;</button>
+      </div>
+      <form id="form-login-supabase">
+        <input type="email" id="login-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
+        <input type="password" id="login-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Ingresar</button>
+      </form>
+      <p class="text-center mt-4">¿No tienes cuenta? <button onclick="mostrarModalRegistro()" class="text-blue-600">Regístrate</button></p>
+    </div>
+  </div>
+  
+  <div id="modal-registro" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="cerrarModalRegistro(event)">
+    <div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6" onclick="event.stopPropagation()">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-2xl font-bold">Crear Cuenta</h3>
+        <button onclick="cerrarModalRegistro()" class="text-2xl">&times;</button>
+      </div>
+      <form id="form-registro-supabase">
+        <input type="text" id="reg-nombre" placeholder="Nombre completo" class="w-full p-3 border rounded-lg mb-3">
+        <input type="tel" id="reg-telefono" placeholder="Teléfono" class="w-full p-3 border rounded-lg mb-3">
+        <input type="email" id="reg-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
+        <input type="password" id="reg-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
+        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold">Registrarse</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- ========================================== -->
+  <!-- SCRIPTS -->
+  <!-- ========================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase-auth.js"></script>
+  <script src="js/cart-supabase.js"></script>
+  
+  <!-- Tu JavaScript original (el que ya funciona) va aquí -->
+  <script>
+    // ============================================
+    // AQUÍ VA TODO TU JAVASCRIPT ORIGINAL
+    // (cargarProductos, renderizarComponentesSueltos,
+    //  verProductosKit, etc.)
+    // ============================================
     
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js_config.js"></script>
-    <script src="js_auth.js"></script>
-    <script src="js_cart.js"></script>
-    <script src="js_products.js"></script>
-    <script src="js_app.js"></script>
+    // Por ahora pongo funciones básicas para que no rompa
+    // Tú pegas tu código original aquí
     
-    <!-- Modales de login/registro (se agregan al final) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Agregar modales de login y registro si no existen
-            if (!document.getElementById('modal-login')) {
-                document.body.insertAdjacentHTML('beforeend', `
-                    <div id="modal-login" class="modal">
-                        <div class="modal-container max-w-md">
-                            <div class="p-6">
-                                <div class="flex justify-between items-center mb-4">
-                                    <h3 class="text-2xl font-bold">Iniciar Sesión</h3>
-                                    <button onclick="cerrarModalLogin()" class="text-2xl">&times;</button>
-                                </div>
-                                <form id="form-login">
-                                    <input type="email" id="login-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
-                                    <input type="password" id="login-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
-                                    <button type="submit" class="w-full btn-primary">Ingresar</button>
-                                </form>
-                                <p class="text-center mt-4">¿No tienes cuenta? <button onclick="cerrarModalLogin(); mostrarModalRegistro()" class="text-blue-600">Regístrate</button></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="modal-registro" class="modal">
-                        <div class="modal-container max-w-md">
-                            <div class="p-6">
-                                <div class="flex justify-between items-center mb-4">
-                                    <h3 class="text-2xl font-bold">Crear Cuenta</h3>
-                                    <button onclick="cerrarModalRegistro()" class="text-2xl">&times;</button>
-                                </div>
-                                <form id="form-registro">
-                                    <input type="text" id="reg-nombre" placeholder="Nombre completo" class="w-full p-3 border rounded-lg mb-3">
-                                    <input type="tel" id="reg-telefono" placeholder="Teléfono" class="w-full p-3 border rounded-lg mb-3">
-                                    <input type="email" id="reg-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
-                                    <input type="password" id="reg-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
-                                    <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold">Registrarse</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                `);
-            }
-        });
-    </script>
+    function volverAlInicio() {
+      location.reload();
+    }
+    
+    function verProductosKit(id) {
+      alert('Función verProductosKit - Implementar con tu código original');
+    }
+    
+    function verComponentesSueltos() {
+      alert('Función verComponentesSueltos - Implementar con tu código original');
+    }
+    
+    function verAsesorias() {
+      document.getElementById('vista-asesorias').classList.remove('hidden');
+      document.getElementById('main-content').style.display = 'none';
+    }
+    
+    function verCarrito() {
+      document.getElementById('modal-carrito').classList.remove('opacity-0');
+      document.getElementById('modal-carrito').classList.remove('pointer-events-none');
+    }
+    
+    function toggleModalProducto() {
+      const modal = document.getElementById('modal-producto');
+      modal.classList.toggle('opacity-0');
+      modal.classList.toggle('pointer-events-none');
+    }
+    
+    function mostrarModalLogin() {
+      document.getElementById('modal-login').classList.remove('hidden');
+      document.getElementById('modal-login').style.display = 'flex';
+    }
+    
+    function cerrarModalLogin(event) {
+      if (event && event.target !== event.currentTarget) return;
+      document.getElementById('modal-login').classList.add('hidden');
+      document.getElementById('modal-login').style.display = 'none';
+    }
+    
+    function mostrarModalRegistro() {
+      cerrarModalLogin();
+      document.getElementById('modal-registro').classList.remove('hidden');
+      document.getElementById('modal-registro').style.display = 'flex';
+    }
+    
+    function cerrarModalRegistro(event) {
+      if (event && event.target !== event.currentTarget) return;
+      document.getElementById('modal-registro').classList.add('hidden');
+      document.getElementById('modal-registro').style.display = 'none';
+    }
+    
+    // Integración con Supabase - Login
+    document.getElementById('form-login-supabase')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      if (await iniciarSesionSupabase(email, password)) {
+        cerrarModalLogin();
+        location.reload();
+      }
+    });
+    
+    document.getElementById('form-registro-supabase')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nombre = document.getElementById('reg-nombre').value;
+      const telefono = document.getElementById('reg-telefono').value;
+      const email = document.getElementById('reg-email').value;
+      const password = document.getElementById('reg-password').value;
+      if (await registrarUsuarioSupabase(email, password, nombre, telefono)) {
+        cerrarModalRegistro();
+        mostrarModalLogin();
+      }
+    });
+    
+    // Cargar usuario al inicio
+    cargarUsuarioActualSupabase().then(() => {
+      if (usuarioActual) {
+        const userDesktop = document.getElementById('user-desktop');
+        if (userDesktop) {
+          userDesktop.innerHTML = `<div class="flex items-center gap-2 ml-4"><span class="text-sm">${usuarioActual.nombre}</span><button onclick="cerrarSesionSupabase()" class="text-red-500 text-sm">Salir</button></div>`;
+        }
+      }
+    });
+    
+    function toggleModal() {}
+    function enviarPorWhatsApp() {}
+    function mostrarModalProyecto() {}
+    function comprarProductoWhatsApp() {}
+    function agregarProductoAlCarrito() {}
+    function vaciarCarrito() {}
+    function enviarCarritoWhatsAppMejorado() {}
+    function cambiarPagina() {}
+    function aplicarFiltroCategoria() {}
+    function limpiarFiltros() {}
+    function mostrarModalFiltros() {}
+    function cerrarModalFiltros() {}
+    function aplicarFiltrosMovil() {}
+    function instalarPWA() {}
+  </script>
+  
 </body>
 </html>

@@ -1,97 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Innovakit</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Tailwind y FontAwesome -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/a2e0e9c6b1.js" crossorigin="anonymous"></script>
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#7eb74a">
+    <meta name="description" content="Innovakit - Kits de electrónica en Paraguay. Arduino, sensores, robótica educativa">
+    <title>Innovakit - Electrónica en Paraguay</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN (para utilidades rápidas) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Header -->
-  <header class="bg-white shadow-md p-4 flex flex-col items-center sm:flex-row sm:justify-between sm:items-center sticky top-0 z-20">
-    <a href="#main-content" onclick="volverAlInicio()" class="flex items-center mb-2 sm:mb-0 focus:outline-none">
-      <img src="Icono.png" alt="Logo Innovakit" class="h-14 sm:h-20 lg:h-16 mr-1">
-      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold">
-        <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
-      </h1>
+<body class="bg-gray-50">
+    
+    <!-- Skip to content (accesibilidad) -->
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+    
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40" id="main-header">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="/" class="flex items-center" id="logo">
+                    <h1 class="text-2xl md:text-3xl font-bold">
+                        <span style="color:#7eb74a">Inn</span>
+                        <span style="color:#fdc344">o</span>
+                        <span style="color:#7eb74a">va</span>
+                        <span class="text-blue-600">kit</span>
+                    </h1>
+                </a>
+                
+                <!-- Navegación Desktop -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#productos" class="nav-link">Productos</a>
+                    <a href="#kits" class="nav-link">Kits</a>
+                    <a href="#asesorias" class="nav-link">Asesorías</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </nav>
+                
+                <!-- Botones de usuario y carrito -->
+                <div class="flex items-center gap-3">
+                    <!-- Usuario -->
+                    <div id="user-menu" class="relative">
+                        <button id="user-btn" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+                            <i class="fas fa-user-circle text-2xl"></i>
+                            <span id="user-name" class="hidden md:inline text-sm">Invitado</span>
+                        </button>
+                        <div id="user-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg hidden z-50">
+                            <!-- Contenido dinámico -->
+                        </div>
+                    </div>
+                    
+                    <!-- Carrito -->
+                    <button id="cart-btn" class="relative text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    
+                    <!-- Menú móvil -->
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Navegación móvil -->
+            <nav id="mobile-nav" class="hidden md:hidden mt-4 pb-2 flex flex-col gap-2">
+                <a href="#inicio" class="nav-link py-2">Inicio</a>
+                <a href="#productos" class="nav-link py-2">Productos</a>
+                <a href="#kits" class="nav-link py-2">Kits</a>
+                <a href="#asesorias" class="nav-link py-2">Asesorías</a>
+                <a href="#contacto" class="nav-link py-2">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main id="main-content">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="bg-gradient-to-r from-blue-900 to-green-800 text-white">
+            <div class="container mx-auto px-4 py-16 md:py-24">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                            Aprende electrónica de forma 
+                            <span class="text-yellow-300">simple</span>
+                        </h1>
+                        <p class="text-lg md:text-xl mb-8 opacity-95">
+                            Kits completos, asesoría profesional y soporte para transformar tus ideas en proyectos reales.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#productos" class="btn-primary">Ver nuestros kits</a>
+                            <a href="#asesorias" class="btn-secondary">Solicitar asesoría</a>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <img src="img/hero-illustration.svg" alt="Electrónica" class="w-full max-w-md mx-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Productos destacados -->
+        <section id="productos" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Nuestros Productos</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Descubre nuestra selección de componentes electrónicos de alta calidad
+                </p>
+                <div id="productos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Los productos se cargan dinámicamente -->
+                    <div class="col-span-full text-center py-12">
+                        <i class="fas fa-spinner fa-spin text-3xl text-blue-600"></i>
+                        <p class="mt-2 text-gray-500">Cargando productos...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Kits destacados -->
+        <section id="kits" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Kits Educativos</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Todo lo que necesitas para empezar en electrónica y robótica
+                </p>
+                <div id="kits-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Los kits se cargan dinámicamente -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Asesorías -->
+        <section id="asesorias" class="py-16 bg-blue-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Necesitas ayuda con tu proyecto?</h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Te acompañamos en tu proyecto técnico, feria científica o trabajo escolar
+                </p>
+                <button id="solicitar-asesoria" class="btn-primary bg-yellow-500 hover:bg-yellow-600">
+                    Solicitar asesoría
+                </button>
+            </div>
+        </section>
+        
+        <!-- Contacto -->
+        <section id="contacto" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Contáctanos</h2>
+                <div class="flex justify-center gap-8 text-4xl">
+                    <a href="https://www.facebook.com/share/15HSQmpG2Z8/" target="_blank" class="text-blue-600 hover:text-blue-700 transition">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/595972292392" target="_blank" class="text-green-500 hover:text-green-600 transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/innovakit_ofc" target="_blank" class="text-pink-500 hover:text-pink-600 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Innovakit - Todos los derechos reservados</p>
+            <p class="text-gray-400 text-sm mt-2">Kits de electrónica y robótica educativa en Paraguay</p>
+        </div>
+    </footer>
+    
+    <!-- Modales -->
+    <div id="modal-login" class="modal hidden"></div>
+    <div id="modal-registro" class="modal hidden"></div>
+    <div id="modal-carrito" class="modal hidden"></div>
+    <div id="modal-producto" class="modal hidden"></div>
+    
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/595972292392" id="whatsapp-float" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-40">
+        <i class="fab fa-whatsapp text-2xl"></i>
     </a>
-    <nav class="flex flex-row flex-wrap justify-center gap-2 items-center text-sm sm:text-base">
-      <a href="#mision" onclick="volverAlInicio()" class="hover:text-blue-600">Misión</a>
-      <a href="#vision" onclick="volverAlInicio()" class="hover:text-blue-600">Visión</a>
-      <a href="#productos" onclick="volverAlInicio()" class="hover:text-blue-600">Productos</a>
-      <a href="#contacto" onclick="volverAlInicio()" class="hover:text-blue-600">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- Contenido principal -->
-  <main id="main-content">
-    <!-- Hero -->
-    <section class="bg-gradient-to-r from-green-400 to-blue-500 text-white text-center p-10 sm:p-16">
-      <h2 class="text-2xl sm:text-4xl font-bold mb-4">Bienvenido a Innovakit</h2>
-      <p class="text-base sm:text-lg">Kits de electrónica y soluciones innovadoras para aprender y crear</p>
-      <a href="#productos" class="mt-6 inline-block bg-white text-blue-600 px-4 py-2 sm:px-6 sm:py-2 rounded-lg shadow hover:bg-gray-200 font-semibold">Ver Productos</a>
-    </section>
-
-    <!-- Misión -->
-    <section id="mision" class="p-6 sm:p-12 text-center bg-gray-100 scroll-mt-20">
-      <i class="fas fa-bullseye text-4xl text-green-600 mb-4"></i>
-      <h3 class="text-xl sm:text-2xl font-bold mb-2">Nuestra Misión</h3>
-      <p class="max-w-2xl mx-auto text-base sm:text-lg">
-        Ofrecer kits de electrónica accesibles y prácticos que impulsen el aprendizaje, la creatividad y la innovación en estudiantes, entusiastas y emprendedores.
-      </p>
-    </section>
-
-    <!-- Visión -->
-    <section id="vision" class="p-6 sm:p-12 text-center scroll-mt-20">
-      <i class="fas fa-lightbulb text-4xl text-yellow-500 mb-4"></i>
-      <h3 class="text-xl sm:text-2xl font-bold mb-2">Nuestra Visión</h3>
-      <p class="max-w-2xl mx-auto text-base sm:text-lg">
-        Convertirnos en referentes en kits educativos y soluciones electrónicas en Paraguay, fomentando el desarrollo tecnológico y la formación práctica de nuevas generaciones.
-      </p>
-    </section>
-
-    <!-- Productos -->
-    <section id="productos" class="p-6 sm:p-12 bg-gray-100 scroll-mt-20">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Nuestros Productos</h3>
-      <div id="productos-principales" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <!-- Aquí JS inserta los 3 productos principales -->
-      </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="p-6 sm:p-12 text-center">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-6">Contáctanos</h3>
-      <p class="mb-4 text-base sm:text-lg">¿Tienes dudas o quieres más información? Escríbenos directamente.</p>
-      <a href="https://wa.me/595972292392" target="_blank"
-         class="inline-block bg-green-500 text-white px-4 py-3 sm:px-6 rounded-lg shadow hover:bg-green-600">
-         <i class="fab fa-whatsapp mr-2"></i>WhatsApp
-      </a>
-    </section>
-  </main>
-
-  <!-- Vista de productos individuales -->
-  <section id="vista-productoskit" class="hidden p-6 sm:p-12 bg-gray-100 min-h-screen">
-    <div id="productoskit-content"></div>
-    <div class="mt-8 flex justify-center">
-      <button onclick="volverAlInicio()" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 font-semibold">Volver al inicio</button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center p-4">
-    <p>&copy; 2025 Innovakit. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="scripts.js"></script>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

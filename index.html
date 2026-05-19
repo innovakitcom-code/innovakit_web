@@ -4,36 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#7eb74a">
-    <meta name="description" content="Innovakit - Kits de electrónica en Paraguay. Arduino, sensores, robótica educativa">
     <title>Innovakit - Electrónica en Paraguay</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS CDN (para utilidades rápidas) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body class="bg-gray-50">
     
-    <!-- Skip to content (accesibilidad) -->
-    <a href="#main-content" class="skip-link">Saltar al contenido</a>
-    
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-40" id="main-header">
+    <header class="bg-white shadow-md sticky top-0 z-40">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <a href="/" class="flex items-center" id="logo">
+                <a href="/" class="flex items-center">
                     <h1 class="text-2xl md:text-3xl font-bold">
                         <span style="color:#7eb74a">Inn</span>
                         <span style="color:#fdc344">o</span>
@@ -42,88 +27,69 @@
                     </h1>
                 </a>
                 
-                <!-- Navegación Desktop -->
                 <nav class="hidden md:flex items-center gap-6">
                     <a href="#inicio" class="nav-link">Inicio</a>
                     <a href="#productos" class="nav-link">Productos</a>
                     <a href="#kits" class="nav-link">Kits</a>
-                    <a href="#asesorias" class="nav-link">Asesorías</a>
                     <a href="#contacto" class="nav-link">Contacto</a>
                 </nav>
                 
-                <!-- Botones de usuario y carrito -->
-                <div class="flex items-center gap-3">
-                    <!-- Usuario -->
+                <div class="flex items-center gap-4">
                     <div id="user-menu" class="relative">
                         <button id="user-btn" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
                             <i class="fas fa-user-circle text-2xl"></i>
                             <span id="user-name" class="hidden md:inline text-sm">Invitado</span>
                         </button>
-                        <div id="user-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg hidden z-50">
-                            <!-- Contenido dinámico -->
-                        </div>
                     </div>
                     
-                    <!-- Carrito -->
                     <button id="cart-btn" class="relative text-gray-700 hover:text-blue-600">
                         <i class="fas fa-shopping-cart text-xl"></i>
                         <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
                     </button>
                     
-                    <!-- Menú móvil -->
                     <button id="mobile-menu-btn" class="md:hidden text-gray-700">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
             
-            <!-- Navegación móvil -->
             <nav id="mobile-nav" class="hidden md:hidden mt-4 pb-2 flex flex-col gap-2">
                 <a href="#inicio" class="nav-link py-2">Inicio</a>
                 <a href="#productos" class="nav-link py-2">Productos</a>
                 <a href="#kits" class="nav-link py-2">Kits</a>
-                <a href="#asesorias" class="nav-link py-2">Asesorías</a>
                 <a href="#contacto" class="nav-link py-2">Contacto</a>
             </nav>
         </div>
     </header>
     
-    <!-- Contenido principal -->
-    <main id="main-content">
-        
-        <!-- Hero Section -->
-        <section id="hero" class="bg-gradient-to-r from-blue-900 to-green-800 text-white">
+    <main>
+        <!-- Hero -->
+        <section id="inicio" class="bg-gradient-to-r from-blue-900 to-green-800 text-white">
             <div class="container mx-auto px-4 py-16 md:py-24">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="text-center md:text-left">
-                        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                            Aprende electrónica de forma 
-                            <span class="text-yellow-300">simple</span>
-                        </h1>
-                        <p class="text-lg md:text-xl mb-8 opacity-95">
-                            Kits completos, asesoría profesional y soporte para transformar tus ideas en proyectos reales.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <a href="#productos" class="btn-primary">Ver nuestros kits</a>
-                            <a href="#asesorias" class="btn-secondary">Solicitar asesoría</a>
-                        </div>
-                    </div>
-                    <div class="hidden md:block">
-                        <img src="img/hero-illustration.svg" alt="Electrónica" class="w-full max-w-md mx-auto">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
+                        Aprende electrónica de forma 
+                        <span class="text-yellow-300">simple</span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                        Kits completos, asesoría profesional y soporte para transformar tus ideas en proyectos reales.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#productos" class="btn-primary">Ver productos</a>
+                        <a href="https://wa.me/595972292392" class="btn-secondary" target="_blank">Solicitar asesoría</a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Productos destacados -->
+        <!-- Productos -->
         <section id="productos" class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Nuestros Productos</h2>
                 <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Descubre nuestra selección de componentes electrónicos de alta calidad
+                    Componentes electrónicos de alta calidad para tus proyectos
                 </p>
                 <div id="productos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <!-- Los productos se cargan dinámicamente -->
                     <div class="col-span-full text-center py-12">
                         <i class="fas fa-spinner fa-spin text-3xl text-blue-600"></i>
                         <p class="mt-2 text-gray-500">Cargando productos...</p>
@@ -132,7 +98,7 @@
             </div>
         </section>
         
-        <!-- Kits destacados -->
+        <!-- Kits -->
         <section id="kits" class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Kits Educativos</h2>
@@ -140,21 +106,11 @@
                     Todo lo que necesitas para empezar en electrónica y robótica
                 </p>
                 <div id="kits-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Los kits se cargan dinámicamente -->
+                    <div class="col-span-full text-center py-12">
+                        <i class="fas fa-spinner fa-spin text-3xl text-blue-600"></i>
+                        <p class="mt-2 text-gray-500">Cargando kits...</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Asesorías -->
-        <section id="asesorias" class="py-16 bg-blue-50">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Necesitas ayuda con tu proyecto?</h2>
-                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                    Te acompañamos en tu proyecto técnico, feria científica o trabajo escolar
-                </p>
-                <button id="solicitar-asesoria" class="btn-primary bg-yellow-500 hover:bg-yellow-600">
-                    Solicitar asesoría
-                </button>
             </div>
         </section>
         
@@ -175,10 +131,8 @@
                 </div>
             </div>
         </section>
-        
     </main>
     
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 Innovakit - Todos los derechos reservados</p>
@@ -186,14 +140,10 @@
         </div>
     </footer>
     
-    <!-- Modales -->
-    <div id="modal-login" class="modal hidden"></div>
-    <div id="modal-registro" class="modal hidden"></div>
-    <div id="modal-carrito" class="modal hidden"></div>
-    <div id="modal-producto" class="modal hidden"></div>
+    <!-- Modales (se agregan dinámicamente con JS) -->
     
     <!-- WhatsApp flotante -->
-    <a href="https://wa.me/595972292392" id="whatsapp-float" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-40">
+    <a href="https://wa.me/595972292392" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-40 animate-bounce">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
     
@@ -204,5 +154,50 @@
     <script src="js_cart.js"></script>
     <script src="js_products.js"></script>
     <script src="js_app.js"></script>
+    
+    <!-- Modales de login/registro (se agregan al final) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Agregar modales de login y registro si no existen
+            if (!document.getElementById('modal-login')) {
+                document.body.insertAdjacentHTML('beforeend', `
+                    <div id="modal-login" class="modal">
+                        <div class="modal-container max-w-md">
+                            <div class="p-6">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h3 class="text-2xl font-bold">Iniciar Sesión</h3>
+                                    <button onclick="cerrarModalLogin()" class="text-2xl">&times;</button>
+                                </div>
+                                <form id="form-login">
+                                    <input type="email" id="login-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
+                                    <input type="password" id="login-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
+                                    <button type="submit" class="w-full btn-primary">Ingresar</button>
+                                </form>
+                                <p class="text-center mt-4">¿No tienes cuenta? <button onclick="cerrarModalLogin(); mostrarModalRegistro()" class="text-blue-600">Regístrate</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="modal-registro" class="modal">
+                        <div class="modal-container max-w-md">
+                            <div class="p-6">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h3 class="text-2xl font-bold">Crear Cuenta</h3>
+                                    <button onclick="cerrarModalRegistro()" class="text-2xl">&times;</button>
+                                </div>
+                                <form id="form-registro">
+                                    <input type="text" id="reg-nombre" placeholder="Nombre completo" class="w-full p-3 border rounded-lg mb-3">
+                                    <input type="tel" id="reg-telefono" placeholder="Teléfono" class="w-full p-3 border rounded-lg mb-3">
+                                    <input type="email" id="reg-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
+                                    <input type="password" id="reg-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
+                                    <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold">Registrarse</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                `);
+            }
+        });
+    </script>
 </body>
 </html>

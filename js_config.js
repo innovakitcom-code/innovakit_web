@@ -6,8 +6,8 @@
 const SUPABASE_URL = 'https://lvdjczfblanbadikccxo.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_O9oR1xmyeAy1ludJJlo3Rw_2gW9XZ_F';
 
-// Inicializar Supabase
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// ✅ CAMBIA esta línea:
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // Variables globales
 let usuarioActual = null;

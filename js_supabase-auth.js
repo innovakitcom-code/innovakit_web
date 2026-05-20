@@ -1,13 +1,16 @@
 // ============================================
 // AUTENTICACIÓN CON SUPABASE
-// Para integrar con tu index original
 // ============================================
 
 async function registrarUsuarioSupabase(email, password, nombre, telefono) {
-    if (!supabase) return false;
+    if (!supabaseClient) {
+        console.error('❌ supabaseClient no está definido');
+        mostrarNotificacion('Error de conexión', 'error');
+        return false;
+    }
     
     try {
-        const { data, error } = await supabase.auth.signUp({
+        const { data, error } = await supabaseClient.auth.signUp({
             email: email,
             password: password,
             options: { data: { nombre, telefono } }
@@ -16,7 +19,7 @@ async function registrarUsuarioSupabase(email, password, nombre, telefono) {
         if (error) throw error;
         
         if (data.user) {
-            await supabase.from('perfiles').insert([{
+            await supabaseClient.from('perfiles').insert([{
                 id: data.user.id,
                 nombre: nombre || email.split('@')[0],
                 telefono: telefono || null,
@@ -33,10 +36,17 @@ async function registrarUsuarioSupabase(email, password, nombre, telefono) {
 }
 
 async function iniciarSesionSupabase(email, password) {
-    if (!supabase) return false;
+    if (!supabaseClient) {
+        console.error('❌ supabaseClient no está definido');
+        mostrarNotificacion('Error de conexión', 'error');
+        return false;
+    }
     
     try {
-        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+        const { data, error } = await supabaseClient.auth.signInWithPassword({ 
+            email: email, 
+            password: password 
+        });
         if (error) throw error;
         
         await cargarUsuarioActualSupabase();
@@ -49,20 +59,24 @@ async function iniciarSesionSupabase(email, password) {
 }
 
 async function cerrarSesionSupabase() {
-    if (!supabase) return;
-    await supabase.auth.signOut();
+    if (!supabaseClient) return;
+    await supabaseClient.auth.signOut();
     usuarioActual = null;
     mostrarNotificacion('Sesión cerrada', 'info');
-    location.reload(); // Recargar para actualizar UI
+    location.reload();
 }
 
 async function cargarUsuarioActualSupabase() {
-    if (!supabase) return null;
+    if (!supabaseClient) return null;
     
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { user } } = await supabaseClient.auth.getUser();
     if (!user) return null;
     
-    const { data: perfil } = await supabase.from('perfiles').select('*').eq('id', user.id).single();
+    const { data: perfil } = await supabaseClient
+        .from('perfiles')
+        .select('*')
+        .eq('id', user.id)
+        .single();
     
     usuarioActual = {
         id: user.id,

@@ -1503,6 +1503,84 @@ function instalarPWA() {
 
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); window.deferredPrompt = e; console.log('📱 PWA disponible'); });
 
+    // ============================================
+// FUNCIONES DE LOGIN (AGREGADAS MANUALMENTE)
+// ============================================
+
+function mostrarModalLogin() {
+    console.log('📱 Abriendo modal login');
+    const modal = document.getElementById('modal-login');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+    } else {
+        console.error('❌ Modal login no encontrado');
+    }
+}
+
+function cerrarModalLogin(event) {
+    if (event && event.target !== event.currentTarget) return;
+    console.log('📱 Cerrando modal login');
+    const modal = document.getElementById('modal-login');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+    }
+}
+
+function mostrarModalRegistro() {
+    console.log('📱 Abriendo modal registro');
+    const modal = document.getElementById('modal-registro');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+    }
+}
+
+function cerrarModalRegistro(event) {
+    if (event && event.target !== event.currentTarget) return;
+    console.log('📱 Cerrando modal registro');
+    const modal = document.getElementById('modal-registro');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+    }
+}
+
+// Event listeners para formularios de Supabase
+document.getElementById('form-login-supabase')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+    console.log('🔐 Intentando login:', email);
+    
+    if (typeof iniciarSesionSupabase === 'function') {
+        if (await iniciarSesionSupabase(email, password)) {
+            cerrarModalLogin();
+            location.reload();
+        }
+    } else {
+        alert('Error: iniciarSesionSupabase no está definida. Revisa js_supabase-auth.js');
+    }
+});
+
+document.getElementById('form-registro-supabase')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const nombre = document.getElementById('reg-nombre').value;
+    const telefono = document.getElementById('reg-telefono').value;
+    const email = document.getElementById('reg-email').value;
+    const password = document.getElementById('reg-password').value;
+    console.log('📝 Intentando registro:', email);
+    
+    if (typeof registrarUsuarioSupabase === 'function') {
+        if (await registrarUsuarioSupabase(email, password, nombre, telefono)) {
+            cerrarModalRegistro();
+            mostrarModalLogin();
+        }
+    } else {
+        alert('Error: registrarUsuarioSupabase no está definida. Revisa js_supabase-auth.js');
+    }
+});
 // Funciones adicionales necesarias
 function extraerComponentes(desc) { return []; }
 function formatearComponentesEnColumnas(c) { return ''; }

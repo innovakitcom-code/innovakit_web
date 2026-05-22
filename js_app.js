@@ -1,114 +1,18 @@
 // ============================================
-// APP PRINCIPAL - INICIALIZACIÓN
+// ja_app.js - Inicialización y eventos globales
 // ============================================
 
-// Inicializar todo cuando la página carga
-document.addEventListener('DOMContentLoaded', async () => {
-    console.log('🚀 Iniciando Innovakit con Supabase...');
-    
-    // Mostrar loading
-    mostrarLoading(true);
-    
-    // 1. Cargar usuario actual
-    await cargarUsuarioActual();
-    
-    // 2. Cargar productos y kits
-    await cargarProductos();
-    await cargarKits();
-    
-    // 3. Cargar carrito
-    await cargarCarrito();
-    
-    // 4. Renderizar en la página
-    renderizarProductos(productosGlobal);
-    renderizarKits(kitsGlobal);
-    
-    // 5. Configurar eventos
-    configurarEventos();
-    
-    // Ocultar loading
-    mostrarLoading(false);
-    
-    console.log('✅ Innovakit listo');
-    console.log(`📊 Estadísticas: ${productosGlobal.length} productos, ${kitsGlobal.length} kits`);
-});
+// Productos y kits globales
+let productosGlobal = [];
+let kitsGlobal = [];
 
-// Mostrar/ocultar loading
-function mostrarLoading(mostrar) {
-    const loading = document.getElementById('loading-overlay');
-    if (loading) {
-        if (mostrar) {
-            loading.classList.remove('hidden');
-        } else {
-            loading.classList.add('hidden');
-        }
-    }
-}
-
-// Configurar eventos de UI
-function configurarEventos() {
-    // Menú móvil
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileNav = document.getElementById('mobile-nav');
-    if (menuBtn && mobileNav) {
-        menuBtn.onclick = () => mobileNav.classList.toggle('hidden');
-    }
-    
-    // Botón carrito
-    const cartBtn = document.getElementById('cart-btn');
-    if (cartBtn) {
-        cartBtn.onclick = verCarrito;
-    }
-    
-    // Botón usuario
-    const userBtn = document.getElementById('user-btn');
-    if (userBtn) {
-        userBtn.onclick = () => {
-            if (usuarioActual) {
-                // Mostrar menú de usuario
-                const dropdown = document.getElementById('user-dropdown');
-                if (dropdown) {
-                    dropdown.classList.toggle('hidden');
-                }
-            } else {
-                mostrarModalLogin();
-            }
-        };
-    }
-    
-    // Cerrar dropdown al hacer clic fuera
-    document.addEventListener('click', (e) => {
-        const dropdown = document.getElementById('user-dropdown');
-        const userBtn = document.getElementById('user-btn');
-        if (dropdown && !dropdown.classList.contains('hidden')) {
-            if (!dropdown.contains(e.target) && e.target !== userBtn) {
-                dropdown.classList.add('hidden');
-            }
-        }
-    });
-    
-    // Botón admin
-    const adminBtn = document.getElementById('admin-btn');
-    if (adminBtn) {
-        adminBtn.onclick = () => {
-            window.location.href = '/admin.html';
-        };
-    }
-    
-    // Solicitar asesoría
-    const asesoriaBtns = document.querySelectorAll('#solicitar-asesoria, .btn-asesoria');
-    asesoriaBtns.forEach(btn => {
-        btn.onclick = () => {
-            window.open('https://wa.me/595972292392?text=¡Hola! Necesito asesoría para un proyecto técnico', '_blank');
-        };
-    });
-    
+// Configurar todos los eventos de UI
+function configurarEventosGlobales() {
     // Scroll suave para enlaces internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             if (href === '#') return;
-            
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
@@ -117,73 +21,126 @@ function configurarEventos() {
         });
     });
     
-    // Cerrar modales con ESC
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            cerrarModalLogin();
-            cerrarModalRegistro();
-            cerrarCarrito();
-            cerrarModalProductoDetalle();
-        }
+    // Botón flotante de admin
+    const adminFloatBtn = document.getElementById('admin-float-btn');
+    if (adminFloatBtn) {
+        adminFloatBtn.addEventListener('click', () => {
+            window.location.href = '/admin.html';
+        });
+    }
+    
+    // Cerrar modales con overlay click
+    document.querySelectorAll('.modal-overlay, [onclick*="cerrar"]').forEach(el => {
+        // Los event listeners se manejan en cada modal
     });
 }
 
-// Cargar el menú de usuario dropdown
-function cargarDropdownUsuario() {
-    const dropdown = document.getElementById('user-dropdown');
-    if (!dropdown) return;
+// Cargar productos desde Supabase
+async function cargarProductosGlobal() {
+    try {
+        const { data, error } = await supabaseClient
+            .from('productos')
+            .select('*')
+            .eq('activo', true)
+            .order('id', { ascending: false });
+        
+        if (error) throw error;
+        productosGlobal = data || [];
+        console.log(`✅ Cargados ${productosGlobal.length} productos`);
+        return productosGlobal;
+    } catch (error) {
+        console.error('Error cargando productos:', error);
+        return [];
+    }
+}
+
+// Cargar kits desde Supabase
+async function cargarKitsGlobal() {
+    try {
+        const { data, error } = await supabaseClient
+            .from('kits')
+            .select('*')
+            .eq('activo', true);
+        
+        if (error) throw error;
+        kitsGlobal = data || [];
+        console.log(`✅ Cargados ${kitsGlobal.length} kits`);
+        return kitsGlobal;
+    } catch (error) {
+        console.error('Error cargando kits:', error);
+        return [];
+    }
+}
+
+// Funciones de navegación
+function volverAlInicio() {
+    document.getElementById('main-content').style.display = '';
+    document.getElementById('vista-productoskit')?.classList.add('hidden');
+    document.getElementById('vista-asesorias')?.classList.add('hidden');
+    document.getElementById('vista-componentes-sueltos')?.classList.add('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function verAsesorias() {
+    document.getElementById('main-content').style.display = 'none';
+    document.getElementById('vista-productoskit')?.classList.add('hidden');
+    document.getElementById('vista-componentes-sueltos')?.classList.add('hidden');
+    document.getElementById('vista-asesorias')?.classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function verComponentesSueltos() {
+    document.getElementById('main-content').style.display = 'none';
+    document.getElementById('vista-productoskit')?.classList.add('hidden');
+    document.getElementById('vista-asesorias')?.classList.add('hidden');
+    document.getElementById('vista-componentes-sueltos')?.classList.remove('hidden');
+    if (typeof renderizarComponentesSueltos === 'function') {
+        renderizarComponentesSueltos();
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Mostrar botón flotante de admin si es admin
+async function mostrarBotonAdminSiCorresponde() {
+    if (usuarioActual?.es_admin) {
+        const btn = document.getElementById('admin-float-btn');
+        if (btn) btn.style.display = 'block';
+    }
+}
+
+// Inicialización principal
+document.addEventListener('DOMContentLoaded', async () => {
+    console.log('🚀 Inicializando Innovakit...');
     
-    if (usuarioActual) {
-        dropdown.innerHTML = `
-            <div class="py-2">
-                <div class="px-4 py-3 border-b border-gray-100">
-                    <p class="font-semibold text-gray-800">${usuarioActual.nombre}</p>
-                    <p class="text-xs text-gray-500">${usuarioActual.email}</p>
-                </div>
-                ${usuarioActual.es_admin ? `
-                    <a href="/admin.html" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-50 text-gray-700">
-                        <i class="fas fa-chart-line w-5"></i> Panel Admin
-                    </a>
-                ` : ''}
-                <button onclick="cerrarSesion()" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-50 text-red-600 w-full">
-                    <i class="fas fa-sign-out-alt w-5"></i> Cerrar sesión
-                </button>
-            </div>
-        `;
+    mostrarLoading(true);
+    
+    // Configurar eventos
+    configurarEventosGlobales();
+    
+    // Cargar datos
+    await cargarProductosGlobal();
+    await cargarKitsGlobal();
+    
+    // Cargar carrito
+    if (typeof cargarCarrito === 'function') {
+        await cargarCarrito();
     }
-}
-
-// Agregar loading overlay al DOM
-function agregarLoadingOverlay() {
-    if (!document.getElementById('loading-overlay')) {
-        document.body.insertAdjacentHTML('beforeend', `
-            <div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center hidden">
-                <div class="text-center">
-                    <div class="loading-spinner mx-auto mb-4"></div>
-                    <p class="text-gray-600">Cargando Innovakit...</p>
-                </div>
-            </div>
-        `);
+    
+    // Mostrar botón admin si corresponde
+    await mostrarBotonAdminSiCorresponde();
+    
+    // Registrar cierre con ESC
+    if (typeof registrarCierreConEsc === 'function') {
+        registrarCierreConEsc();
     }
-}
-
-// Agregar dropdown de usuario al DOM
-function agregarDropdownUsuario() {
-    if (!document.getElementById('user-dropdown')) {
-        const userMenu = document.getElementById('user-menu');
-        if (userMenu) {
-            userMenu.insertAdjacentHTML('beforeend', `
-                <div id="user-dropdown" class="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 hidden z-50">
-                    <!-- Contenido dinámico -->
-                </div>
-            `);
-        }
-    }
-}
-
-// Inicializar elementos adicionales
-document.addEventListener('DOMContentLoaded', () => {
-    agregarLoadingOverlay();
-    agregarDropdownUsuario();
-    cargarDropdownUsuario();
+    
+    mostrarLoading(false);
+    console.log('✅ Innovakit listo');
 });
+
+// Exponer funciones globalmente
+window.volverAlInicio = volverAlInicio;
+window.verAsesorias = verAsesorias;
+window.verComponentesSueltos = verComponentesSueltos;
+window.productosGlobal = () => productosGlobal;
+window.kitsGlobal = () => kitsGlobal;

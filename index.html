@@ -15,26 +15,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   
-  <!-- ========================================== -->
-  <!-- FAVICON -->
-  <!-- ========================================== -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#7eb74a">
   
-  <!-- ========================================== -->
-  <!-- META TAGS -->
-  <!-- ========================================== -->
+  <!-- Meta tags -->
   <title>Innovakit - Kits de Electrónica en Paraguay</title>
-  <meta name="description" content="🤖 Innovakit - Kits de electrónica en Paraguay ✅ Arduino, Motores, Sensores, robótica educativa ✅ Envíos a Asunción y todo el país ✅ Asesoría técnica para proyectos y ferias científicas">
-  <meta name="keywords" content="Arduino paraguay, kits electrónica Asunción, sensores, motores, robótica educativa, componentes electrónicos Paraguay, feria científica, proyectos escolares, innovakit Paraguay">
+  <meta name="description" content="🤖 Innovakit - Kits de electrónica en Paraguay ✅ Arduino, Motores, Sensores, robótica educativa ✅ Envíos a Asunción y todo el país">
+  <meta name="keywords" content="Arduino paraguay, kits electrónica Asunción, sensores, motores, robótica educativa">
   <meta name="author" content="Innovakit">
   <meta name="robots" content="index, follow">
   
-  <!-- PWA Meta Tags -->
+  <!-- PWA -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -42,34 +37,52 @@
   
   <!-- Open Graph -->
   <meta property="og:title" content="Innovakit - Kits y componentes de Electrónica en Paraguay">
-  <meta property="og:description" content="Aprende, crea y destaca con los kits de Innovakit. Proyectos electrónicos con acompañamiento profesional en Paraguay.">
+  <meta property="og:description" content="Aprende, crea y destaca con los kits de Innovakit.">
   <meta property="og:image" content="https://wwwinnovakit.com/png/wthpp_web.png">
   <meta property="og:url" content="https://wwwinnovakit.com">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Innovakit">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Innovakit - Kits de Electrónica en Paraguay">
-  <meta name="twitter:description" content="Aprende electrónica de forma simple con kits completos y asesoría profesional.">
+  <meta name="twitter:description" content="Aprende electrónica de forma simple con kits completos.">
   <meta name="twitter:image" content="https://wwwinnovakit.com/png/wthpp_web.png">
   
-  <!-- ========================================== -->
-  <!-- CSS - EXTERNO (ESTILOS EXTRAÍDOS) -->
-  <!-- ========================================== -->
+  <!-- CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Tus estilos extraídos -->
+  <!-- Tus estilos -->
   <link rel="stylesheet" href="css_style.css">
-  <link rel="stylesheet" href="css_animations.css">
+  <link rel="stylesheet" href="css_animation.css">
+  
+  <style>
+    /* Estilos adicionales mínimos que no están en los CSS externos */
+    #testimonios {
+        padding-top: 1.5rem !important;
+        padding-bottom: 2rem !important;
+    }
+    #testimonios h3 { margin-bottom: 0.5rem !important; }
+    #testimonios .text-gray-700.text-center { margin-bottom: 1rem !important; }
+    #testimonios .flex.justify-center.mb-8 { margin-bottom: 0.75rem !important; }
+    #testimonios .text-center.text-gray-700.text-sm.mb-6 { margin-bottom: 0.75rem !important; }
+    #testimonios-reales { gap: 1rem !important; }
+    #testimonios-reales > div { margin-bottom: 0 !important; }
+    
+    #rating-stars i {
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        user-select: none !important;
+        transition: all 0.2s ease;
+    }
+    #rating-stars i:hover { transform: scale(1.1); }
+    #proyecto-modal { z-index: 9999 !important; }
+    .modal, [id*="modal"] { z-index: 9998; }
+  </style>
   
   <script>
     tailwind.config = {
@@ -97,7 +110,7 @@
     
     <!-- Desktop -->
     <div class="hidden sm:flex justify-between items-center">
-      <a href="#main-content" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded btn-hover ml-3" onclick="volverAlInicio(); return false;">
+      <a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded btn-hover ml-3" onclick="volverAlInicio(); return false;">
         <h1 class="text-3xl lg:text-4xl font-bold">
           <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
         </h1>
@@ -111,7 +124,7 @@
         <a href="#contacto" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Contacto</a>
         
         <!-- Carrito Desktop -->
-        <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-3 py-2 rounded-lg shadow hover:bg-yellow-400 font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500 btn-hover" aria-label="Ver carrito de compras">
+        <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-3 py-2 rounded-lg shadow hover:bg-yellow-400 font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500 btn-hover" aria-label="Ver carrito">
           🛒 Carrito (<span id="carrito-count-desktop" aria-live="polite">0</span>)
         </button>
         
@@ -128,7 +141,7 @@
     <div class="sm:hidden">
       <div class="flex justify-between items-center mb-3">
         <div class="flex-1">
-          <a href="#main-content" class="flex items-center" onclick="volverAlInicio(); return false;">
+          <a href="#" class="flex items-center" onclick="volverAlInicio(); return false;">
             <h1 class="text-2xl font-bold">
               <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
             </h1>
@@ -139,7 +152,7 @@
           🛍️ (<span id="carrito-count-mobile" aria-live="polite">0</span>)
         </button>
         
-        <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-2 py-1 rounded-lg text-sm font-semibold ml-2">
+        <button onclick="mostrarModalLogin()" class="auth-mobile-btn bg-blue-600 text-white px-2 py-1 rounded-lg text-sm font-semibold ml-2">
           <i class="fas fa-user"></i>
         </button>
       </div>
@@ -174,7 +187,7 @@
                 <span>Ver nuestros kits</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </a>
-              <a href="#asesorias-preview" class="btn-hover inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#FFD84D] hover:bg-yellow-400 text-gray-900 font-semibold shadow-lg transition btn-icon mx-auto">
+              <a href="#asesorias-preview" class="btn-hover inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#FFD84D] hover:bg-yellow-400 text-gray-900 font-semibold shadow-lg transition btn-icon">
                 <span>Solicita asesoría</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
               </a>
@@ -183,12 +196,8 @@
           <div class="hidden md:block animate-slide-in-right" aria-hidden="true">
             <img src="vector-electrónica-tablet.svg" alt="Electrónica desktop" class="w-64 md:w-80 h-auto object-contain drop-shadow-xl mx-auto contrast-enhanced">
           </div>
-          <div class="imagen-tablet hidden md:hidden lg:hidden animate-slide-in-right" aria-hidden="true">
-            <img src="vector-electrónica.svg" alt="Electrónica tablet" class="w-64 md:w-80 h-auto object-contain drop-shadow-xl mx-auto contrast-enhanced">
-          </div>
         </div>
       </div>
-      <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-16 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
     </section>
     
     <hr class="my-6 border-gray-300">
@@ -244,7 +253,6 @@
       <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Nuestros Productos</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 place-items-center justify-center">
         
-        <!-- Kit 1 -->
         <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-4 flex flex-col items-center w-full max-w-xs mx-auto mb-4 h-96">
           <img src="png/Kounshun.svg" alt="Kit de electrónica Innovakit" class="w-48 h-48 object-contain mb-3 rounded-lg" loading="lazy">
           <h4 class="text-lg font-bold mb-2 text-center">Kit de Electrónica Básico</h4>
@@ -252,7 +260,6 @@
           <button onclick="verProductosKit(1)" class="w-full bg-blue-600 text-white px-3 py-2 rounded-lg shadow hover:bg-blue-700 mt-auto text-sm">Ver más</button>
         </div>
         
-        <!-- Kit 3 -->
         <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-4 flex flex-col items-center w-full max-w-xs mx-auto mb-4 h-96">
           <img src="png/Acebott.svg" alt="Kit de Robótica Acebott" class="w-48 h-48 object-contain mb-3 rounded-lg" loading="lazy">
           <h4 class="text-lg font-bold mb-2 text-center">Kit de Robótica Acebott</h4>
@@ -260,7 +267,6 @@
           <button onclick="verProductosKit(3)" class="w-full bg-blue-600 text-white px-3 py-2 rounded-lg shadow hover:bg-blue-700 mt-auto text-sm">Ver más</button>
         </div>
         
-        <!-- Componentes Sueltos -->
         <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-4 flex flex-col items-center w-full max-w-xs mx-auto mb-4 h-96">
           <img src="png/Producto4.svg" alt="Componentes Sueltos" class="w-48 h-48 object-contain mb-3 rounded-lg" loading="lazy">
           <h4 class="text-lg font-bold mb-2 text-center">Componentes</h4>
@@ -280,10 +286,11 @@
         ¿Vas a una <strong class="text-blue-700">feria científica</strong> o necesitas presentar un proyecto técnico? 
         Con nuestra asesoría tendrás <strong class="text-blue-700">acompañamiento profesional</strong> para que tu idea destaque.
       </p>
-      <div class="flex justify-center text-center mb-6">
-      <button onclick="verAsesorias()" class="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg btn-hover touch-target btn-icon transition-all duration-300 transform hover:scale-105">
-        <i class="fas fa-calendar-check mr-2"></i>Solicitar asesoría
-      </button>
+      <div class="flex justify-center">
+        <button onclick="verAsesorias()" class="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg btn-hover touch-target btn-icon transition-all duration-300 transform hover:scale-105">
+          <i class="fas fa-calendar-check mr-2"></i>Solicitar asesoría
+        </button>
+      </div>
     </section>
     
     <hr class="my-6 border-gray-300">
@@ -291,19 +298,81 @@
     <!-- TESTIMONIOS -->
     <section id="testimonios" class="pt-8 pb-12 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div class="max-w-6xl mx-auto px-4">
-        <h3 class="text-3xl font-bold text-center mb-4 animate-fade-in-up">Proyectos de Nuestros Clientes</h3>
-        <p class="text-gray-700 text-center mb-6 max-w-3xl mx-auto text-base">
+        <h3 class="text-3xl font-bold text-center mb-2 animate-fade-in-up">Proyectos de Nuestros Clientes</h3>
+        <p class="text-gray-700 text-center mb-4 max-w-3xl mx-auto text-base">
           Descubre lo que han creado estudiantes, makers y emprendedores con Innovakit
         </p>
-       <div class="flex justify-center text-center mb-8">
+        <div class="flex justify-center mb-3">
           <button onclick="mostrarModalProyecto()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl font-semibold text-base btn-hover touch-target btn-icon transition-all duration-300 transform hover:scale-105">
             <i class="fas fa-camera mr-2"></i>Comparte tu proyecto
           </button>
         </div>
-        <div class="text-center mb-6">
-          <p class="justify-center text-gray-700 text-sm">Muestra al mundo lo que creaste</p></div>
-        <div id="testimonios-reales" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <p class="text-center text-gray-700 text-sm mb-3">Muestra al mundo lo que creaste</p>
+        <div id="testimonios-reales" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      </div>
     </section>
+    
+    <!-- MODAL COMPARTIR PROYECTO -->
+    <div id="proyecto-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="cerrarModalProyecto(event)">
+      <div class="bg-white rounded-2xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold">📸 Comparte tu Proyecto</h3>
+            <button onclick="cerrarModalProyecto()" class="text-2xl">&times;</button>
+          </div>
+          <form id="form-proyecto" onsubmit="enviarProyecto(event)">
+            <div class="mb-4">
+              <label class="block text-sm font-semibold mb-1">Foto de tu proyecto *</label>
+              <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition"
+                   onclick="document.getElementById('foto-proyecto').click()">
+                <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-2"></i>
+                <p class="text-gray-600">Haz clic para subir una foto</p>
+                <p class="text-gray-400 text-sm">JPEG, PNG hasta 5MB</p>
+                <input type="file" id="foto-proyecto" accept="image/*" class="hidden" onchange="previewFotoProyecto(this)">
+              </div>
+              <div id="foto-preview" class="mt-3 hidden">
+                <img id="foto-preview-img" class="w-full h-40 object-cover rounded-lg">
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-sm font-semibold mb-1">Tu nombre *</label>
+                <input type="text" id="proyecto-nombre" class="w-full p-2 border rounded-lg" required>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-1">Nombre del proyecto *</label>
+                <input type="text" id="proyecto-titulo" class="w-full p-2 border rounded-lg" required>
+              </div>
+            </div>
+            
+            <div class="mb-4">
+              <label class="block text-sm font-semibold mb-1">Tu calificación *</label>
+              <div id="rating-stars" class="flex gap-1 text-2xl mb-2">
+                <i class="far fa-star cursor-pointer" data-rating="1"></i>
+                <i class="far fa-star cursor-pointer" data-rating="2"></i>
+                <i class="far fa-star cursor-pointer" data-rating="3"></i>
+                <i class="far fa-star cursor-pointer" data-rating="4"></i>
+                <i class="far fa-star cursor-pointer" data-rating="5"></i>
+              </div>
+              <input type="hidden" id="proyecto-rating" value="0">
+            </div>
+            
+            <div class="mb-6">
+              <label class="block text-sm font-semibold mb-1">Cuéntanos sobre tu proyecto *</label>
+              <textarea id="proyecto-comentario" rows="4" class="w-full p-2 border rounded-lg" placeholder="¿Qué creaste? ¿Qué componentes usaste? ¿Qué aprendiste?" required></textarea>
+            </div>
+            
+            <div class="flex gap-3">
+              <button type="submit" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold">
+                <i class="fas fa-paper-plane mr-2"></i> Enviar proyecto
+              </button>
+              <button type="button" onclick="cerrarModalProyecto()" class="flex-1 bg-gray-200 hover:bg-gray-300 py-3 rounded-lg font-semibold">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     
     <hr class="my-6 border-gray-300">
     
@@ -340,10 +409,9 @@
   </main>
   
   <!-- ========================================== -->
-  <!-- VISTAS OCULTAS (Kits, Asesorías, Componentes) -->
+  <!-- VISTAS OCULTAS -->
   <!-- ========================================== -->
   
-  <!-- Vista de productos kit -->
   <section id="vista-productoskit" class="hidden p-6 sm:p-12 bg-gradient-to-br from-gray-50 to-white min-h-screen">
     <div id="productoskit-content" class="max-w-7xl mx-auto"></div>
     <div class="mt-12 flex justify-center animate-fade-in-up">
@@ -353,7 +421,7 @@
     </div>
   </section>
   
-  <!-- Modal descripción -->
+  <!-- Modal descripción genérico -->
   <div id="modal-descripcion" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50 backdrop-blur-sm">
     <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-60 transition-opacity duration-300"></div>
     <div class="modal-container bg-white w-11/12 md:max-w-4xl mx-auto rounded-2xl shadow-2xl z-50 overflow-y-auto transform transition-all duration-300 scale-95">
@@ -381,32 +449,6 @@
           <a id="modal-whatsapp" href="#" target="_blank" class="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold flex items-center justify-center btn-hover touch-target btn-icon">
             <i class="fab fa-whatsapp mr-2"></i>Comprar por WhatsApp
           </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal Carrito -->
-  <div id="modal-carrito" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50 backdrop-blur-sm">
-    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-60 transition-opacity duration-300"></div>
-    <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-2xl shadow-2xl z-50 overflow-y-auto transform transition-all duration-300 scale-95 max-h-[90vh]">
-      <div class="py-6 px-8">
-        <div class="flex justify-between items-center pb-4 mb-6 border-b border-gray-200">
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 flex items-center"><i class="fas fa-shopping-cart mr-3 text-blue-600"></i>Tu carrito</h2>
-          <button class="modal-carrito-close text-gray-500 hover:text-gray-700 text-2xl font-bold transition-colors duration-300 btn-hover p-2 rounded-full hover:bg-gray-100">✕</button>
-        </div>
-        <div id="carrito-lista" class="divide-y divide-gray-200 max-h-96 overflow-y-auto"></div>
-        <div class="flex flex-col sm:flex-row items-center justify-between mt-8 pt-6 border-t border-gray-200 gap-4">
-          <div class="text-xl font-bold text-gray-800">Total: <span id="carrito-total" class="text-green-600 text-2xl">Gs. 0</span></div>
-          <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-            <button onclick="vaciarCarrito()" class="px-4 py-2.5 rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold flex items-center justify-center btn-hover touch-target transition-all duration-300 text-sm">
-              <i class="fas fa-trash mr-1.5"></i>Vaciar Carrito
-            </button>
-            <button onclick="enviarCarritoWhatsAppMejorado()" class="px-4 py-2.5 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold flex items-center justify-center btn-hover touch-target transition-all duration-300 text-sm">
-              <i class="fab fa-whatsapp mr-1.5"></i>Comprar por Whatsapp
-            </button>
-            <button class="modal-carrito-close px-4 py-2.5 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold transition-all duration-300 btn-hover text-sm">Cerrar</button>
-          </div>
         </div>
       </div>
     </div>
@@ -574,7 +616,7 @@
       </div></div>
       <div id="modal-filtros" class="fixed inset-0 z-50 hidden"><div class="absolute inset-0 bg-black bg-opacity-50" onclick="cerrarModalFiltros()"></div><div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6 max-h-[80vh] overflow-y-auto"><div class="flex items-center mb-6 pb-4 border-b"><button id="btn-volver-categorias" class="text-gray-500 mr-3 hidden"><i class="fas fa-chevron-left text-xl"></i></button><h3 id="modal-filtros-titulo" class="text-xl font-bold flex-1">Filtros</h3><button onclick="cerrarModalFiltros()" class="text-gray-500 text-2xl">×</button></div><div id="contenido-filtros"></div><div class="mt-6 pt-4 border-t"><div class="mb-6"><h4 class="font-semibold mb-3 text-lg">💰 Precio</h4><select id="filtro-precio-mobile" class="w-full p-3 border rounded-lg text-base"><option value="todos">💎 Todos los precios</option><option value="0-50000">💰 Gs. 0 - 50.000</option><option value="50000-100000">💵 Gs. 50.000 - 100.000</option><option value="100000-200000">💳 Gs. 100.000 - 200.000</option></select></div><button onclick="aplicarFiltrosMovil()" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg">Aplicar Filtros</button></div></div></div>
       <div id="grid-componentes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
-      <div id="loading-componentes" class="text-center py-16 hidden"><div class="inline-block animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mb-6"></div><p class="text-gray-700 text-lg font-medium">Cargando componentes...</p><p class="text-gray-500 text-sm mt-2">Buscando los mejores productos para ti</p></div>
+      <div id="loading-componentes" class="text-center py-16 hidden"><div class="inline-block animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mb-6"></div><p class="text-gray-700 text-lg font-medium">Cargando componentes...</p></div>
     </div></div></div>
     <div class="pagination-fixed backdrop-blur bg-white/90 border-t border-gray-200 safe-bottom mb-2 md:mb-4"><div class="container mx-auto px-4"><div class="hidden sm:flex justify-center items-center space-x-6"><button onclick="cambiarPagina(paginaActual - 1)" class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-xl shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 btn-hover font-semibold flex items-center gap-2"><i class="fas fa-chevron-left text-sm"></i>Anterior</button><span id="info-paginacion" class="text-base text-gray-700 font-semibold bg-gray-100 px-4 py-2 rounded-lg">Página <span class="text-blue-600">1</span> de <span class="text-blue-600">1</span></span><button onclick="cambiarPagina(paginaActual + 1)" class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-xl shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 btn-hover font-semibold flex items-center gap-2">Siguiente<i class="fas fa-chevron-right text-sm"></i></button></div><div class="sm:hidden flex justify-between items-center py-2 px-3"><button onclick="cambiarPagina(paginaActual - 1)" class="px-3 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg disabled:opacity-50 transition-all font-semibold text-sm flex items-center touch-target min-w-[70px] justify-center"><i class="fas fa-chevron-left mr-1"></i>Ant.</button><span id="info-paginacion-mobile" class="text-sm text-gray-700 font-medium px-3 py-1 bg-gray-100 rounded"><span class="text-blue-600">1</span>/<span class="text-blue-600">1</span></span><button onclick="cambiarPagina(paginaActual + 1)" class="px-3 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg disabled:opacity-50 transition-all font-semibold text-sm flex items-center touch-target min-w-[70px] justify-center">Sig.<i class="fas fa-chevron-right ml-1"></i></button></div></div></div>
   </section>
@@ -586,1040 +628,194 @@
   </footer>
   
   <!-- ========================================== -->
-  <!-- MODAL LOGIN (agregado para Supabase) -->
-  <!-- ========================================== -->
-  <div id="modal-login" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="cerrarModalLogin(event)">
-    <div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6" onclick="event.stopPropagation()">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="text-2xl font-bold">Iniciar Sesión</h3>
-        <button onclick="cerrarModalLogin()" class="text-2xl">&times;</button>
-      </div>
-      <form id="form-login-supabase">
-        <input type="email" id="login-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
-        <input type="password" id="login-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
-        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Ingresar</button>
-      </form>
-      <p class="text-center mt-4">¿No tienes cuenta? <button onclick="mostrarModalRegistro()" class="text-blue-600">Regístrate</button></p>
-    </div>
-  </div>
-  
-  <div id="modal-registro" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="cerrarModalRegistro(event)">
-    <div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6" onclick="event.stopPropagation()">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="text-2xl font-bold">Crear Cuenta</h3>
-        <button onclick="cerrarModalRegistro()" class="text-2xl">&times;</button>
-      </div>
-      <form id="form-registro-supabase">
-        <input type="text" id="reg-nombre" placeholder="Nombre completo" class="w-full p-3 border rounded-lg mb-3">
-        <input type="tel" id="reg-telefono" placeholder="Teléfono" class="w-full p-3 border rounded-lg mb-3">
-        <input type="email" id="reg-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
-        <input type="password" id="reg-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
-        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold">Registrarse</button>
-      </form>
-    </div>
-  </div>
-  
-  <!-- ========================================== -->
-  <!-- SCRIPTS -->
+  <!-- SCRIPTS (ORDEN CORRECTO) -->
   <!-- ========================================== -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js_config.js"></script>
-  <script src="js_supabase-auth.js"></script>
-  <script src="js_cart-supabase.js"></script>
   
-  <!-- Tu JavaScript original (el que ya funciona) va aquí -->
+  <!-- Configuración y utilidades -->
+  <script src="js_config.js"></script>
+  <script src="js_utils.js"></script>
+  
+  <!-- Autenticación -->
+  <script src="js_supabase-auth.js"></script>
+  
+  <!-- Carrito -->
+  <script src="js_cart.js"></script>
+  
+  <!-- App principal (inicialización) -->
+  <script src="ja_app.js"></script>
+  
+  <!-- Funciones específicas de la vista (se llaman desde onclick) -->
   <script>
-    // ============================================
-    // ============================================
-// JAVASCRIPT ORIGINAL DE INNOVAKIT - LIMPIO Y OPTIMIZADO
-// ============================================
-
-// Detectar soporte para WebP
-function supportsWebP() {
-    return new Promise(resolve => {
-        const webP = new Image();
-        webP.onload = webP.onerror = function () {
-            resolve(webP.height === 2);
-        };
-        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-    });
-}
-
-// Función para convertir rutas a WebP
-function toWebP(path) {
-    if (!path) return path;
-    return path.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-}
-
-// Sistema de kits desde JSON
-let productosKits = [];
-
-async function cargarKitsDesdeJSON() {
-    try {
-        const respuesta = await fetch('kits.json');
-        const todosLosKits = await respuesta.json();
-        productosKits = [[], [], []];
-        todosLosKits.forEach(kit => {
-            if (kit.kit_id >= 1 && kit.kit_id <= 3) {
-                productosKits[kit.kit_id - 1] = kit.productos.map(producto => ({
-                    img: producto.imagenes || [],
-                    nombre: producto.nombre,
-                    desc: producto.descripcion_larga,
-                    precio: producto.precio,
-                    documentos: producto.documentos || [],
-                    especificaciones: producto.especificaciones || []
-                }));
-            }
-        });
-        console.log('✅ Kits cargados:', productosKits);
-    } catch (error) {
-        console.error('❌ Error cargando kits:', error);
-        productosKits = [[], [], []];
-    }
-}
-
-// Función para parsear precios
-function parseGs(str) { 
-    return Number(String(str).replace(/[^\d]/g,'')) || 0; 
-}
-
-function formatearGs(n) { 
-    return 'Gs. ' + n.toLocaleString('es-PY'); 
-}
-
-// Base de datos de componentes sueltos
-let componentesSueltos = [];
-
-// Sistema de seguridad admin
-const SISTEMA_SEGURIDAD = {
-    password: "KitElectronica2024",
-    codigoSecreto: "9722",
-    urlToken: "innovakit_paraguay_admin",
-    intentos: 0,
-    maxIntentos: 3
-};
-
-// Sistema de reviews
-let reviews = JSON.parse(localStorage.getItem('innovakit_reviews')) || [
-    {
-        id: 1,
-        nombre: "Carlos Mendoza",
-        rating: 5,
-        comentario: "El kit AE101 es perfecto para empezar en electrónica. Los componentes son de buena calidad y el manual muy claro.",
-        producto: "37 SENSOR KIT (AE101)",
-        fecha: "2024-01-15",
-        verified: true,
-        pending: false,
-        tipo: "producto",
-        foto: null
-    },
-    {
-        id: 2,
-        nombre: "Ana Torres",
-        rating: 4,
-        comentario: "Buenísima calidad de componentes. El envío fue rápido y todo bien embalado. Recomendado!",
-        producto: "ESP32 Basic STARTER KIT (AE312)", 
-        fecha: "2024-01-12",
-        verified: true,
-        pending: false,
-        tipo: "producto",
-        foto: null
-    },
-    {
-        id: 3,
-        nombre: "Roberto Díaz",
-        rating: 5,
-        comentario: "Excelente soporte técnico. Me ayudaron con mi proyecto de la feria científica y gané el primer puesto!",
-        producto: "Kit de Robótica Acebott",
-        fecha: "2024-01-08",
-        verified: true,
-        pending: false,
-        tipo: "producto",
-        foto: null
-    }
-];
-
-// Variables globales
-let paginaActual = 1;
-const componentesPorPagina = 8;
-let carrito = [];
-let navegando = false;
-
-// ============================================
-// NOTIFICACIONES (VERSIÓN ÚNICA)
-// ============================================
-function mostrarNotificacion(mensaje, tipo = 'success') {
-    const notificacion = document.createElement('div');
-    notificacion.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300 ${
-        tipo === 'success' ? 'bg-green-500 text-white' : 
-        tipo === 'error' ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'
-    }`;
-    notificacion.textContent = mensaje;
-    document.body.appendChild(notificacion);
-    setTimeout(() => notificacion.classList.remove('translate-x-full'), 100);
-    setTimeout(() => {
-        notificacion.classList.add('translate-x-full');
-        setTimeout(() => notificacion.remove(), 300);
-    }, 3000);
-}
-
-// ============================================
-// CARRITO (VERSIÓN ÚNICA)
-// ============================================
-function agregarAlCarrito(nombre, precio) {
-    carrito.push({ nombre, precio });
-    actualizarContador();
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'add_to_cart', {
-            'event_category': 'carrito',
-            'event_label': nombre,
-            'value': parseGs(precio)
-        });
-    }
-    proporcionarFeedbackTactil();
-    mostrarNotificacion(`${nombre} agregado ✅`);
-    trackEvent('Carrito', 'Agregar Producto', nombre);
-}
-
-function actualizarContador() {
-    const count = carrito.length;
-    const desktopCount = document.getElementById("carrito-count-desktop");
-    const mobileCount = document.getElementById("carrito-count-mobile");
-    if (desktopCount) desktopCount.textContent = count;
-    if (mobileCount) mobileCount.textContent = count;
-}
-
-function renderizarCarrito() {
-    const cont = document.getElementById('carrito-lista');
-    if (!cont) return;
-    if (carrito.length === 0) {
-        cont.innerHTML = `<p class="text-gray-500 py-6 text-center">Tu carrito está vacío.</p>`;
-        document.getElementById('carrito-total').textContent = 'Gs. 0';
-        return;
-    }
-    let total = 0;
-    cont.innerHTML = carrito.map((p, i) => {
-        total += parseGs(p.precio);
-        return `
-            <div class="flex items-center justify-between py-3 border-b">
-                <div class="flex-1 pr-3">
-                    <p class="font-medium text-gray-800">${p.nombre}</p>
-                    <p class="text-sm text-green-700 font-semibold">${p.precio}</p>
-                </div>
-                <button onclick="quitarDelCarrito(${i})" class="text-red-500 hover:text-red-700 font-semibold px-2 py-1 rounded hover:bg-red-50 transition">✕</button>
-            </div>`;
-    }).join('');
-    document.getElementById('carrito-total').textContent = formatearGs(total);
-}
-
-function verCarrito() {
-    renderizarCarrito();
-    const modal = document.getElementById('modal-carrito');
-    if (modal) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        document.body.classList.add('modal-active');
-    }
-}
-
-function quitarDelCarrito(i) {
-    carrito.splice(i, 1);
-    actualizarContador();
-    renderizarCarrito();
-}
-
-function vaciarCarrito() {
-    if (carrito.length === 0) return;
-    if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
-        carrito = [];
-        actualizarContador();
-        renderizarCarrito();
-    }
-}
-
-function toggleModalCarrito(forceOpen = null) {
-    const modal = document.getElementById('modal-carrito');
-    if (!modal) return;
-    const willOpen = forceOpen === null ? modal.classList.contains('opacity-0') : forceOpen;
-    modal.classList.toggle('opacity-0', !willOpen);
-    modal.classList.toggle('pointer-events-none', !willOpen);
-    document.body.classList.toggle('modal-active', willOpen);
-}
-
-// ============================================
-// PRODUCTOS (CARGA Y RENDERIZADO)
-// ============================================
-async function cargarProductos() {
-    try {
-        console.log('🔄 Iniciando carga de productos...');
-        const response = await fetch('productos.json');
-        if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
-        const data = await response.json();
-        if (!data.componentesSueltos) throw new Error('Formato JSON inválido');
-        const webPSupported = await supportsWebP();
-        componentesSueltos = data.componentesSueltos.map(comp => ({
-            ...comp,
-            precioNum: comp.precioNum || parseGs(comp.precio),
-            imagen: webPSupported ? toWebP(comp.imagen) : comp.imagen,
-            imagenes: comp.imagenes ? comp.imagenes.map(img => webPSupported ? toWebP(img) : img) : []
-        }));
-        console.log(`✅ Cargados ${componentesSueltos.length} productos`);
-        if (!document.getElementById('vista-componentes-sueltos').classList.contains('hidden')) {
-            renderizarComponentesSueltos();
-        }
-    } catch (error) {
-        console.error('❌ Error cargando productos:', error);
-        const grid = document.getElementById('grid-componentes');
-        if (grid) {
-            grid.innerHTML = `<div class="col-span-full text-center py-8"><div class="text-red-500 text-4xl mb-2">⚠️</div><p class="text-red-600 font-semibold">Error cargando productos</p><button onclick="cargarProductos()" class="mt-3 px-4 py-2 bg-blue-500 text-white rounded">Reintentar</button></div>`;
-        }
-    }
-}
-
-function renderizarComponentesSueltos() {
-    const grid = document.getElementById('grid-componentes');
-    if (!grid) return;
-    if (!componentesSueltos || componentesSueltos.length === 0) {
-        grid.innerHTML = `<div class="col-span-full text-center py-8"><div class="text-yellow-500 text-4xl mb-2">🔄</div><p class="text-gray-700">Cargando productos...</p></div>`;
-        return;
+    // Variables globales necesarias para la vista de componentes
+    let paginaActual = 1;
+    const componentesPorPagina = 8;
+    let componentesSueltos = [];
+    let productosKits = [[], [], []];
+    
+    // Función para ver productos de un kit (se llama desde los botones)
+    function verProductosKit(kitId) {
+      console.log('Ver productos del kit:', kitId);
+      // Esta función debe implementarse según la lógica original
+      window.location.href = `/productos-kit.html?kit=${kitId}`;
     }
     
-    const buscarInput = document.getElementById('buscar-componente');
-    const filtroPrecio = document.getElementById('filtro-precio');
-    const filtroTexto = buscarInput ? buscarInput.value.toLowerCase() : '';
-    const filtroPrecioValor = filtroPrecio ? filtroPrecio.value : 'todos';
-    
-    let componentesFiltrados = componentesSueltos.filter(comp => {
-        const coincideTexto = !filtroTexto || comp.nombre.toLowerCase().includes(filtroTexto);
-        let coincidePrecio = true;
-        if (filtroPrecioValor !== 'todos') {
-            const [min, max] = filtroPrecioValor.split('-').map(Number);
-            const precioNum = comp.precioNum || parseGs(comp.precio);
-            coincidePrecio = precioNum >= min && precioNum <= max;
-        }
-        return coincideTexto && coincidePrecio;
-    });
-    
-    const totalComponentes = componentesFiltrados.length;
-    const totalPaginas = Math.ceil(totalComponentes / componentesPorPagina);
-    const inicio = (paginaActual - 1) * componentesPorPagina;
-    const fin = inicio + componentesPorPagina;
-    const componentesPagina = componentesFiltrados.slice(inicio, fin);
-    
-    if (componentesPagina.length === 0) {
-        grid.innerHTML = `<div class="col-span-full text-center py-8"><div class="text-gray-400 text-4xl mb-2">🔍</div><p class="text-gray-700 font-semibold">No se encontraron productos</p><button onclick="limpiarFiltros()" class="mt-3 px-4 py-2 bg-blue-500 text-white rounded">Mostrar todos</button></div>`;
-    } else {
-        grid.innerHTML = componentesPagina.map(comp => `
-            <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition duration-300 cursor-pointer flex flex-col h-full min-h-[350px]" onclick="mostrarModalProducto(${comp.id})">
-                <div class="p-3 flex-grow min-h-[130px]">
-                    <img src="${comp.imagen}" alt="${comp.nombre}" class="w-full h-40 object-contain mb-2 rounded" loading="lazy">
-                    <h3 class="font-semibold text-base line-clamp-2">${comp.nombre}</h3>
-                    ${comp.categoria ? `<p class="text-xs text-gray-500 mt-1">${comp.categoria}</p>` : ''}
-                </div>
-                <div class="px-3"><p class="text-green-600 font-bold text-base">${comp.precio}</p></div>
-                <div class="p-3 pt-1"><div class="flex items-center justify-between"><span class="px-2 py-1 text-xs rounded-full ${comp.stock === 'disponible' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">${comp.stock === 'disponible' ? 'En stock' : 'Sin stock'}</span><button class="text-blue-600 hover:text-blue-800 font-semibold text-xs">Ver detalles ›</button></div></div>
-            </div>
-        `).join('');
-    }
-    
-    const infoPaginacion = document.getElementById('info-paginacion');
-    const infoPaginacionMobile = document.getElementById('info-paginacion-mobile');
-    if (infoPaginacion) infoPaginacion.innerHTML = `Página <span class="text-blue-600">${paginaActual}</span> de <span class="text-blue-600">${totalPaginas || 1}</span>`;
-    if (infoPaginacionMobile) infoPaginacionMobile.innerHTML = `<span class="text-blue-600">${paginaActual}</span>/<span class="text-blue-600">${totalPaginas || 1}</span>`;
-    
-    const botones = document.querySelectorAll('.pagination-fixed button');
-    if (botones.length >= 2) {
-        botones[0].disabled = paginaActual === 1;
-        botones[1].disabled = paginaActual === totalPaginas || totalPaginas === 0;
-    }
-}
-
-function cambiarPagina(nuevaPagina) {
-    paginaActual = nuevaPagina;
-    renderizarComponentesSueltos();
-    document.getElementById('grid-componentes').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function limpiarFiltros() {
-    paginaActual = 1;
-    const buscarInput = document.getElementById('buscar-componente');
-    if (buscarInput) buscarInput.value = '';
-    const filtroPrecio = document.getElementById('filtro-precio');
-    if (filtroPrecio) filtroPrecio.value = 'todos';
-    renderizarComponentesSueltos();
-    mostrarNotificacion('Filtros limpiados ✅');
-}
-
-function verComponentesSueltos() {
-    document.getElementById('main-content').style.display = 'none';
-    document.getElementById('vista-productoskit').classList.add('hidden');
-    document.getElementById('vista-asesorias').classList.add('hidden');
-    document.getElementById('vista-componentes-sueltos').classList.remove('hidden');
-    paginaActual = 1;
-    if (componentesSueltos && componentesSueltos.length > 0) {
-        renderizarComponentesSueltos();
-    } else {
-        cargarProductos().then(() => renderizarComponentesSueltos());
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// ============================================
-// MODAL DE PRODUCTO
-// ============================================
-function mostrarModalProducto(id) {
-    const producto = componentesSueltos.find(comp => comp.id === id);
-    if (!producto) {
-        mostrarNotificacion('❌ Producto no encontrado');
-        return;
-    }
-    try {
-        document.getElementById('modal-producto-nombre').textContent = producto.nombre;
-        document.getElementById('modal-producto-precio').textContent = producto.precio;
-        document.getElementById('modal-producto-descripcion').textContent = producto.descripcion || 'Descripción no disponible';
-        document.getElementById('modal-producto-imagen').src = producto.imagen;
-        
-        const stockElement = document.getElementById('modal-producto-stock');
-        const disponible = producto.stock === 'disponible';
-        stockElement.textContent = disponible ? 'En stock' : 'Sin existencias';
-        stockElement.className = `ml-4 px-2 py-1 text-xs rounded-full ${disponible ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`;
-        
-        const especElement = document.getElementById('modal-producto-especificaciones');
-        if (producto.especificaciones && producto.especificaciones.length > 0) {
-            especElement.innerHTML = producto.especificaciones.map(spec => `<div class="flex"><span class="mr-2">•</span><span>${spec}</span></div>`).join('');
-        } else {
-            especElement.innerHTML = '<p class="text-gray-500">No hay especificaciones disponibles</p>';
-        }
-        
-        const imagenes = producto.imagenes || [producto.imagen];
-        for (let i = 0; i < 4; i++) {
-            const thumb = document.getElementById(`modal-producto-thumb${i + 1}`);
-            if (thumb) {
-                if (imagenes[i]) {
-                    thumb.src = imagenes[i];
-                    thumb.style.display = 'block';
-                    thumb.onclick = () => document.getElementById('modal-producto-imagen').src = imagenes[i];
-                } else {
-                    thumb.style.display = 'none';
-                }
-            }
-        }
-        
+    // Función para agregar producto al carrito desde el modal
+    function agregarProductoAlCarrito() {
+      const nombre = document.getElementById('modal-producto-nombre')?.textContent || '';
+      const precioText = document.getElementById('modal-producto-precio')?.textContent || '0';
+      const precio = parseInt(precioText.replace(/[^0-9]/g, '')) || 0;
+      if (nombre && precio) {
+        agregarAlCarrito(Date.now(), nombre, precio, '');
         toggleModalProducto();
-        setTimeout(() => {
-            const reviewsContainer = document.getElementById('modal-producto-reviews');
-            if (reviewsContainer) reviewsContainer.innerHTML = renderizarReviewsEnModal(producto.nombre);
-        }, 100);
-    } catch (error) {
-        console.error('Error:', error);
-        mostrarNotificacion('❌ Error al cargar detalles');
+      }
     }
-}
-
-function toggleModalProducto() {
-    const modal = document.getElementById('modal-producto');
-    const isOpening = modal.classList.contains('opacity-0');
-    modal.classList.toggle('opacity-0');
-    modal.classList.toggle('pointer-events-none');
-    document.body.classList.toggle('modal-active', isOpening);
-    if (window.innerWidth <= 768) {
-        document.body.style.overflow = isOpening ? 'hidden' : '';
+    
+    function comprarProductoWhatsApp() {
+      const nombre = document.getElementById('modal-producto-nombre')?.textContent || '';
+      const precioText = document.getElementById('modal-producto-precio')?.textContent || '0';
+      window.open(`https://wa.me/595972292392?text=${encodeURIComponent(`¡Hola! Quiero comprar: ${nombre} - ${precioText}`)}`, '_blank');
+      toggleModalProducto();
     }
-}
-
-function comprarProductoWhatsApp() {
-    const productoNombre = document.getElementById('modal-producto-nombre').textContent;
-    const productoPrecio = document.getElementById('modal-producto-precio').textContent;
-    const mensaje = `¡Hola! Quiero comprar: ${productoNombre} - ${productoPrecio}`;
-    const url = `https://wa.me/595972292392?text=${encodeURIComponent(mensaje)}`;
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'whatsapp_single_product', { 'event_category': 'conversion', 'event_label': productoNombre });
+    
+    function toggleModalProducto() {
+      const modal = document.getElementById('modal-producto');
+      if (modal) {
+        modal.classList.toggle('opacity-0');
+        modal.classList.toggle('pointer-events-none');
+      }
     }
-    toggleModalProducto();
-    window.open(url, "_blank");
-    mostrarNotificacion('✅ Producto enviado a WhatsApp');
-}
-
-function agregarProductoAlCarrito() {
-    const producto = componentesSueltos.find(comp => comp.nombre === document.getElementById('modal-producto-nombre').textContent);
-    if (producto) {
-        agregarAlCarrito(producto.nombre, producto.precio);
-        toggleModalProducto();
+    
+    function toggleModal() {
+      const modal = document.getElementById('modal-descripcion');
+      if (modal) {
+        modal.classList.toggle('opacity-0');
+        modal.classList.toggle('pointer-events-none');
+      }
     }
-}
-
-// ============================================
-// KITS
-// ============================================
-function verProductosKit(idx) {
-    navegarA('productoskit', { kitId: idx });
-    const productos = productosKits[idx - 1];
-    const portadas = ["png/portada_kit1.webp", "png/portadados.webp", "png/portada_kit3.svg"];
-    const titulosPersonalizados = ["🔌 Kits de Electrónica - Kuongshun", "⚡ Kits Proyectos - Learning", "🤖 Kits de Robótica - Acebott"];
     
-    let html = `<div class="portada-sin-margenes"><img src="${portadas[idx-1]}" alt="${titulosPersonalizados[idx-1]}" class="w-full h-full object-cover"><div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"><h2 class="text-3xl sm:text-4xl font-bold text-white text-center px-4">${titulosPersonalizados[idx-1]}</h2></div></div><div class="container mx-auto px-4 mt-8"><h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Productos incluidos</h3><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">`;
-    
-    productos.forEach((p, i) => {
-        let slidesHTML = '';
-        if (p.img && p.img.length > 0) {
-            p.img.forEach(imgSrc => {
-                slidesHTML += `<div class="swiper-slide flex justify-center items-center"><img src="${imgSrc}" alt="${p.nombre}" class="max-h-48 object-contain" loading="lazy"></div>`;
-            });
-        } else {
-            slidesHTML = `<div class="swiper-slide flex justify-center items-center"><div class="w-full h-48 bg-gray-200 flex items-center justify-center"><span class="text-gray-500">Imagen no disponible</span></div></div>`;
-        }
-        
-        html += `<div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-6 flex flex-col items-center w-full max-w-xs mx-auto mb-6 text-center"><div class="swiper swiper-producto-${i} w-full h-48 rounded-lg overflow-hidden mb-4" onclick="event.stopPropagation()"><div class="swiper-wrapper">${slidesHTML}</div><div class="swiper-button-next" onclick="event.stopPropagation()"></div><div class="swiper-button-prev" onclick="event.stopPropagation()"></div></div><h4 class="text-lg sm:text-xl font-bold mb-2">${p.nombre}</h4><p class="mb-2 text-sm sm:text-base text-gray-700">${acortarTexto(p.desc, 100)}</p><a href="javascript:void(0)" onclick="mostrarModalKitProducto(${idx}, ${i})" class="text-blue-600 hover:text-blue-800 hover:underline mb-3 text-sm font-semibold inline-block">Ver detalles completos...</a><p class="mb-4 text-lg font-semibold text-green-600">${p.precio}</p><div class="flex flex-col gap-2 w-full mt-auto"><button onclick="comprarProductoKitWhatsApp('${p.nombre.replace(/'/g, "\\'")}', '${p.precio}')" class="w-full bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition">Comprar por WhatsApp</button><button onclick="event.stopPropagation(); agregarAlCarrito('${p.nombre.replace(/'/g, "\\'")}', '${p.precio}')" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">Agregar al carrito</button></div></div>`;
-    });
-    
-    html += `</div></div>`;
-    document.getElementById('productoskit-content').innerHTML = html;
-    
-    productos.forEach((_, i) => {
-        const swiperElement = document.querySelector(`.swiper-producto-${i}`);
-        if (swiperElement) {
-            try {
-                new Swiper(swiperElement, {
-                    loop: true,
-                    navigation: { nextEl: `.swiper-producto-${i} .swiper-button-next`, prevEl: `.swiper-producto-${i} .swiper-button-prev` },
-                    preventClicks: true,
-                    preventClicksPropagation: true
-                });
-            } catch (error) {
-                console.warn(`Error en Swiper ${i}:`, error);
-            }
-        }
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function acortarTexto(texto, maxLength = 120) {
-    if (texto.length <= maxLength) return texto;
-    return texto.substring(0, maxLength) + '...';
-}
-
-// ============================================
-// MODAL DETALLE KIT (CARRUSEL)
-// ============================================
-let productoDetalleActual = null;
-
-function mostrarModalKitProducto(kitId, productoIndex) {
-    const kitIndex = kitId - 1;
-    const productos = productosKits[kitIndex];
-    if (!productos || !productos[productoIndex]) return;
-    const producto = productos[productoIndex];
-    
-    const componentes = obtenerComponentesDeDescripcion(producto.desc);
-    const descripcionCorta = obtenerDescripcionSinComponentes(producto.desc);
-    
-    const modalHTML = `<div class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4 modal-kit-detalle"><div class="absolute inset-0" onclick="cerrarModalKitDetalle()"></div><div class="bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden flex flex-col relative z-10"><div class="flex justify-between items-center p-6 border-b"><h3 class="text-2xl font-bold text-gray-800">${producto.nombre}</h3><button onclick="cerrarModalKitDetalle()" class="text-gray-500 hover:text-gray-700 text-2xl p-2 hover:bg-gray-100 rounded-full transition">×</button></div><div class="flex-1 overflow-y-auto p-6"><div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><div class="space-y-4"><div class="relative bg-gray-100 rounded-xl overflow-hidden" style="height: 400px;"><img id="imagen-principal-detalle" src="${producto.img && producto.img[0] ? producto.img[0] : 'png/placeholder.png'}" alt="${producto.nombre}" class="w-full h-full object-contain p-4 cursor-zoom-in" onclick="ampliarImagenDetalle(this.src)">${producto.img && producto.img.length > 1 ? `<button onclick="event.stopPropagation(); cambiarImagenDetalle(-1)" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 z-20">←</button><button onclick="event.stopPropagation(); cambiarImagenDetalle(1)" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 z-20">→</button><div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm"><span id="contador-imagen-detalle">1</span> / <span id="total-imagenes-detalle">${producto.img.length}</span></div>` : ''}</div>${producto.img && producto.img.length > 1 ? `<div id="miniaturas-detalle" class="flex gap-2 overflow-x-auto py-2">${producto.img.map((imgSrc, imgIndex) => `<img src="${imgSrc}" alt="Miniatura ${imgIndex + 1}" class="w-20 h-20 object-cover rounded-lg border-2 ${imgIndex === 0 ? 'border-blue-500' : 'border-transparent hover:border-blue-300'} cursor-pointer transition-all" onclick="event.stopPropagation(); seleccionarImagenDetalle(${imgIndex})">`).join('')}</div>` : ''}</div><div class="space-y-6"><div><h4 class="text-lg font-semibold text-gray-800 mb-2">Descripción completa</h4><p class="text-gray-700 leading-relaxed">${descripcionCorta || 'Sin descripción disponible.'}</p></div>${componentes.length > 0 ? `<div><h4 class="text-lg font-semibold text-gray-800 mb-2">📦 Componentes incluidos</h4><div class="bg-blue-50 rounded-lg p-4 max-h-60 overflow-y-auto"><div class="grid grid-cols-1 md:grid-cols-2 gap-2">${componentes.map(comp => `<div class="flex items-start"><span class="text-blue-500 mr-2 mt-1">•</span><span class="text-gray-700 text-sm">${comp}</span></div>`).join('')}</div></div></div>` : ''}${producto.especificaciones && producto.especificaciones.length > 0 ? `<div><h4 class="text-lg font-semibold text-gray-800 mb-2">✨ Características técnicas</h4><ul class="space-y-2">${producto.especificaciones.map(spec => `<li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span><span class="text-gray-700">${spec}</span></li>`).join('')}</ul></div>` : ''}<div class="pt-4 border-t"><h4 class="text-lg font-semibold text-gray-800 mb-2">Precio</h4><p class="text-3xl font-bold text-green-600">${producto.precio || 'Consultar'}</p></div>${producto.documentos && producto.documentos.length > 0 ? `<div><h4 class="text-lg font-semibold text-gray-800 mb-2">📄 Documentos disponibles</h4><div class="space-y-2">${producto.documentos.map(doc => `<a href="${doc.archivo}" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800 hover:underline"><i class="fas fa-file-download mr-2"></i>${doc.nombre}</a>`).join('')}</div></div>` : ''}</div></div></div><div class="border-t p-6 bg-gray-50"><div class="flex flex-col sm:flex-row gap-3"><button onclick="cerrarModalKitDetalle()" class="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg font-semibold transition flex-1"><i class="fas fa-times mr-2"></i>Cerrar</button><a href="https://wa.me/595972292392?text=${encodeURIComponent('¡Hola! Quiero información sobre: ' + producto.nombre)}" target="_blank" class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition flex-1 text-center"><i class="fab fa-whatsapp mr-2"></i>Consultar por WhatsApp</a></div></div></div></div><div id="modal-zoom-detalle" class="hidden fixed inset-0 bg-black bg-opacity-90 z-[60] flex items-center justify-center p-4" onclick="cerrarZoomDetalle()"><div class="relative max-w-4xl w-full"><img id="imagen-zoom-detalle" src="" alt="Zoom" class="w-full h-auto max-h-[80vh] object-contain"><button onclick="cerrarZoomDetalle()" class="absolute top-4 right-4 text-white text-3xl bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center">×</button></div></div>`;
-    
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
-    productoDetalleActual = { producto: producto, imagenIndex: 0, totalImagenes: producto.img ? producto.img.length : 0 };
-    if (producto.img && producto.img.length > 1) setTimeout(() => actualizarMiniaturasActivas(), 100);
-    document.body.style.overflow = 'hidden';
-}
-
-function obtenerDescripcionSinComponentes(descripcion) {
-    if (!descripcion) return '';
-    const idxComponentes = descripcion.toLowerCase().indexOf('como:');
-    return idxComponentes !== -1 ? descripcion.substring(0, idxComponentes + 5).trim() : descripcion;
-}
-
-function obtenerComponentesDeDescripcion(descripcion) {
-    if (!descripcion) return [];
-    const componentes = [];
-    const idxComo = descripcion.toLowerCase().indexOf('como:');
-    if (idxComo === -1) return [];
-    const seccionComponentes = descripcion.substring(idxComo + 5).trim();
-    const separadores = /[-–—•]|\d+\./;
-    const partes = seccionComponentes.split(separadores);
-    partes.forEach(parte => {
-        const componente = parte.replace(/^[\s:;,.]*/, '').replace(/[\s:;,.]*$/, '').trim();
-        if (componente && componente.length > 2 && !componente.match(/^\d+$/)) componentes.push(componente);
-    });
-    return componentes;
-}
-
-function cambiarImagenDetalle(direccion) {
-    if (!productoDetalleActual || !productoDetalleActual.producto.img || productoDetalleActual.totalImagenes <= 1) return;
-    productoDetalleActual.imagenIndex = (productoDetalleActual.imagenIndex + direccion + productoDetalleActual.totalImagenes) % productoDetalleActual.totalImagenes;
-    actualizarImagenDetalle();
-}
-
-function seleccionarImagenDetalle(index) {
-    if (!productoDetalleActual) return;
-    productoDetalleActual.imagenIndex = index;
-    actualizarImagenDetalle();
-}
-
-function actualizarImagenDetalle() {
-    if (!productoDetalleActual || !productoDetalleActual.producto.img) return;
-    const nuevaImagen = productoDetalleActual.producto.img[productoDetalleActual.imagenIndex];
-    const imgPrincipal = document.getElementById('imagen-principal-detalle');
-    if (imgPrincipal) imgPrincipal.src = nuevaImagen;
-    const contador = document.getElementById('contador-imagen-detalle');
-    if (contador) contador.textContent = productoDetalleActual.imagenIndex + 1;
-    actualizarMiniaturasActivas();
-}
-
-function actualizarMiniaturasActivas() {
-    if (!productoDetalleActual) return;
-    const miniaturas = document.querySelectorAll('#miniaturas-detalle img');
-    miniaturas.forEach((thumb, index) => {
-        thumb.classList.toggle('border-blue-500', index === productoDetalleActual.imagenIndex);
-        thumb.classList.toggle('border-transparent', index !== productoDetalleActual.imagenIndex);
-    });
-}
-
-function ampliarImagenDetalle(src) {
-    const modalZoom = document.getElementById('modal-zoom-detalle');
-    const imgZoom = document.getElementById('imagen-zoom-detalle');
-    if (modalZoom && imgZoom) {
-        imgZoom.src = src;
-        modalZoom.classList.remove('hidden');
+    function enviarPorWhatsApp() {
+      const nombre = document.querySelector('input[name="nombre"]')?.value || '';
+      const institucion = document.querySelector('input[name="institucion"]')?.value || '';
+      const email = document.querySelector('input[name="email"]')?.value || '';
+      const telefono = document.querySelector('input[name="telefono"]')?.value || '';
+      const tipo = document.querySelector('select[name="tipo_proyecto"]')?.value || '';
+      const proyecto = document.querySelector('textarea[name="proyecto"]')?.value || '';
+      window.open(`https://wa.me/595972292392?text=${encodeURIComponent(`¡Hola! Solicito asesoría:%0A%0ANombre: ${nombre}%0AInstitución: ${institucion}%0AEmail: ${email}%0ATeléfono: ${telefono}%0ATipo: ${tipo}%0A%0ADescripción: ${proyecto}`)}`, '_blank');
     }
-}
-
-function cerrarModalKitDetalle() {
-    const modal = document.querySelector('.modal-kit-detalle');
-    if (modal) {
-        modal.style.opacity = '0';
-        setTimeout(() => { modal.remove(); document.body.style.overflow = ''; productoDetalleActual = null; }, 300);
+    
+    // Funciones de filtros (placeholder)
+    function mostrarModalFiltros() {}
+    function cerrarModalFiltros() {}
+    function aplicarFiltrosMovil() {}
+    function limpiarFiltros() {}
+    function aplicarFiltroCategoria(cat) { console.log('Filtrar por:', cat); }
+    function cambiarPagina(nueva) { paginaActual = nueva; }
+    function instalarPWA() {}
+    function renderizarComponentesSueltos() {}
+    
+    // Funciones de proyectos
+    function mostrarModalProyecto() {
+      const modal = document.getElementById('proyecto-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+        // Resetear estrellas
+        document.querySelectorAll('#rating-stars i').forEach(s => {
+          s.classList.remove('fas', 'text-yellow-400');
+          s.classList.add('far');
+        });
+        document.getElementById('proyecto-rating').value = 0;
+      }
     }
-}
-
-function cerrarZoomDetalle() {
-    const modalZoom = document.getElementById('modal-zoom-detalle');
-    if (modalZoom) modalZoom.classList.add('hidden');
-}
-
-function comprarProductoKitWhatsApp(nombreProducto, precioProducto) {
-    const mensaje = `¡Hola! Quiero comprar: ${nombreProducto} - ${precioProducto}`;
-    window.open(`https://wa.me/595972292392?text=${encodeURIComponent(mensaje)}`, "_blank");
-    mostrarNotificacion('✅ Producto enviado a WhatsApp');
-}
-
-// ============================================
-// REVIEWS
-// ============================================
-function renderStars(rating) {
-    let stars = '';
-    for (let i = 1; i <= 5; i++) stars += i <= rating ? '<i class="fas fa-star star filled"></i>' : '<i class="far fa-star star"></i>';
-    return stars;
-}
-
-function renderizarReviewsEnModal(productoNombre) {
-    const reviewsProducto = reviews.filter(r => (r.producto.toLowerCase().includes(productoNombre.toLowerCase()) || productoNombre.toLowerCase().includes(r.producto.toLowerCase())) && !r.pending);
-    const promedio = reviewsProducto.length ? (reviewsProducto.reduce((s, r) => s + r.rating, 0) / reviewsProducto.length).toFixed(1) : 0;
-    let html = `<div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200"><div class="flex items-center gap-4 mb-3"><div class="text-3xl font-bold text-gray-800">${promedio}</div><div class="flex-1"><div class="rating-stars text-lg mb-1">${renderStars(Math.round(promedio))}</div><div class="text-sm text-gray-700">${reviewsProducto.length} ${reviewsProducto.length === 1 ? 'reseña' : 'reseñas'} • ${promedio} de 5</div></div></div><button onclick="mostrarModalReview('${productoNombre.replace(/'/g, "\\'")}')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition btn-hover"><i class="fas fa-plus mr-2"></i>Escribir Reseña</button></div>`;
-    if (reviewsProducto.length) {
-        html += '<div class="space-y-4 max-h-64 overflow-y-auto pr-2">';
-        reviewsProducto.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-        reviewsProducto.forEach(r => html += `<div class="review-card"><div class="flex justify-between items-start mb-3"><div class="flex-1"><div class="rating-stars mb-2">${renderStars(r.rating)}</div><h4 class="font-semibold text-gray-800">${r.nombre}</h4></div>${r.verified ? '<span class="verified-badge"><i class="fas fa-check"></i> Verificado</span>' : ''}</div><p class="text-gray-700 text-sm mb-3 leading-relaxed">${r.comentario}</p><div class="text-xs text-gray-500 flex justify-between items-center"><span>${new Date(r.fecha).toLocaleDateString('es-PY')}</span><span class="text-blue-600">${r.producto}</span></div></div>`);
-        html += '</div>';
-    } else {
-        html += `<div class="text-center py-8 text-gray-500"><i class="fas fa-comments text-4xl mb-3 text-gray-300"></i><p class="font-semibold">Aún no hay reseñas</p><p class="text-sm mt-1">Sé el primero en compartir tu experiencia</p></div>`;
+    
+    function cerrarModalProyecto(event) {
+      if (event && event.target !== event.currentTarget) return;
+      const modal = document.getElementById('proyecto-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+      }
     }
-    return html;
-}
-
-let currentRating = 0;
-
-function mostrarModalReview(productoNombre) {
-    toggleModalProducto();
-    const modalHTML = `<div id="review-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" onclick="if(event.target===this) cerrarModalReview()"><div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6"><div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">Escribe tu Reseña</h3><button onclick="cerrarModalReview()" class="text-2xl">&times;</button></div><div class="mb-4 p-3 bg-blue-50 rounded-lg"><p class="text-sm text-blue-800 font-semibold">Producto:</p><p class="text-blue-900">${productoNombre}</p></div><form id="form-review" onsubmit="agregarReview(event, '${productoNombre.replace(/'/g, "\\'")}')"><div class="mb-4"><label class="block text-sm font-medium mb-2">Tu nombre *</label><input type="text" id="review-nombre" required class="w-full p-3 border rounded-lg"></div><div class="mb-4"><label class="block text-sm font-medium mb-2">Tu calificación *</label><div class="rating-input flex gap-1 text-2xl mb-2 justify-center">${[1,2,3,4,5].map(i => `<i class="far fa-star cursor-pointer text-gray-300 hover:text-yellow-400 transition" data-rating="${i}" onmouseover="previewStars(${i})" onmouseout="resetStars()" onclick="setRating(${i})"></i>`).join('')}</div><input type="hidden" id="review-rating" value="0"><div id="rating-text" class="text-center text-sm text-gray-500">Selecciona las estrellas</div></div><div class="mb-6"><label class="block text-sm font-medium mb-2">Tu experiencia *</label><textarea id="review-comentario" required rows="4" class="w-full p-3 border rounded-lg resize-none"></textarea></div><div class="flex gap-3"><button type="button" onclick="cerrarModalReview()" class="flex-1 bg-gray-200 py-3 rounded-lg font-semibold">Cancelar</button><button type="submit" id="submit-review" disabled class="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold opacity-50 cursor-not-allowed">Enviar</button></div></form></div></div>`;
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
-    currentRating = 0;
-}
-
-function previewStars(rating) {
-    const stars = document.querySelectorAll('.rating-input .fa-star');
-    const ratingText = document.getElementById('rating-text');
-    stars.forEach((star, i) => {
-        if (i < rating) { star.classList.add('fas', 'text-yellow-400'); star.classList.remove('far', 'text-gray-300'); }
-        else { star.classList.add('far', 'text-gray-300'); star.classList.remove('fas', 'text-yellow-400'); }
-    });
-    const textos = ["Selecciona las estrellas", "Malo", "Regular", "Bueno", "Muy bueno", "Excelente"];
-    if (ratingText) ratingText.textContent = textos[rating];
-}
-
-function resetStars() {
-    if (currentRating === 0) previewStars(0);
-    else previewStars(currentRating);
-}
-
-function setRating(rating) {
-    currentRating = rating;
-    document.getElementById('review-rating').value = rating;
-    const submitBtn = document.getElementById('submit-review');
-    if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('opacity-50', 'cursor-not-allowed'); }
-    previewStars(rating);
-}
-
-function cerrarModalReview() {
-    const modal = document.getElementById('review-modal');
-    if (modal) modal.remove();
-}
-
-function agregarReview(event, productoNombre) {
-    event.preventDefault();
-    const nombre = document.getElementById('review-nombre').value.trim();
-    const rating = parseInt(document.getElementById('review-rating').value);
-    const comentario = document.getElementById('review-comentario').value.trim();
-    if (rating === 0 || nombre.length < 2 || comentario.length < 10) { mostrarNotificacion('Complete todos los campos', 'error'); return; }
-    const nuevoReview = { id: Date.now(), nombre, rating, comentario, producto: productoNombre, fecha: new Date().toISOString().split('T')[0], verified: false, pending: true, tipo: "producto", foto: null };
-    reviews.push(nuevoReview);
-    localStorage.setItem('innovakit_reviews', JSON.stringify(reviews));
-    mostrarNotificacion('¡Gracias por tu reseña! La revisaremos pronto. 📝', 'success');
-    cerrarModalReview();
-}
-
-function cargarTestimoniosReales() {
-    const container = document.getElementById('testimonios-reales');
-    if (!container) return;
-    const proyectos = reviews.filter(r => r.tipo === 'proyecto' && r.verified && !r.pending && r.foto);
-    if (proyectos.length === 0) { container.innerHTML = `<div class="col-span-full text-center py-2"><i class="fas fa-camera text-4xl text-gray-300 mb-4"></i><p class="text-gray-700 font-semibold">Aún no hay proyectos compartidos</p></div>`; return; }
-    container.innerHTML = proyectos.slice(0, 6).map(p => `<div class="review-card transform hover:scale-105 transition duration-300"><div class="relative h-48 mb-4 rounded-xl overflow-hidden"><img src="${p.foto}" alt="Proyecto de ${p.nombre}" class="w-full h-full object-cover"><div class="absolute top-3 right-3 rating-stars text-white">${renderStars(p.rating)}</div></div><div class="p-4"><div class="flex items-center mb-3"><div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-3"><span class="text-white font-bold text-sm">${p.nombre.split(' ').map(n => n[0]).join('')}</span></div><div class="flex-1"><p class="font-semibold text-gray-800">${p.nombre}</p><p class="text-sm text-gray-500">${p.producto}</p></div></div><p class="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-3">"${p.comentario}"</p><div class="flex justify-between items-center text-xs text-gray-500"><span>${new Date(p.fecha).toLocaleDateString('es-PY')}</span><span class="verified-badge bg-green-100 text-green-800 px-2 py-1 rounded-full"><i class="fas fa-check mr-1"></i>Verificado</span></div></div></div>`).join('');
-}
-
-function mostrarModalProyecto() {
-    const modalHTML = `<div id="proyecto-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" onclick="if(event.target===this) cerrarModalProyecto()"><div class="bg-white rounded-2xl max-w-2xl w-full mx-4 p-6 max-h-[90vh] overflow-y-auto"><div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">Comparte tu Proyecto</h3><button onclick="cerrarModalProyecto()" class="text-2xl">&times;</button></div><form id="form-proyecto" onsubmit="agregarProyecto(event)"><div class="mb-6"><label class="block text-sm font-medium mb-2">Foto de tu proyecto *</label><div class="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer" onclick="document.getElementById('foto-proyecto').click()"><i class="fas fa-camera text-3xl text-gray-400 mb-2"></i><p class="text-gray-700 font-semibold">Haz clic para subir una foto</p><input type="file" id="foto-proyecto" accept="image/*" class="hidden" onchange="previewFotoProyecto(this)"></div><div id="foto-preview" class="mt-3 hidden"><img id="foto-preview-img" class="w-full h-48 object-cover rounded-lg"></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4"><div><input type="text" id="proyecto-nombre" placeholder="Tu nombre *" class="w-full p-3 border rounded-lg" required></div><div><input type="text" id="proyecto-titulo" placeholder="Nombre del proyecto *" class="w-full p-3 border rounded-lg" required></div></div><div class="mb-4"><label class="block text-sm font-medium mb-2">Calificación *</label><div class="rating-input flex gap-1 text-2xl mb-2 justify-center">${[1,2,3,4,5].map(i => `<i class="far fa-star cursor-pointer text-gray-300 hover:text-yellow-400 transition" data-rating="${i}" onmouseover="previewStarsProyecto(${i})" onmouseout="resetStarsProyecto()" onclick="setRatingProyecto(${i})"></i>`).join('')}</div><input type="hidden" id="proyecto-rating" value="0"><div id="proyecto-rating-text" class="text-center text-sm text-gray-500">Selecciona las estrellas</div></div><div class="mb-6"><textarea id="proyecto-comentario" placeholder="Cuéntanos sobre tu proyecto *" required rows="4" class="w-full p-3 border rounded-lg resize-none"></textarea></div><div class="flex gap-3"><button type="button" onclick="cerrarModalProyecto()" class="flex-1 bg-gray-200 py-3 rounded-lg font-semibold">Cancelar</button><button type="submit" id="submit-proyecto" disabled class="flex-1 bg-green-600 text-white py-3 rounded-lg font-semibold opacity-50 cursor-not-allowed">Compartir</button></div></form></div></div>`;
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
-}
-
-let proyectoCurrentRating = 0;
-
-function previewStarsProyecto(rating) {
-    const stars = document.querySelectorAll('#proyecto-modal .rating-input .fa-star');
-    stars.forEach((star, i) => {
-        if (i < rating) { star.classList.add('fas', 'text-yellow-400'); star.classList.remove('far', 'text-gray-300'); }
-        else { star.classList.add('far', 'text-gray-300'); star.classList.remove('fas', 'text-yellow-400'); }
-    });
-}
-
-function resetStarsProyecto() { if (proyectoCurrentRating === 0) previewStarsProyecto(0); else previewStarsProyecto(proyectoCurrentRating); }
-
-function setRatingProyecto(rating) {
-    proyectoCurrentRating = rating;
-    document.getElementById('proyecto-rating').value = rating;
-    const submitBtn = document.getElementById('submit-proyecto');
-    if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('opacity-50', 'cursor-not-allowed'); }
-    previewStarsProyecto(rating);
-}
-
-function previewFotoProyecto(input) {
-    const file = input.files[0];
-    if (file) {
+    
+    function previewFotoProyecto(input) {
+      const file = input.files[0];
+      if (file) {
         const reader = new FileReader();
-        reader.onload = e => { document.getElementById('foto-preview-img').src = e.target.result; document.getElementById('foto-preview').classList.remove('hidden'); };
+        reader.onload = function(e) {
+          const preview = document.getElementById('foto-preview');
+          const img = document.getElementById('foto-preview-img');
+          img.src = e.target.result;
+          preview.classList.remove('hidden');
+        };
         reader.readAsDataURL(file);
-    }
-}
-
-function cerrarModalProyecto() {
-    const modal = document.getElementById('proyecto-modal');
-    if (modal) modal.remove();
-}
-
-function agregarProyecto(event) {
-    event.preventDefault();
-    const nombre = document.getElementById('proyecto-nombre').value.trim();
-    const titulo = document.getElementById('proyecto-titulo').value.trim();
-    const rating = parseInt(document.getElementById('proyecto-rating').value);
-    const comentario = document.getElementById('proyecto-comentario').value.trim();
-    const fotoInput = document.getElementById('foto-proyecto');
-    if (rating === 0 || !fotoInput.files[0] || nombre.length < 2 || comentario.length < 20) { mostrarNotificacion('Complete todos los campos', 'error'); return; }
-    const reader = new FileReader();
-    reader.onload = e => {
-        const nuevo = { id: Date.now(), nombre, rating, comentario, producto: titulo, fecha: new Date().toISOString().split('T')[0], verified: false, pending: true, tipo: "proyecto", foto: e.target.result };
-        reviews.push(nuevo);
-        localStorage.setItem('innovakit_reviews', JSON.stringify(reviews));
-        mostrarNotificacion('¡Gracias por compartir! Lo revisaremos pronto. 📸', 'success');
-        cerrarModalProyecto();
-        setTimeout(cargarTestimoniosReales, 1000);
-    };
-    reader.readAsDataURL(fotoInput.files[0]);
-}
-
-// ============================================
-// ADMIN Y SEGURIDAD
-// ============================================
-function inicializarSistemaSeguridad() {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('admin') === SISTEMA_SEGURIDAD.urlToken) {
-        window.accesoAdminPermitido = true;
-        history.replaceState({}, '', window.location.pathname);
-    }
-}
-
-function mostrarPanelReviewsSeguro() {
-    if (!window.accesoAdminPermitido) {
-        if (SISTEMA_SEGURIDAD.intentos >= SISTEMA_SEGURIDAD.maxIntentos) { mostrarNotificacion('Acceso bloqueado', 'error'); return; }
-        const metodo = prompt("🔐 ACCESO ADMIN\n1 - Contraseña\n2 - Código personal");
-        let acceso = false;
-        if (metodo === "1") acceso = prompt("Contraseña:") === SISTEMA_SEGURIDAD.password;
-        else if (metodo === "2") acceso = prompt("Código:") === SISTEMA_SEGURIDAD.codigoSecreto;
-        else { mostrarNotificacion('Opción no válida', 'error'); return; }
-        if (!acceso) { SISTEMA_SEGURIDAD.intentos++; mostrarNotificacion(`Acceso denegado. ${SISTEMA_SEGURIDAD.maxIntentos - SISTEMA_SEGURIDAD.intentos} intentos restantes.`, 'error'); return; }
-    }
-    SISTEMA_SEGURIDAD.intentos = 0;
-    window.accesoAdminPermitido = true;
-    const pendientes = reviews.filter(r => r.pending);
-    const panelHTML = `<div class="admin-overlay fixed inset-0 bg-black bg-opacity-70 z-[9999]" onclick="cerrarPanelReviews()"></div><div class="admin-panel fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl p-6 z-[10000] max-w-2xl w-full max-h-[90vh] overflow-y-auto"><div class="flex justify-between items-center mb-6"><h2 class="text-2xl font-bold">👑 Panel Admin</h2><button onclick="cerrarPanelReviews()" class="text-2xl">&times;</button></div><div class="mb-4 flex gap-2"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full">${pendientes.length} Pendientes</span><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">${reviews.filter(r => r.verified && !r.pending).length} Aprobados</span></div>${pendientes.length ? `<div class="space-y-4">${pendientes.map(r => `<div class="border-2 border-yellow-400 bg-yellow-50 p-4 rounded-xl"><div class="flex justify-between"><div><div class="rating-stars mb-2">${renderStars(r.rating)}</div><p class="font-semibold">${r.nombre}</p><p class="text-sm">${r.producto}</p></div><span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs">Pendiente</span></div><p class="my-3">"${r.comentario}"</p><div class="flex gap-2 justify-end"><button onclick="aprobarReview(${r.id})" class="bg-green-600 text-white px-4 py-2 rounded-lg">✅ Aprobar</button><button onclick="rechazarReview(${r.id})" class="bg-red-600 text-white px-4 py-2 rounded-lg">❌ Rechazar</button></div></div>`).join('')}</div>` : '<div class="text-center py-8 text-gray-500">No hay reseñas pendientes</div>'}<div class="text-center mt-6"><button onclick="cerrarPanelReviews()" class="bg-blue-600 text-white px-6 py-2 rounded-lg">Cerrar</button></div></div>`;
-    document.body.insertAdjacentHTML('beforeend', panelHTML);
-}
-
-function cerrarPanelReviews() { document.querySelector('.admin-overlay')?.remove(); document.querySelector('.admin-panel')?.remove(); }
-
-function aprobarReview(id) {
-    const idx = reviews.findIndex(r => r.id === id);
-    if (idx !== -1) { reviews[idx].verified = true; reviews[idx].pending = false; localStorage.setItem('innovakit_reviews', JSON.stringify(reviews)); mostrarNotificacion('✅ Reseña aprobada'); cerrarPanelReviews(); }
-}
-
-function rechazarReview(id) {
-    if (confirm('¿Rechazar esta reseña?')) { reviews = reviews.filter(r => r.id !== id); localStorage.setItem('innovakit_reviews', JSON.stringify(reviews)); mostrarNotificacion('❌ Reseña rechazada'); cerrarPanelReviews(); }
-}
-
-function agregarBotonAdminSeguro() {
-    const btn = document.createElement('button');
-    btn.innerHTML = '👑';
-    btn.className = 'fixed bottom-24 left-6 z-50 bg-purple-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-purple-700 transition hidden';
-    btn.onclick = mostrarPanelReviewsSeguro;
-    btn.id = 'boton-admin-secreto';
-    document.body.appendChild(btn);
-    document.addEventListener('keydown', e => { if (e.ctrlKey && e.altKey && e.key === 'i') { document.getElementById('boton-admin-secreto')?.classList.toggle('hidden'); setTimeout(() => document.getElementById('boton-admin-secreto')?.classList.add('hidden'), 10000); } });
-}
-
-// ============================================
-// NAVEGACIÓN Y UTILIDADES
-// ============================================
-function volverAlInicio() {
-    navegarA('inicio');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    trackEvent('Navegación', 'Logo Click', 'Volver al inicio');
-}
-
-function verAsesorias() { navegarA('asesorias'); }
-
-function toggleModal() {
-    const modal = document.getElementById('modal-descripcion');
-    const isOpening = modal.classList.contains('opacity-0');
-    modal.classList.toggle('opacity-0');
-    modal.classList.toggle('pointer-events-none');
-    document.body.classList.toggle('modal-active', isOpening);
-    if (window.innerWidth <= 768) document.body.style.overflow = isOpening ? 'hidden' : '';
-}
-
-function enviarPorWhatsApp() {
-    const nombre = document.querySelector('input[name="nombre"]')?.value || '';
-    const institucion = document.querySelector('input[name="institucion"]')?.value || '';
-    const email = document.querySelector('input[name="email"]')?.value || '';
-    const telefono = document.querySelector('input[name="telefono"]')?.value || '';
-    const tipoProyecto = document.querySelector('select[name="tipo_proyecto"]')?.value || '';
-    const proyecto = document.querySelector('textarea[name="proyecto"]')?.value || '';
-    const fechaLimite = document.querySelector('input[name="fecha_limite"]')?.value || '';
-    const mensaje = `¡Hola! Solicito asesoría:%0A%0ANombre: ${nombre}%0AInstitución: ${institucion}%0AEmail: ${email}%0ATeléfono: ${telefono}%0ATipo: ${tipoProyecto}%0AFecha: ${fechaLimite || 'No especificada'}%0A%0ADescripción: ${proyecto}`;
-    window.open(`https://wa.me/595972292392?text=${mensaje}`, '_blank');
-}
-
-function proporcionarFeedbackTactil() { if ('vibrate' in navigator) navigator.vibrate(50); }
-
-function trackEvent(categoria, accion, etiqueta = '') {
-    if (typeof gtag !== 'undefined') gtag('event', accion, { 'event_category': categoria, 'event_label': etiqueta });
-    console.log(`📊 ${categoria} - ${accion} - ${etiqueta}`);
-}
-
-function navegarA(vista, data = {}) {
-    if (navegando) return;
-    navegando = true;
-    document.getElementById('main-content').style.display = 'none';
-    document.getElementById('vista-productoskit').classList.add('hidden');
-    document.getElementById('vista-asesorias').classList.add('hidden');
-    document.getElementById('vista-componentes-sueltos').classList.add('hidden');
-    switch(vista) {
-        case 'inicio': document.getElementById('main-content').style.display = ''; history.pushState({vista: 'inicio'}, '', '#inicio'); break;
-        case 'productoskit': document.getElementById('vista-productoskit').classList.remove('hidden'); history.pushState({vista: 'productoskit', data}, '', `#productoskit-${data.kitId}`); if (data.kitId) setTimeout(() => { verProductosKit(data.kitId); navegando = false; }, 50); break;
-        case 'asesorias': document.getElementById('vista-asesorias').classList.remove('hidden'); history.pushState({vista: 'asesorias'}, '', '#asesorias'); setTimeout(() => { navegando = false; }, 50); break;
-        case 'componentes': document.getElementById('vista-componentes-sueltos').classList.remove('hidden'); history.pushState({vista: 'componentes'}, '', '#componentes'); if (typeof verComponentesSueltos === 'function') setTimeout(() => { verComponentesSueltos(); navegando = false; }, 50); break;
-    }
-    setTimeout(() => { navegando = false; }, 100);
-}
-
-// ============================================
-// INICIALIZACIÓN
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Inicializando Innovakit...');
-    inicializarSistemaSeguridad();
-    agregarBotonAdminSeguro();
-    cargarKitsDesdeJSON();
-    cargarProductos();
-    cargarTestimoniosReales();
-    
-    const buscarInput = document.getElementById('buscar-componente');
-    if (buscarInput) {
-        let timeout;
-        buscarInput.addEventListener('input', () => { clearTimeout(timeout); timeout = setTimeout(() => { paginaActual = 1; renderizarComponentesSueltos(); }, 300); });
+      }
     }
     
-    const filtroPrecio = document.getElementById('filtro-precio');
-    if (filtroPrecio) filtroPrecio.addEventListener('change', () => { paginaActual = 1; renderizarComponentesSueltos(); });
-    
-    document.querySelectorAll('#modal-producto .modal-overlay, #modal-producto .modal-close').forEach(el => el.addEventListener('click', toggleModalProducto));
-    document.querySelectorAll('#modal-carrito .modal-overlay, #modal-carrito .modal-carrito-close').forEach(el => el.addEventListener('click', () => toggleModalCarrito(false)));
-    
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') { toggleModalProducto(); toggleModalCarrito(false); } });
-    
-    if (!history.state) history.replaceState({vista: 'inicio'}, '', '#inicio');
-    if (window.location.hash) {
-        const hash = window.location.hash;
-        if (hash.includes('productoskit')) { const kitId = hash.split('-')[1]; if (kitId) navegarA('productoskit', { kitId: parseInt(kitId) }); }
-        else if (hash === '#asesorias') navegarA('asesorias');
-        else if (hash === '#componentes') navegarA('componentes');
+    async function enviarProyecto(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('proyecto-nombre')?.value || '';
+      const rating = document.getElementById('proyecto-rating')?.value || 0;
+      const comentario = document.getElementById('proyecto-comentario')?.value || '';
+      const fotoInput = document.getElementById('foto-proyecto');
+      
+      if (rating == 0 || !fotoInput.files[0] || !nombre || comentario.length < 10) {
+        mostrarNotificacion('Completa todos los campos', 'error');
+        return;
+      }
+      
+      mostrarNotificacion('Proyecto enviado para revisión', 'success');
+      cerrarModalProyecto();
+      document.getElementById('form-proyecto')?.reset();
+      document.getElementById('foto-preview')?.classList.add('hidden');
     }
     
-    console.log('✅ Innovakit inicializado');
-});
-
-function enviarCarritoWhatsAppMejorado() {
-    if (carrito.length === 0) { mostrarNotificacion("Tu carrito está vacío 🛒"); return; }
-    const cuerpo = carrito.map((p, i) => `${i+1}. ${p.nombre} - ${p.precio}`).join('%0A');
-    const total = carrito.reduce((s, p) => s + parseGs(p.precio), 0);
-    const url = `https://wa.me/595972292392?text=¡Hola! Quiero comprar:%0A%0A${cuerpo}%0A%0A*Total: ${formatearGs(total)}*`;
-    carrito = [];
-    actualizarContador();
-    window.open(url, "_blank");
-    mostrarNotificacion('✅ Pedido enviado, revisa WhatsApp');
-}
-
-function instalarPWA() {
-    if (window.deferredPrompt) {
-        window.deferredPrompt.prompt();
-        window.deferredPrompt.userChoice.then(choice => { if (choice.outcome === 'accepted') console.log('✅ PWA instalada'); window.deferredPrompt = null; });
-    }
-}
-
-window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); window.deferredPrompt = e; console.log('📱 PWA disponible'); });
-
-    // ============================================
-// FUNCIONES DE LOGIN (AGREGADAS MANUALMENTE)
-// ============================================
-
-function mostrarModalLogin() {
-    console.log('📱 Abriendo modal login');
-    const modal = document.getElementById('modal-login');
-    if (modal) {
-        modal.classList.remove('hidden');
-        modal.style.display = 'flex';
-    } else {
-        console.error('❌ Modal login no encontrado');
-    }
-}
-
-function cerrarModalLogin(event) {
-    if (event && event.target !== event.currentTarget) return;
-    console.log('📱 Cerrando modal login');
-    const modal = document.getElementById('modal-login');
-    if (modal) {
-        modal.classList.add('hidden');
-        modal.style.display = 'none';
-    }
-}
-
-function mostrarModalRegistro() {
-    console.log('📱 Abriendo modal registro');
-    const modal = document.getElementById('modal-registro');
-    if (modal) {
-        modal.classList.remove('hidden');
-        modal.style.display = 'flex';
-    }
-}
-
-function cerrarModalRegistro(event) {
-    if (event && event.target !== event.currentTarget) return;
-    console.log('📱 Cerrando modal registro');
-    const modal = document.getElementById('modal-registro');
-    if (modal) {
-        modal.classList.add('hidden');
-        modal.style.display = 'none';
-    }
-}
-
-// Event listeners para formularios de Supabase
-document.getElementById('form-login-supabase')?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
-    console.log('🔐 Intentando login:', email);
-    
-    if (typeof iniciarSesionSupabase === 'function') {
-        if (await iniciarSesionSupabase(email, password)) {
-            cerrarModalLogin();
-            location.reload();
-        }
-    } else {
-        alert('Error: iniciarSesionSupabase no está definida. Revisa js_supabase-auth.js');
-    }
-});
-
-document.getElementById('form-registro-supabase')?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const nombre = document.getElementById('reg-nombre').value;
-    const telefono = document.getElementById('reg-telefono').value;
-    const email = document.getElementById('reg-email').value;
-    const password = document.getElementById('reg-password').value;
-    console.log('📝 Intentando registro:', email);
-    
-    if (typeof registrarUsuarioSupabase === 'function') {
-        if (await registrarUsuarioSupabase(email, password, nombre, telefono)) {
-            cerrarModalRegistro();
-            mostrarModalLogin();
-        }
-    } else {
-        alert('Error: registrarUsuarioSupabase no está definida. Revisa js_supabase-auth.js');
-    }
-});
-
-// Funciones adicionales necesarias
-function extraerComponentes(desc) { return []; }
-function formatearComponentesEnColumnas(c) { return ''; }
-function mostrarDescripcionCompleta(p) {}
-function comprarPorWhatsApp(n, p) {}
-function aplicarFiltroCategoria(c) {}
-function mostrarModalFiltros() {}
-function cerrarModalFiltros() {}
-function aplicarFiltrosMovil() {}
-function verTodosLosPedidos() { console.log('Ver pedidos'); }
-function initAdvancedLazyLoading() {}
-function initDarkMode() {}
-
-  </script>
-  <!-- Botón flotante para admin (solo visible cuando eres admin) -->
-<div id="admin-float-btn" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: none;">
-    <a href="/admin.html" class="bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center w-14 h-14">
-        <i class="fas fa-crown text-xl"></i>
-    </a>
-</div>
-
-<script>
-// Mostrar botón admin solo si el usuario es admin
-async function mostrarBotonAdmin() {
-    if (typeof supabaseClient !== 'undefined' && supabaseClient) {
-        const { data: { user } } = await supabaseClient.auth.getUser();
-        if (user) {
-            const { data: perfil } = await supabaseClient
-                .from('perfiles')
-                .select('es_admin')
-                .eq('id', user.id)
-                .single();
-            if (perfil?.es_admin) {
-                document.getElementById('admin-float-btn').style.display = 'block';
+    // Inicializar estrellas
+    document.addEventListener('DOMContentLoaded', () => {
+      const stars = document.querySelectorAll('#rating-stars i');
+      stars.forEach(star => {
+        star.addEventListener('click', function() {
+          const rating = parseInt(this.dataset.rating);
+          document.getElementById('proyecto-rating').value = rating;
+          stars.forEach((s, i) => {
+            if (i < rating) {
+              s.classList.remove('far');
+              s.classList.add('fas', 'text-yellow-400');
+            } else {
+              s.classList.remove('fas', 'text-yellow-400');
+              s.classList.add('far');
             }
-        }
-    }
-}
-document.addEventListener('DOMContentLoaded', mostrarBotonAdmin);
-</script>
+          });
+        });
+      });
+    });
+    
+    // Exponer funciones al window
+    window.verProductosKit = verProductosKit;
+    window.agregarProductoAlCarrito = agregarProductoAlCarrito;
+    window.comprarProductoWhatsApp = comprarProductoWhatsApp;
+    window.toggleModalProducto = toggleModalProducto;
+    window.toggleModal = toggleModal;
+    window.enviarPorWhatsApp = enviarPorWhatsApp;
+    window.mostrarModalProyecto = mostrarModalProyecto;
+    window.cerrarModalProyecto = cerrarModalProyecto;
+    window.previewFotoProyecto = previewFotoProyecto;
+    window.enviarProyecto = enviarProyecto;
+    window.mostrarModalFiltros = mostrarModalFiltros;
+    window.cerrarModalFiltros = cerrarModalFiltros;
+    window.aplicarFiltrosMovil = aplicarFiltrosMovil;
+    window.limpiarFiltros = limpiarFiltros;
+    window.aplicarFiltroCategoria = aplicarFiltroCategoria;
+    window.cambiarPagina = cambiarPagina;
+    window.instalarPWA = instalarPWA;
+  </script>
+  
+  <!-- Botón flotante para admin -->
+  <div id="admin-float-btn" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: none;">
+    <a href="/admin.html" class="bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center w-14 h-14">
+      <i class="fas fa-crown text-xl"></i>
+    </a>
+  </div>
 </body>
 </html>

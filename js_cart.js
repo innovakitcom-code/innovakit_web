@@ -2,9 +2,6 @@
 // js_cart.js - Sistema de carrito completo
 // ============================================
 
-// Variables globales del carrito
-let carritoGlobal = [];
-
 // Cargar carrito del usuario
 async function cargarCarrito() {
     if (!usuarioActual) {

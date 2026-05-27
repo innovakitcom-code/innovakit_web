@@ -540,3 +540,24 @@ img {
     width: 100%;
     border-radius: 8px;
 }
+/* Sección impresora 3D */
+#impresora-destacada {
+    position: relative;
+    overflow: hidden;
+}
+
+#impresora-destacada::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(126,183,74,0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Badge flotante */
+#impresora-destacada .absolute.-top-3.-right-3 {
+    animation: pulseSoft 2s infinite;
+}

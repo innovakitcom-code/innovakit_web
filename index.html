@@ -239,7 +239,109 @@
     </section>
     
     <hr class="my-6 border-gray-300">
+   <!-- ========================================== -->
+<!-- SECCIÓN IMPRESORA 3D DESTACADA -->
+<!-- Mantiene armonía con el diseño existente -->
+<!-- ========================================== -->
+<section id="impresora-destacada" class="py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-100 scroll-mt-20 relative overflow-hidden">
     
+    <!-- Elementos decorativos sutiles (no rompen armonía) -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-green-200/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
+        
+        <!-- Etiqueta superior (opcional, como en otras secciones) -->
+        <div class="text-center mb-6">
+            <span class="inline-block px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-sm font-semibold text-blue-700 shadow-sm">
+                🖨️ NOVEDAD | IMPRESORA 3D
+            </span>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            
+            <!-- COLUMNA IZQUIERDA: IMAGEN -->
+            <div class="lg:w-1/2 relative group">
+                <!-- Sombra difuminada detrás (más sutil) -->
+                <div class="absolute -inset-3 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
+                
+                <!-- Tarjeta blanca con sombra -->
+                <div class="relative bg-white rounded-2xl shadow-xl p-4 transform transition-all duration-500 group-hover:scale-[1.02]">
+                    <img src="https://placehold.co/600x500/png?text=Impresora+3D" 
+                         alt="Impresora 3D Innovakit" 
+                         class="w-full h-auto object-contain rounded-xl transition-all duration-500" 
+                         loading="lazy">
+                </div>
+                
+                <!-- Badge flotante -->
+                <div class="absolute -top-3 -right-3 bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-full text-sm font-bold shadow-lg flex items-center gap-1 animate-pulse-soft">
+                    <span>✨</span> NUEVO
+                </div>
+            </div>
+            
+            <!-- COLUMNA DERECHA: TEXTO Y BOTONES -->
+            <div class="lg:w-1/2 text-center lg:text-left space-y-6">
+                
+                <!-- Título principal -->
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800">
+                    Impresora 3D 
+                    <span class="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Bambu Lab P1S</span>
+                </h3>
+                
+                <!-- Descripción -->
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                    Hardware y software bien pulidos y maduros, con base en comentarios del mundo real. 
+            Lleva tus proyectos al siguiente nivel con precisión profesional.
+                </p>
+                
+                <!-- Características en grilla (2 columnas) -->
+                <div class="grid grid-cols-2 gap-3 py-2">
+                    <div class="flex items-center gap-2 text-sm md:text-base">
+                        <i class="fas fa-check-circle text-green-500 text-base"></i>
+                        <span class="text-gray-700">Precisión 0.1mm</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm md:text-base">
+                        <i class="fas fa-check-circle text-green-500 text-base"></i>
+                        <span class="text-gray-700">Volumen 256x256x256mm</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm md:text-base">
+                        <i class="fas fa-check-circle text-green-500 text-base"></i>
+                        <span class="text-gray-700">Pantalla táctil a color</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm md:text-base">
+                        <i class="fas fa-check-circle text-green-500 text-base"></i>
+                        <span class="text-gray-700">Conectividad WiFi + App</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm md:text-base">
+                        <i class="fas fa-check-circle text-green-500 text-base"></i>
+                        <span class="text-gray-700">Impresión multicolor</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm md:text-base">
+                        <i class="fas fa-check-circle text-green-500 text-base"></i>
+                        <span class="text-gray-700">Cámara integrada</span>
+                    </div>
+                </div>
+                
+                <!-- Botones -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+                    <button onclick="verPaginaImpresora()" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all duration-300 btn-hover flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+                        <i class="fas fa-eye"></i> Ver página exclusiva
+                    </button>
+                    <button onclick="consultarImpresoraWhatsApp()" class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold transition-all duration-300 btn-hover flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+                        <i class="fab fa-whatsapp"></i> Consultar precio
+                    </button>
+                </div>
+                
+                <!-- Texto adicional (envíos) -->
+                <p class="text-sm text-gray-400 pt-2 flex items-center justify-center lg:justify-start gap-2">
+                    <i class="fas fa-truck"></i> Envíos a todo Paraguay
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <i class="fas fa-shield-alt"></i> Garantía incluida
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- MISIÓN -->
     <section id="mision" class="p-6 sm:p-12 text-center bg-white scroll-mt-20 card-elevated mx-4">
       <i class="fas fa-bullseye text-4xl sm:text-5xl text-green-600 mb-4 animate-bounce-subtle"></i>
@@ -261,64 +363,7 @@
     </section>
     
     <hr class="my-6 border-gray-300">
-    <!-- ========================================== -->
-<!-- SECCIÓN IMPRESORA 3D DESTACADA -->
-<!-- ========================================== -->
-<section id="impresora-destacada" class="py-12 px-4 bg-gradient-to-br from-gray-50 to-white scroll-mt-20">
-    <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            
-            <!-- Imagen - Izquierda -->
-            <div class="md:w-1/2 relative group">
-                <div class="absolute -inset-4 bg-gradient-to-r from-innovakit-green/20 to-innovakit-blue/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                <div class="relative bg-white rounded-2xl shadow-2xl p-4 transform transition duration-500 group-hover:scale-105">
-                    <img src="png/impresora3d.png" alt="Impresora 3D Innovakit" class="w-full h-auto object-contain rounded-xl" loading="lazy">
-                </div>
-                <!-- Badge flotante -->
-                <div class="absolute -top-3 -right-3 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                    🔥 NUEVO
-                </div>
-            </div>
-            
-            <!-- Texto y botones - Derecha -->
-            <div class="md:w-1/2 text-center md:text-left space-y-5">
-                <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-2">
-                    🖨️ Tecnología de precisión
-                </div>
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-800">
-                    Impresora 3D <span class="text-innovakit-green">[Nombre del modelo]</span>
-                </h3>
-                <p class="text-gray-600 text-lg leading-relaxed">
-                    Lleva tus proyectos al siguiente nivel con nuestra impresora 3D de alta calidad. 
-                    Ideal para prototipos, piezas personalizadas y proyectos de robótica.
-                </p>
-                
-                <!-- Lista de características -->
-                <div class="grid grid-cols-2 gap-3 py-3">
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i><span class="text-sm">Precisión 0.1mm</span></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i><span class="text-sm">Volumen 220x220x250mm</span></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i><span class="text-sm">Pantalla táctil</span></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i><span class="text-sm">Conectividad WiFi</span></div>
-                </div>
-                
-                <!-- Botones -->
-                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
-                    <button onclick="verDetallesImpresora()" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition btn-hover flex items-center justify-center gap-2">
-                        <i class="fas fa-eye"></i> Ver detalles
-                    </button>
-                    <button onclick="comprarImpresora()" class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold transition btn-hover flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Consultar precio
-                    </button>
-                </div>
-                
-                <!-- Envío gratis (opcional) -->
-                <p class="text-sm text-gray-400 pt-3">
-                    <i class="fas fa-truck"></i> Envíos a todo Paraguay
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+    
     <!-- BENEFICIOS -->
     <section class="p-4 sm:p-6 text-center bg-white mb-6">
       <h3 class="text-2xl sm:text-3xl font-bold mb-6 animate-fade-in-up">¿Por qué elegir Innovakit?</h3>

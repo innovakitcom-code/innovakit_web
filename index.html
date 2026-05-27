@@ -15,21 +15,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   
-  <!-- Favicon -->
+  <!-- ========================================== -->
+  <!-- FAVICON -->
+  <!-- ========================================== -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#7eb74a">
   
-  <!-- Meta tags -->
+  <!-- ========================================== -->
+  <!-- META TAGS -->
+  <!-- ========================================== -->
   <title>Innovakit - Kits de Electrónica en Paraguay</title>
-  <meta name="description" content="🤖 Innovakit - Kits de electrónica en Paraguay ✅ Arduino, Motores, Sensores, robótica educativa ✅ Envíos a Asunción y todo el país">
-  <meta name="keywords" content="Arduino paraguay, kits electrónica Asunción, sensores, motores, robótica educativa">
+  <meta name="description" content="🤖 Innovakit - Kits de electrónica en Paraguay ✅ Arduino, Motores, Sensores, robótica educativa ✅ Envíos a Asunción y todo el país ✅ Asesoría técnica para proyectos y ferias científicas">
+  <meta name="keywords" content="Arduino paraguay, kits electrónica Asunción, sensores, motores, robótica educativa, componentes electrónicos Paraguay, feria científica, proyectos escolares, innovakit Paraguay">
   <meta name="author" content="Innovakit">
   <meta name="robots" content="index, follow">
   
-  <!-- PWA -->
+  <!-- PWA Meta Tags -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -37,51 +42,80 @@
   
   <!-- Open Graph -->
   <meta property="og:title" content="Innovakit - Kits y componentes de Electrónica en Paraguay">
-  <meta property="og:description" content="Aprende, crea y destaca con los kits de Innovakit.">
+  <meta property="og:description" content="Aprende, crea y destaca con los kits de Innovakit. Proyectos electrónicos con acompañamiento profesional en Paraguay.">
   <meta property="og:image" content="https://wwwinnovakit.com/png/wthpp_web.png">
   <meta property="og:url" content="https://wwwinnovakit.com">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Innovakit">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Innovakit - Kits de Electrónica en Paraguay">
-  <meta name="twitter:description" content="Aprende electrónica de forma simple con kits completos.">
+  <meta name="twitter:description" content="Aprende electrónica de forma simple con kits completos y asesoría profesional.">
   <meta name="twitter:image" content="https://wwwinnovakit.com/png/wthpp_web.png">
   
-  <!-- CSS -->
+  <!-- ========================================== -->
+  <!-- CSS - EXTERNO (ESTILOS EXTRAÍDOS) -->
+  <!-- ========================================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Tus estilos -->
+  <!-- Tus estilos extraídos -->
   <link rel="stylesheet" href="css_style.css">
-  <link rel="stylesheet" href="css_animation.css">
+  <link rel="stylesheet" href="css_animations.css">
   
   <style>
-    /* Estilos adicionales mínimos que no están en los CSS externos */
+    /* ============================================
+       REDUCCIÓN DE ESPACIO EN TESTIMONIOS
+       ============================================ */
     #testimonios {
         padding-top: 1.5rem !important;
         padding-bottom: 2rem !important;
     }
-    #testimonios h3 { margin-bottom: 0.5rem !important; }
-    #testimonios .text-gray-700.text-center { margin-bottom: 1rem !important; }
-    #testimonios .flex.justify-center.mb-8 { margin-bottom: 0.75rem !important; }
-    #testimonios .text-center.text-gray-700.text-sm.mb-6 { margin-bottom: 0.75rem !important; }
-    #testimonios-reales { gap: 1rem !important; }
-    #testimonios-reales > div { margin-bottom: 0 !important; }
+    #testimonios h3 {
+        margin-bottom: 0.5rem !important;
+    }
+    #testimonios .text-gray-700.text-center {
+        margin-bottom: 1rem !important;
+    }
+    #testimonios .flex.justify-center.mb-8 {
+        margin-bottom: 0.75rem !important;
+    }
+    #testimonios .text-center.text-gray-700.text-sm.mb-6 {
+        margin-bottom: 0.75rem !important;
+    }
+    #testimonios-reales {
+        gap: 1rem !important;
+    }
+    #testimonios-reales > div {
+        margin-bottom: 0 !important;
+    }
     
+    /* ============================================
+       ARREGLAR ESTRELLAS INTERACTIVAS
+       ============================================ */
     #rating-stars i {
         cursor: pointer !important;
         pointer-events: auto !important;
         user-select: none !important;
         transition: all 0.2s ease;
     }
-    #rating-stars i:hover { transform: scale(1.1); }
-    #proyecto-modal { z-index: 9999 !important; }
-    .modal, [id*="modal"] { z-index: 9998; }
+    #rating-stars i:hover {
+        transform: scale(1.1);
+    }
+    #proyecto-modal {
+        z-index: 9999 !important;
+    }
+    .modal, [id*="modal"] {
+        z-index: 9998;
+    }
   </style>
   
   <script>
@@ -124,7 +158,7 @@
         <a href="#contacto" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Contacto</a>
         
         <!-- Carrito Desktop -->
-        <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-3 py-2 rounded-lg shadow hover:bg-yellow-400 font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500 btn-hover" aria-label="Ver carrito">
+        <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-3 py-2 rounded-lg shadow hover:bg-yellow-400 font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500 btn-hover" aria-label="Ver carrito de compras">
           🛒 Carrito (<span id="carrito-count-desktop" aria-live="polite">0</span>)
         </button>
         
@@ -196,8 +230,12 @@
           <div class="hidden md:block animate-slide-in-right" aria-hidden="true">
             <img src="vector-electrónica-tablet.svg" alt="Electrónica desktop" class="w-64 md:w-80 h-auto object-contain drop-shadow-xl mx-auto contrast-enhanced">
           </div>
+          <div class="imagen-tablet hidden md:hidden lg:hidden animate-slide-in-right" aria-hidden="true">
+            <img src="vector-electrónica.svg" alt="Electrónica tablet" class="w-64 md:w-80 h-auto object-contain drop-shadow-xl mx-auto contrast-enhanced">
+          </div>
         </div>
       </div>
+      <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-16 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
     </section>
     
     <hr class="my-6 border-gray-300">
@@ -295,7 +333,7 @@
     
     <hr class="my-6 border-gray-300">
     
-    <!-- TESTIMONIOS -->
+    <!-- TESTIMONIOS (VERSIÓN REDUCIDA) -->
     <section id="testimonios" class="pt-8 pb-12 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div class="max-w-6xl mx-auto px-4">
         <h3 class="text-3xl font-bold text-center mb-2 animate-fade-in-up">Proyectos de Nuestros Clientes</h3>
@@ -312,7 +350,9 @@
       </div>
     </section>
     
-    <!-- MODAL COMPARTIR PROYECTO -->
+    <!-- ========================================== -->
+    <!-- MODAL PARA COMPARTIR PROYECTO -->
+    <!-- ========================================== -->
     <div id="proyecto-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="cerrarModalProyecto(event)">
       <div class="bg-white rounded-2xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
         <div class="p-6">
@@ -349,11 +389,11 @@
             <div class="mb-4">
               <label class="block text-sm font-semibold mb-1">Tu calificación *</label>
               <div id="rating-stars" class="flex gap-1 text-2xl mb-2">
-                <i class="far fa-star cursor-pointer" data-rating="1"></i>
-                <i class="far fa-star cursor-pointer" data-rating="2"></i>
-                <i class="far fa-star cursor-pointer" data-rating="3"></i>
-                <i class="far fa-star cursor-pointer" data-rating="4"></i>
-                <i class="far fa-star cursor-pointer" data-rating="5"></i>
+                <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-rating="1"></i>
+                <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-rating="2"></i>
+                <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-rating="3"></i>
+                <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-rating="4"></i>
+                <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-rating="5"></i>
               </div>
               <input type="hidden" id="proyecto-rating" value="0">
             </div>
@@ -411,9 +451,15 @@
   <!-- ========================================== -->
   <!-- VISTAS OCULTAS -->
   <!-- ========================================== -->
-  
   <section id="vista-productoskit" class="hidden p-6 sm:p-12 bg-gradient-to-br from-gray-50 to-white min-h-screen">
-    <div id="productoskit-content" class="max-w-7xl mx-auto"></div>
+    <!-- LOADER - se muestra mientras carga -->
+    <div id="loader-productoskit" class="flex flex-col items-center justify-center py-20 hidden">
+        <div class="loading-spinner mb-4"></div>
+        <p class="text-gray-600 font-medium">Cargando productos...</p>
+        <p class="text-gray-400 text-sm mt-1">Esto puede tomar unos segundos</p>
+    </div>
+    <!-- Contenido real -->
+    <div id="productoskit-content" class="max-w-7xl mx-auto" style="display: none;"></div>
     <div class="mt-12 flex justify-center animate-fade-in-up">
       <button onclick="volverAlInicio()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl font-semibold text-lg btn-hover touch-target btn-icon">
         <i class="fas fa-arrow-left mr-2"></i>Volver al inicio
@@ -421,7 +467,7 @@
     </div>
   </section>
   
-  <!-- Modal descripción genérico -->
+  <!-- Modal descripción -->
   <div id="modal-descripcion" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50 backdrop-blur-sm">
     <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-60 transition-opacity duration-300"></div>
     <div class="modal-container bg-white w-11/12 md:max-w-4xl mx-auto rounded-2xl shadow-2xl z-50 overflow-y-auto transform transition-all duration-300 scale-95">
@@ -449,6 +495,32 @@
           <a id="modal-whatsapp" href="#" target="_blank" class="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold flex items-center justify-center btn-hover touch-target btn-icon">
             <i class="fab fa-whatsapp mr-2"></i>Comprar por WhatsApp
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Carrito -->
+  <div id="modal-carrito" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50 backdrop-blur-sm">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-60 transition-opacity duration-300"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-2xl shadow-2xl z-50 overflow-y-auto transform transition-all duration-300 scale-95 max-h-[90vh]">
+      <div class="py-6 px-8">
+        <div class="flex justify-between items-center pb-4 mb-6 border-b border-gray-200">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 flex items-center"><i class="fas fa-shopping-cart mr-3 text-blue-600"></i>Tu carrito</h2>
+          <button class="modal-carrito-close text-gray-500 hover:text-gray-700 text-2xl font-bold transition-colors duration-300 btn-hover p-2 rounded-full hover:bg-gray-100">✕</button>
+        </div>
+        <div id="carrito-lista" class="divide-y divide-gray-200 max-h-96 overflow-y-auto"></div>
+        <div class="flex flex-col sm:flex-row items-center justify-between mt-8 pt-6 border-t border-gray-200 gap-4">
+          <div class="text-xl font-bold text-gray-800">Total: <span id="carrito-total" class="text-green-600 text-2xl">Gs. 0</span></div>
+          <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+            <button onclick="vaciarCarritoSupabase()" class="px-4 py-2.5 rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold flex items-center justify-center btn-hover touch-target transition-all duration-300 text-sm">
+              <i class="fas fa-trash mr-1.5"></i>Vaciar Carrito
+            </button>
+            <button onclick="enviarCarritoWhatsAppMejorado()" class="px-4 py-2.5 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold flex items-center justify-center btn-hover touch-target transition-all duration-300 text-sm">
+              <i class="fab fa-whatsapp mr-1.5"></i>Comprar por Whatsapp
+            </button>
+            <button class="modal-carrito-close px-4 py-2.5 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold transition-all duration-300 btn-hover text-sm">Cerrar</button>
+          </div>
         </div>
       </div>
     </div>
@@ -498,7 +570,7 @@
               <button onclick="comprarProductoWhatsApp()" class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold text-sm md:text-base flex items-center justify-center btn-hover touch-target">
                 <i class="fab fa-whatsapp mr-2 text-lg"></i>Comprar por WhatsApp
               </button>
-              <button onclick="agregarProductoAlCarrito()" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-sm md:text-base flex items-center justify-center btn-hover touch-target">
+              <button onclick="agregarProductoAlCarritoSupabase()" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-sm md:text-base flex items-center justify-center btn-hover touch-target">
                 <i class="fas fa-cart-plus mr-2 text-lg"></i>Agregar al carrito
               </button>
               <button onclick="toggleModalProducto()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg font-semibold text-sm md:text-base transition-all btn-hover">Seguir viendo productos</button>
@@ -589,35 +661,46 @@
   
   <!-- Vista Componentes Sueltos -->
   <section id="vista-componentes-sueltos" class="hidden bg-gradient-to-b from-gray-50 to-white min-h-screen">
-    <div class="bg-white shadow-sm border-b"><div class="container mx-auto px-4 py-3"><nav class="text-sm text-gray-700 flex items-center space-x-2"><a href="#" onclick="volverAlInicio()" class="hover:text-blue-600"><i class="fas fa-home mr-2"></i>Inicio</a><span class="text-gray-400">/</span><span class="text-gray-800 font-semibold">Componentes Sueltos</span></nav></div></div>
-    <div class="page-container"><div class="products-container"><div class="container mx-auto px-4 py-6">
-      <div class="bg-white rounded-lg shadow-sm border p-4 mb-6"><div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center">
-        <div class="flex-1 md:max-w-[990px]"><input type="text" id="buscar-componente" placeholder="🔍 Buscar componentes..." class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"></div>
-        <button onclick="mostrarModalFiltros()" class="md:hidden bg-blue-500 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2"><i class="fas fa-filter"></i>Filtros</button>
-        <div class="hidden md:flex flex-row gap-3">
-          <div class="relative group" id="filtro-categoria-container"><button class="px-4 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 flex items-center gap-2"><i class="fas fa-layer-group"></i>Categorías<i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i></button>
-            <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right scale-95 group-hover:scale-100 z-50">
-              <div class="p-3"><div class="space-y-1">
-                <div class="relative subcategory-group"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-between group"><span class="flex items-center gap-2"><i class="fas fa-microchip text-green-500"></i>Sensores</span><i class="fas fa-chevron-right text-xs text-gray-400 group-hover:text-blue-500 transition-transform duration-300 group-hover:translate-x-1"></i></button>
-                  <div class="absolute left-full top-0 ml-1 w-56 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible subcategory-panel transition-all duration-300 transform origin-top-left scale-95"><div class="p-3"><div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Tipos de Sensores</div><div class="space-y-1"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Temperatura')"><i class="fas fa-thermometer-half text-orange-500"></i>Temperatura</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Humedad')"><i class="fas fa-tint text-blue-500"></i>Humedad</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Movimiento')"><i class="fas fa-running text-purple-500"></i>Movimiento</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Luz')"><i class="fas fa-sun text-yellow-500"></i>Luz</button></div></div></div>
+    <!-- LOADER - se muestra mientras carga -->
+    <div id="loader-componentes" class="flex flex-col items-center justify-center py-32 hidden">
+        <div class="loading-spinner mb-4"></div>
+        <p class="text-gray-600 font-medium">Cargando componentes...</p>
+        <p class="text-gray-400 text-sm mt-1">Buscando en nuestro catálogo</p>
+    </div>
+    <div id="componentes-container" class="page-container" style="display: none;">
+      <div class="products-container">
+        <div class="container mx-auto px-4 py-6">
+          <div class="bg-white rounded-lg shadow-sm border p-4 mb-6">
+            <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center">
+              <div class="flex-1 md:max-w-[990px]"><input type="text" id="buscar-componente" placeholder="🔍 Buscar componentes..." class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"></div>
+              <button onclick="mostrarModalFiltros()" class="md:hidden bg-blue-500 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2"><i class="fas fa-filter"></i>Filtros</button>
+              <div class="hidden md:flex flex-row gap-3">
+                <div class="relative group" id="filtro-categoria-container"><button class="px-4 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 flex items-center gap-2"><i class="fas fa-layer-group"></i>Categorías<i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i></button>
+                  <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right scale-95 group-hover:scale-100 z-50">
+                    <div class="p-3"><div class="space-y-1">
+                      <div class="relative subcategory-group"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-between group"><span class="flex items-center gap-2"><i class="fas fa-microchip text-green-500"></i>Sensores</span><i class="fas fa-chevron-right text-xs text-gray-400 group-hover:text-blue-500 transition-transform duration-300 group-hover:translate-x-1"></i></button>
+                        <div class="absolute left-full top-0 ml-1 w-56 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible subcategory-panel transition-all duration-300 transform origin-top-left scale-95"><div class="p-3"><div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Tipos de Sensores</div><div class="space-y-1"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Temperatura')"><i class="fas fa-thermometer-half text-orange-500"></i>Temperatura</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Humedad')"><i class="fas fa-tint text-blue-500"></i>Humedad</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Movimiento')"><i class="fas fa-running text-purple-500"></i>Movimiento</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-green-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Luz')"><i class="fas fa-sun text-yellow-500"></i>Luz</button></div></div></div>
+                      </div>
+                      <div class="relative subcategory-group"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-between group"><span class="flex items-center gap-2"><i class="fas fa-cog text-red-500"></i>Motores</span><i class="fas fa-chevron-right text-xs text-gray-400 group-hover:text-blue-500 transition-transform duration-300 group-hover:translate-x-1"></i></button>
+                        <div class="absolute left-full top-0 ml-1 w-56 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible subcategory-panel transition-all duration-300 transform origin-top-left scale-95"><div class="p-3"><div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Tipos de Motores</div><div class="space-y-1"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-red-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Servo Motores')"><i class="fas fa-robot text-red-400"></i>Servo Motores</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-red-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Stepper')"><i class="fas fa-sync-alt text-red-400"></i>Stepper</button></div></div></div>
+                      </div>
+                      <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center gap-2" onclick="aplicarFiltroCategoria('Displays')"><i class="fas fa-tv text-purple-500"></i>Displays</button>
+                      <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center gap-2" onclick="aplicarFiltroCategoria('Placas')"><i class="fas fa-microchip text-gray-500"></i>Placas</button>
+                      <div class="border-t my-2"></div>
+                      <button onclick="limpiarFiltros()" class="w-full text-center px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200 text-sm font-semibold text-gray-700"><i class="fas fa-th-list mr-2"></i>Ver todas las categorías</button>
+                    </div></div>
+                  </div>
                 </div>
-                <div class="relative subcategory-group"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-between group"><span class="flex items-center gap-2"><i class="fas fa-cog text-red-500"></i>Motores</span><i class="fas fa-chevron-right text-xs text-gray-400 group-hover:text-blue-500 transition-transform duration-300 group-hover:translate-x-1"></i></button>
-                  <div class="absolute left-full top-0 ml-1 w-56 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible subcategory-panel transition-all duration-300 transform origin-top-left scale-95"><div class="p-3"><div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Tipos de Motores</div><div class="space-y-1"><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-red-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Servo Motores')"><i class="fas fa-robot text-red-400"></i>Servo Motores</button><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-red-50 transition-colors duration-200 text-sm flex items-center gap-2" onclick="aplicarFiltroCategoria('Stepper')"><i class="fas fa-sync-alt text-red-400"></i>Stepper</button></div></div></div>
-                </div>
-                <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center gap-2" onclick="aplicarFiltroCategoria('Displays')"><i class="fas fa-tv text-purple-500"></i>Displays</button>
-                <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center gap-2" onclick="aplicarFiltroCategoria('Placas')"><i class="fas fa-microchip text-gray-500"></i>Placas</button>
-                <div class="border-t my-2"></div>
-                <button onclick="limpiarFiltros()" class="w-full text-center px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200 text-sm font-semibold text-gray-700"><i class="fas fa-th-list mr-2"></i>Ver todas las categorías</button>
-              </div></div>
+                <select id="filtro-precio" class="px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white shadow-sm"><option value="todos">💎 Todos los precios</option><option value="0-50000">💰 Gs. 0 - 50.000</option><option value="50000-100000">💵 Gs. 50.000 - 100.000</option><option value="100000-200000">💳 Gs. 100.000 - 200.000</option></select>
+              </div>
             </div>
           </div>
-          <select id="filtro-precio" class="px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white shadow-sm"><option value="todos">💎 Todos los precios</option><option value="0-50000">💰 Gs. 0 - 50.000</option><option value="50000-100000">💵 Gs. 50.000 - 100.000</option><option value="100000-200000">💳 Gs. 100.000 - 200.000</option></select>
+          <div id="modal-filtros" class="fixed inset-0 z-50 hidden"><div class="absolute inset-0 bg-black bg-opacity-50" onclick="cerrarModalFiltros()"></div><div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6 max-h-[80vh] overflow-y-auto"><div class="flex items-center mb-6 pb-4 border-b"><button id="btn-volver-categorias" class="text-gray-500 mr-3 hidden"><i class="fas fa-chevron-left text-xl"></i></button><h3 id="modal-filtros-titulo" class="text-xl font-bold flex-1">Filtros</h3><button onclick="cerrarModalFiltros()" class="text-gray-500 text-2xl">×</button></div><div id="contenido-filtros"></div><div class="mt-6 pt-4 border-t"><div class="mb-6"><h4 class="font-semibold mb-3 text-lg">💰 Precio</h4><select id="filtro-precio-mobile" class="w-full p-3 border rounded-lg text-base"><option value="todos">💎 Todos los precios</option><option value="0-50000">💰 Gs. 0 - 50.000</option><option value="50000-100000">💵 Gs. 50.000 - 100.000</option><option value="100000-200000">💳 Gs. 100.000 - 200.000</option></select></div><button onclick="aplicarFiltrosMovil()" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg">Aplicar Filtros</button></div></div></div>
+          <div id="grid-componentes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+          <div id="loading-componentes" class="text-center py-16 hidden"><div class="inline-block animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mb-6"></div><p class="text-gray-700 text-lg font-medium">Cargando componentes...</p><p class="text-gray-500 text-sm mt-2">Buscando los mejores productos para ti</p></div>
         </div>
-      </div></div>
-      <div id="modal-filtros" class="fixed inset-0 z-50 hidden"><div class="absolute inset-0 bg-black bg-opacity-50" onclick="cerrarModalFiltros()"></div><div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6 max-h-[80vh] overflow-y-auto"><div class="flex items-center mb-6 pb-4 border-b"><button id="btn-volver-categorias" class="text-gray-500 mr-3 hidden"><i class="fas fa-chevron-left text-xl"></i></button><h3 id="modal-filtros-titulo" class="text-xl font-bold flex-1">Filtros</h3><button onclick="cerrarModalFiltros()" class="text-gray-500 text-2xl">×</button></div><div id="contenido-filtros"></div><div class="mt-6 pt-4 border-t"><div class="mb-6"><h4 class="font-semibold mb-3 text-lg">💰 Precio</h4><select id="filtro-precio-mobile" class="w-full p-3 border rounded-lg text-base"><option value="todos">💎 Todos los precios</option><option value="0-50000">💰 Gs. 0 - 50.000</option><option value="50000-100000">💵 Gs. 50.000 - 100.000</option><option value="100000-200000">💳 Gs. 100.000 - 200.000</option></select></div><button onclick="aplicarFiltrosMovil()" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg">Aplicar Filtros</button></div></div></div>
-      <div id="grid-componentes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
-      <div id="loading-componentes" class="text-center py-16 hidden"><div class="inline-block animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mb-6"></div><p class="text-gray-700 text-lg font-medium">Cargando componentes...</p></div>
-    </div></div></div>
+      </div>
+    </div>
     <div class="pagination-fixed backdrop-blur bg-white/90 border-t border-gray-200 safe-bottom mb-2 md:mb-4"><div class="container mx-auto px-4"><div class="hidden sm:flex justify-center items-center space-x-6"><button onclick="cambiarPagina(paginaActual - 1)" class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-xl shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 btn-hover font-semibold flex items-center gap-2"><i class="fas fa-chevron-left text-sm"></i>Anterior</button><span id="info-paginacion" class="text-base text-gray-700 font-semibold bg-gray-100 px-4 py-2 rounded-lg">Página <span class="text-blue-600">1</span> de <span class="text-blue-600">1</span></span><button onclick="cambiarPagina(paginaActual + 1)" class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-xl shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 btn-hover font-semibold flex items-center gap-2">Siguiente<i class="fas fa-chevron-right text-sm"></i></button></div><div class="sm:hidden flex justify-between items-center py-2 px-3"><button onclick="cambiarPagina(paginaActual - 1)" class="px-3 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg disabled:opacity-50 transition-all font-semibold text-sm flex items-center touch-target min-w-[70px] justify-center"><i class="fas fa-chevron-left mr-1"></i>Ant.</button><span id="info-paginacion-mobile" class="text-sm text-gray-700 font-medium px-3 py-1 bg-gray-100 rounded"><span class="text-blue-600">1</span>/<span class="text-blue-600">1</span></span><button onclick="cambiarPagina(paginaActual + 1)" class="px-3 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg disabled:opacity-50 transition-all font-semibold text-sm flex items-center touch-target min-w-[70px] justify-center">Sig.<i class="fas fa-chevron-right ml-1"></i></button></div></div></div>
   </section>
   
@@ -628,186 +711,884 @@
   </footer>
   
   <!-- ========================================== -->
-  <!-- SCRIPTS (ORDEN CORRECTO) -->
+  <!-- MODAL LOGIN Y REGISTRO -->
+  <!-- ========================================== -->
+  <div id="modal-login" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="cerrarModalLogin(event)">
+    <div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6" onclick="event.stopPropagation()">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-2xl font-bold">Iniciar Sesión</h3>
+        <button onclick="cerrarModalLogin()" class="text-2xl">&times;</button>
+      </div>
+      <form id="form-login-supabase">
+        <input type="email" id="login-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
+        <input type="password" id="login-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Ingresar</button>
+      </form>
+      <p class="text-center mt-4">¿No tienes cuenta? <button onclick="mostrarModalRegistro()" class="text-blue-600">Regístrate</button></p>
+    </div>
+  </div>
+  
+  <div id="modal-registro" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="cerrarModalRegistro(event)">
+    <div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6" onclick="event.stopPropagation()">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-2xl font-bold">Crear Cuenta</h3>
+        <button onclick="cerrarModalRegistro()" class="text-2xl">&times;</button>
+      </div>
+      <form id="form-registro-supabase">
+        <input type="text" id="reg-nombre" placeholder="Nombre completo" class="w-full p-3 border rounded-lg mb-3">
+        <input type="tel" id="reg-telefono" placeholder="Teléfono" class="w-full p-3 border rounded-lg mb-3">
+        <input type="email" id="reg-email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg mb-3" required>
+        <input type="password" id="reg-password" placeholder="Contraseña" class="w-full p-3 border rounded-lg mb-4" required>
+        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold">Registrarse</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- ========================================== -->
+  <!-- SCRIPTS -->
   <!-- ========================================== -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  
-  <!-- Configuración y utilidades -->
   <script src="js_config.js"></script>
-  <script src="js_utils.js"></script>
-  
-  <!-- Autenticación -->
   <script src="js_supabase-auth.js"></script>
   
-  <!-- Carrito -->
-  <script src="js_cart.js"></script>
-  
-  <!-- App principal (inicialización) -->
-  <script src="js_app.js"></script>
-  
-  <!-- Funciones específicas de la vista (se llaman desde onclick) -->
   <script>
-    // Variables globales necesarias para la vista de componentes
+    // ============================================
+    // VARIABLES GLOBALES
+    // ============================================
+    let carritoGlobal = [];
     let paginaActual = 1;
     const componentesPorPagina = 8;
     let componentesSueltos = [];
     let productosKits = [[], [], []];
+    let navegando = false;
+    let ratingSeleccionado = 0;
     
-    // Función para ver productos de un kit (se llama desde los botones)
-    function verProductosKit(kitId) {
-      console.log('Ver productos del kit:', kitId);
-      // Esta función debe implementarse según la lógica original
-      window.location.href = `/productos-kit.html?kit=${kitId}`;
-    }
-    
-    // Función para agregar producto al carrito desde el modal
-    function agregarProductoAlCarrito() {
-      const nombre = document.getElementById('modal-producto-nombre')?.textContent || '';
-      const precioText = document.getElementById('modal-producto-precio')?.textContent || '0';
-      const precio = parseInt(precioText.replace(/[^0-9]/g, '')) || 0;
-      if (nombre && precio) {
-        agregarAlCarrito(Date.now(), nombre, precio, '');
-        toggleModalProducto();
-      }
-    }
-    
-    function comprarProductoWhatsApp() {
-      const nombre = document.getElementById('modal-producto-nombre')?.textContent || '';
-      const precioText = document.getElementById('modal-producto-precio')?.textContent || '0';
-      window.open(`https://wa.me/595972292392?text=${encodeURIComponent(`¡Hola! Quiero comprar: ${nombre} - ${precioText}`)}`, '_blank');
-      toggleModalProducto();
-    }
-    
-    function toggleModalProducto() {
-      const modal = document.getElementById('modal-producto');
-      if (modal) {
-        modal.classList.toggle('opacity-0');
-        modal.classList.toggle('pointer-events-none');
-      }
-    }
-    
-    function toggleModal() {
-      const modal = document.getElementById('modal-descripcion');
-      if (modal) {
-        modal.classList.toggle('opacity-0');
-        modal.classList.toggle('pointer-events-none');
-      }
-    }
-    
-    function enviarPorWhatsApp() {
-      const nombre = document.querySelector('input[name="nombre"]')?.value || '';
-      const institucion = document.querySelector('input[name="institucion"]')?.value || '';
-      const email = document.querySelector('input[name="email"]')?.value || '';
-      const telefono = document.querySelector('input[name="telefono"]')?.value || '';
-      const tipo = document.querySelector('select[name="tipo_proyecto"]')?.value || '';
-      const proyecto = document.querySelector('textarea[name="proyecto"]')?.value || '';
-      window.open(`https://wa.me/595972292392?text=${encodeURIComponent(`¡Hola! Solicito asesoría:%0A%0ANombre: ${nombre}%0AInstitución: ${institucion}%0AEmail: ${email}%0ATeléfono: ${telefono}%0ATipo: ${tipo}%0A%0ADescripción: ${proyecto}`)}`, '_blank');
-    }
-    
-    // Funciones de filtros (placeholder)
-    function mostrarModalFiltros() {}
-    function cerrarModalFiltros() {}
-    function aplicarFiltrosMovil() {}
-    function limpiarFiltros() {}
-    function aplicarFiltroCategoria(cat) { console.log('Filtrar por:', cat); }
-    function cambiarPagina(nueva) { paginaActual = nueva; }
-    function instalarPWA() {}
-    function renderizarComponentesSueltos() {}
-    
-    // Funciones de proyectos
-    function mostrarModalProyecto() {
-      const modal = document.getElementById('proyecto-modal');
-      if (modal) {
-        modal.classList.remove('hidden');
-        modal.style.display = 'flex';
-        // Resetear estrellas
-        document.querySelectorAll('#rating-stars i').forEach(s => {
-          s.classList.remove('fas', 'text-yellow-400');
-          s.classList.add('far');
+    // ============================================
+    // FUNCIONES DE CARGA DESDE SUPABASE
+    // ============================================
+
+async function cargarProductosSupabase() {
+    try {
+        console.log('🔄 Cargando componentes sueltos desde Supabase...');
+        
+        // ✅ SOLO productos que NO pertenecen a ningún kit (kit_id IS NULL)
+        const { data, error } = await supabaseClient
+            .from('productos')
+            .select('*')
+            .eq('activo', true)
+            .is('kit_id', null)   // ← CLAVE: excluir productos que son parte de un kit
+            .order('id');
+        
+        if (error) throw error;
+        
+        // ✅ Crear un Map para eliminar duplicados por nombre (case insensitive)
+        const productosUnicos = new Map();
+        
+        data.forEach(prod => {
+            const nombreKey = prod.nombre.trim().toLowerCase();
+            if (!productosUnicos.has(nombreKey)) {
+                productosUnicos.set(nombreKey, prod);
+            } else {
+                console.warn(`⚠️ Producto duplicado detectado: "${prod.nombre}" (ID: ${prod.id}) - Será ignorado`);
+            }
         });
-        document.getElementById('proyecto-rating').value = 0;
-      }
+        
+        const productosSinDuplicados = Array.from(productosUnicos.values());
+        
+        componentesSueltos = productosSinDuplicados.map(comp => ({
+            id: comp.id,
+            nombre: comp.nombre,
+            categoria: comp.categoria,
+            precio: `${comp.precio.toLocaleString()} Gs.`,
+            precioNum: comp.precio,
+            imagen: comp.imagen_principal || 'img/placeholder.png',
+            imagenes: comp.imagenes || [comp.imagen_principal || 'img/placeholder.png'],
+            descripcion: comp.descripcion || 'Sin descripción',
+            stock: comp.stock ? 'disponible' : 'sin stock',
+            especificaciones: comp.especificaciones || []
+        }));
+        
+        const duplicadosEliminados = data.length - productosSinDuplicados.length;
+        console.log(`✅ Cargados ${componentesSueltos.length} componentes sueltos (${duplicadosEliminados} duplicados eliminados, ${data.length - componentesSueltos.length} kits excluidos)`);
+        
+        if (!document.getElementById('vista-componentes-sueltos').classList.contains('hidden')) {
+            renderizarComponentesSueltos();
+        }
+    } catch (error) {
+        console.error('Error cargando componentes:', error);
+        mostrarNotificacion('Error cargando componentes', 'error');
+    }
+}
+     async function cargarKitsSupabase() {
+        try {
+            console.log('🔄 Cargando productos de kits desde Supabase...');
+            for (let kitId = 1; kitId <= 3; kitId++) {
+                const { data, error } = await supabaseClient.from('productos').select('*').eq('kit_id', kitId).eq('activo', true);
+                if (error) throw error;
+                productosKits[kitId - 1] = data.map(p => ({
+                    id: p.id,
+                    img: p.imagenes || [p.imagen_principal], 
+                    nombre: p.nombre, 
+                    desc: p.descripcion,
+                    precio: `${p.precio.toLocaleString()} Gs.`, 
+                    precioNum: p.precio, 
+                    componentes_lista: p.componentes_lista || [],
+                    documentos: p.documentos || [], 
+                    especificaciones: p.especificaciones || []
+                }));
+            }
+            console.log(`✅ Kits cargados: Kit1: ${productosKits[0].length}, Kit2: ${productosKits[1].length}, Kit3: ${productosKits[2].length}`);
+        } catch (error) { console.error('Error cargando kits:', error); }
     }
     
-    function cerrarModalProyecto(event) {
-      if (event && event.target !== event.currentTarget) return;
-      const modal = document.getElementById('proyecto-modal');
-      if (modal) {
-        modal.classList.add('hidden');
-        modal.style.display = 'none';
-      }
+    function renderizarComponentesSueltos() {
+        const grid = document.getElementById('grid-componentes');
+        if (!grid) return;
+        if (!componentesSueltos.length) { grid.innerHTML = `<div class="col-span-full text-center py-8"><div class="text-yellow-500 text-4xl mb-2">🔄</div><p>Cargando...</p></div>`; return; }
+        
+        const buscarInput = document.getElementById('buscar-componente');
+        const filtroPrecio = document.getElementById('filtro-precio');
+        const filtroTexto = buscarInput?.value.toLowerCase() || '';
+        const filtroPrecioValor = filtroPrecio?.value || 'todos';
+        
+        let filtrados = componentesSueltos.filter(comp => {
+            const coincideTexto = !filtroTexto || comp.nombre.toLowerCase().includes(filtroTexto);
+            let coincidePrecio = true;
+            if (filtroPrecioValor !== 'todos') {
+                const [min, max] = filtroPrecioValor.split('-').map(Number);
+                coincidePrecio = comp.precioNum >= min && comp.precioNum <= max;
+            }
+            return coincideTexto && coincidePrecio;
+        });
+        
+        const totalPaginas = Math.ceil(filtrados.length / componentesPorPagina);
+        const inicio = (paginaActual - 1) * componentesPorPagina;
+        const pagina = filtrados.slice(inicio, inicio + componentesPorPagina);
+        
+        if (!pagina.length) {
+            grid.innerHTML = `<div class="col-span-full text-center py-8"><div class="text-gray-400 text-4xl mb-2">🔍</div><p>No se encontraron productos</p><button onclick="limpiarFiltros()" class="mt-3 px-4 py-2 bg-blue-500 text-white rounded">Mostrar todos</button></div>`;
+        } else {
+            grid.innerHTML = pagina.map(comp => `
+                <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition cursor-pointer flex flex-col h-full" onclick="mostrarModalProducto(${comp.id})">
+                    <div class="p-3"><img src="${comp.imagen}" alt="${comp.nombre}" class="w-full h-40 object-contain mb-2 rounded" loading="lazy"><h3 class="font-semibold text-base line-clamp-2 min-h-[48px]">${comp.nombre}</h3>${comp.categoria ? `<p class="text-xs text-gray-500 mt-1">${comp.categoria}</p>` : ''}</div>
+                    <div class="px-3"><p class="text-green-600 font-bold text-base">${comp.precio}</p></div>
+                    <div class="p-3 pt-1 mt-auto"><div class="flex items-center justify-between"><span class="px-2 py-1 text-xs rounded-full ${comp.stock === 'disponible' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">${comp.stock === 'disponible' ? 'En stock' : 'Sin stock'}</span><button class="text-blue-600 hover:text-blue-800 font-semibold text-xs">Ver detalles ›</button></div></div>
+                </div>`).join('');
+        }
+        
+        const infoPaginacion = document.getElementById('info-paginacion');
+        const infoMobile = document.getElementById('info-paginacion-mobile');
+        if (infoPaginacion) infoPaginacion.innerHTML = `Página <span class="text-blue-600">${paginaActual}</span> de <span class="text-blue-600">${totalPaginas || 1}</span>`;
+        if (infoMobile) infoMobile.innerHTML = `<span class="text-blue-600">${paginaActual}</span>/<span class="text-blue-600">${totalPaginas || 1}</span>`;
+        
+        const btns = document.querySelectorAll('.pagination-fixed button');
+        if (btns.length >= 2) { btns[0].disabled = paginaActual === 1; btns[1].disabled = paginaActual === totalPaginas || totalPaginas === 0; }
     }
     
-    function previewFotoProyecto(input) {
-      const file = input.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const preview = document.getElementById('foto-preview');
-          const img = document.getElementById('foto-preview-img');
-          img.src = e.target.result;
-          preview.classList.remove('hidden');
-        };
-        reader.readAsDataURL(file);
-      }
+    function cambiarPagina(nueva) { paginaActual = nueva; renderizarComponentesSueltos(); document.getElementById('grid-componentes').scrollIntoView({ behavior: 'smooth' }); }
+    function limpiarFiltros() { paginaActual = 1; const input = document.getElementById('buscar-componente'); if (input) input.value = ''; const precio = document.getElementById('filtro-precio'); if (precio) precio.value = 'todos'; renderizarComponentesSueltos(); mostrarNotificacion('Filtros limpiados ✅'); }
+    
+    function verComponentesSueltos() {
+        navegarA('componentes');
+        
+        const loader = document.getElementById('loader-componentes');
+        const container = document.getElementById('componentes-container');
+        const grid = document.getElementById('grid-componentes');
+        
+        const startTime = Date.now();
+        
+        if (loader) {
+            loader.classList.remove('hidden');
+            loader.style.display = 'flex';
+        }
+        if (container) {
+            container.style.display = 'none';
+        }
+        if (grid) {
+            grid.innerHTML = '';
+        }
+        
+        if (typeof renderizarComponentesSueltos === 'function') {
+            renderizarComponentesSueltos();
+        }
+        
+        const minDisplayTime = 1500;
+        setTimeout(() => {
+            const elapsed = Date.now() - startTime;
+            const remainingTime = Math.max(0, minDisplayTime - elapsed);
+            setTimeout(() => {
+                if (loader) {
+                    loader.classList.add('hidden');
+                    loader.style.display = 'none';
+                }
+                if (container) {
+                    container.style.display = 'block';
+                }
+            }, remainingTime);
+        }, 10);
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    function mostrarModalProducto(id) {
+        const producto = componentesSueltos.find(c => c.id === id);
+        if (!producto) { mostrarNotificacion('Producto no encontrado', 'error'); return; }
+        document.getElementById('modal-producto-nombre').textContent = producto.nombre;
+        document.getElementById('modal-producto-precio').textContent = producto.precio;
+        document.getElementById('modal-producto-descripcion').textContent = producto.descripcion;
+        document.getElementById('modal-producto-imagen').src = producto.imagen;
+        const stockSpan = document.getElementById('modal-producto-stock');
+        const disponible = producto.stock === 'disponible';
+        stockSpan.textContent = disponible ? 'En stock' : 'Sin existencias';
+        stockSpan.className = `ml-3 px-2 py-1 text-xs rounded-full ${disponible ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`;
+        const especDiv = document.getElementById('modal-producto-especificaciones');
+        if (producto.especificaciones?.length) especDiv.innerHTML = producto.especificaciones.map(s => `<div class="flex"><span class="mr-2">•</span><span>${s}</span></div>`).join('');
+        else especDiv.innerHTML = '<p>No hay especificaciones</p>';
+        const imgs = producto.imagenes || [producto.imagen];
+        for (let i = 0; i < 4; i++) {
+            const thumb = document.getElementById(`modal-producto-thumb${i+1}`);
+            if (thumb) { if (imgs[i]) { thumb.src = imgs[i]; thumb.style.display = 'block'; thumb.onclick = () => document.getElementById('modal-producto-imagen').src = imgs[i]; } else thumb.style.display = 'none'; }
+        }
+        toggleModalProducto();
+    }
+    
+    function toggleModalProducto() { const modal = document.getElementById('modal-producto'); const isOpening = modal.classList.contains('opacity-0'); modal.classList.toggle('opacity-0'); modal.classList.toggle('pointer-events-none'); document.body.classList.toggle('modal-active', isOpening); if (window.innerWidth <= 768) document.body.style.overflow = isOpening ? 'hidden' : ''; }
+    function comprarProductoWhatsApp() { const nombre = document.getElementById('modal-producto-nombre').textContent; const precio = document.getElementById('modal-producto-precio').textContent; window.open(`https://wa.me/595972292392?text=${encodeURIComponent(`¡Hola! Quiero comprar: ${nombre} - ${precio}`)}`, '_blank'); toggleModalProducto(); }
+    
+    function verProductosKit(idx) {
+        navegarA('productoskit', { kitId: idx });
+        
+        const loader = document.getElementById('loader-productoskit');
+        const content = document.getElementById('productoskit-content');
+        
+        const startTime = Date.now();
+        
+        if (loader) {
+            loader.classList.remove('hidden');
+            loader.style.display = 'flex';
+        }
+        if (content) {
+            content.innerHTML = '';
+            content.style.display = 'none';
+        }
+        
+        const productos = productosKits[idx - 1];
+        const portadas = ["png/portada_kit1.webp", "png/portadados.webp", "png/portada_kit3.svg"];
+        const titulosPersonalizados = ["🔌 Kits de Electrónica - Kuongshun", "⚡ Kits Proyectos - Learning", "🤖 Kits de Robótica - Acebott"];
+        
+        let html = `<div class="portada-sin-margenes"><img src="${portadas[idx-1]}" alt="${titulosPersonalizados[idx-1]}" class="w-full h-full object-cover"><div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"><h2 class="text-3xl sm:text-4xl font-bold text-white text-center px-4">${titulosPersonalizados[idx-1]}</h2></div></div><div class="container mx-auto px-4 mt-8"><h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Productos incluidos</h3><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">`;
+        
+        productos.forEach((p, i) => {
+            let slidesHTML = '';
+            if (p.img && p.img.length > 0) { 
+                p.img.forEach((imgSrc) => { 
+                    slidesHTML += `<div class="swiper-slide flex justify-center items-center"><img src="${imgSrc}" alt="${p.nombre}" class="max-h-48 object-contain" loading="lazy"></div>`; 
+                }); 
+            } else { 
+                slidesHTML = `<div class="swiper-slide flex justify-center items-center"><div class="w-full h-48 bg-gray-200 flex items-center justify-center"><span class="text-gray-500">Imagen no disponible</span></div></div>`; 
+            }
+            
+            html += `<div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-6 flex flex-col items-center w-full max-w-xs mx-auto mb-6 text-center"><div class="swiper swiper-producto-${i} w-full h-48 rounded-lg overflow-hidden mb-4" onclick="event.stopPropagation()"><div class="swiper-wrapper">${slidesHTML}</div><div class="swiper-button-next" onclick="event.stopPropagation()"></div><div class="swiper-button-prev" onclick="event.stopPropagation()"></div></div><h4 class="text-lg sm:text-xl font-bold mb-2">${p.nombre}</h4><p class="mb-2 text-sm sm:text-base text-gray-700">${acortarTexto(p.desc || '', 100)}...</p><a href="javascript:void(0)" onclick="mostrarModalKitProducto(${idx}, ${i})" class="text-blue-600 hover:text-blue-800 hover:underline mb-3 text-sm font-semibold inline-block">Ver detalles completos...</a><p class="mb-4 text-lg font-semibold text-green-600">${p.precio}</p><div class="flex flex-col gap-2 w-full mt-auto"><button onclick="comprarProductoKitWhatsApp('${p.nombre.replace(/'/g, "\\'")}', '${p.precio}')" class="w-full bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition">Comprar por WhatsApp</button><button onclick="agregarAlCarritoSupabase(${p.id || i}, '${p.nombre.replace(/'/g, "\\'")}', ${p.precioNum || 0}, '${p.img?.[0] || ""}')" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">Agregar al carrito</button></div></div>`;
+        });
+        
+        html += `</div></div>`;
+        
+        if (content) {
+            content.innerHTML = html;
+        }
+        
+        setTimeout(() => {
+            productos.forEach((_, i) => { 
+                const swiperElement = document.querySelector(`.swiper-producto-${i}`); 
+                if (swiperElement) { 
+                    new Swiper(swiperElement, { 
+                        loop: true, 
+                        navigation: { 
+                            nextEl: `.swiper-producto-${i} .swiper-button-next`, 
+                            prevEl: `.swiper-producto-${i} .swiper-button-prev` 
+                        }, 
+                        preventClicks: true 
+                    }); 
+                } 
+            });
+            
+            const elapsed = Date.now() - startTime;
+            const minDisplayTime = 1500;
+            const remainingTime = Math.max(0, minDisplayTime - elapsed);
+            
+            setTimeout(() => {
+                if (loader) {
+                    loader.classList.add('hidden');
+                    loader.style.display = 'none';
+                }
+                if (content) {
+                    content.style.display = 'block';
+                }
+            }, remainingTime);
+        }, 50);
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    function acortarTexto(texto, maxLength = 120) { return texto.length <= maxLength ? texto : texto.substring(0, maxLength) + '...'; }
+    
+    // ============================================
+    // MODAL DETALLE KIT (CARRUSEL)
+    // ============================================
+    let productoDetalleActual = null;
+    
+   function mostrarModalKitProducto(kitId, productoIndex) {
+    const kitIndex = kitId - 1;
+    const productos = productosKits[kitIndex];
+    if (!productos || !productos[productoIndex]) return;
+    
+    const producto = productos[productoIndex];
+    
+    // ============================================
+    // Procesar descripción: SOLO la introducción (sin componentes)
+    // ============================================
+    let descripcionIntro = producto.desc || 'Sin descripción disponible.';
+    
+    // Si existe componentes_lista en la base de datos, la usamos
+    // Si no, intentamos extraer de la descripción (solo para compatibilidad)
+    let componentesLista = producto.componentes_lista || [];
+    
+    // Si no hay componentes_lista en la DB, intentamos extraer de la descripción (fallback)
+    if (componentesLista.length === 0 && producto.desc) {
+        const keywords = ['componentes incluidos:', 'como:', 'incluye:', 'contiene:'];
+        let idxInicio = -1;
+        
+        for (const kw of keywords) {
+            const idx = producto.desc.toLowerCase().indexOf(kw);
+            if (idx !== -1) {
+                idxInicio = idx;
+                break;
+            }
+        }
+        
+        if (idxInicio !== -1) {
+            descripcionIntro = producto.desc.substring(0, idxInicio).trim();
+            const parteComponentes = producto.desc.substring(idxInicio).trim();
+            const lineas = parteComponentes.split(/[-–—•*]\s*|\d+\.\s*/);
+            for (let linea of lineas) {
+                linea = linea.trim();
+                if (linea.length > 2 && linea.length < 100 && 
+                    !linea.toLowerCase().includes('componentes') && 
+                    !linea.toLowerCase().includes('como:')) {
+                    componentesLista.push(linea);
+                }
+            }
+        } else {
+            descripcionIntro = producto.desc;
+        }
+    }
+    
+    // ============================================
+    // Especificaciones con fondo celeste
+    // ============================================
+    let especificacionesHTML = '';
+    if (producto.especificaciones && producto.especificaciones.length > 0) {
+        especificacionesHTML = `
+        <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+            <h4 class="font-semibold text-blue-800 text-base flex items-center gap-2 mb-3">
+                <i class="fas fa-microchip"></i> Características técnicas
+            </h4>
+            <div class="space-y-2">
+                ${producto.especificaciones.map(spec => `
+                    <div class="flex items-start gap-2 text-sm">
+                        <span class="text-green-500 mt-0.5">✓</span>
+                        <span class="text-gray-700">${spec}</span>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        `;
+    }
+    
+    // ============================================
+    // Documentos disponibles (MANUALES)
+    // ============================================
+    let documentosHTML = '';
+    if (producto.documentos && producto.documentos.length > 0) {
+        documentosHTML = `
+        <div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <i class="fas fa-file-download text-blue-500"></i> Documentos disponibles
+            </h4>
+            <div class="space-y-2">
+                ${producto.documentos.map(doc => `
+                    <a href="${doc.archivo}" target="_blank" 
+                       class="flex items-center gap-2 text-blue-600 hover:text-blue-800 hover:underline p-2 bg-blue-50 rounded-lg transition">
+                        <i class="fas ${doc.archivo.includes('.pdf') ? 'fa-file-pdf' : 'fa-file-download'}"></i>
+                        <span class="text-sm">${doc.nombre}</span>
+                        <i class="fas fa-external-link-alt text-xs ml-auto"></i>
+                    </a>
+                `).join('')}
+            </div>
+        </div>
+        `;
+    }
+    
+    // ============================================
+    // Generar el HTML del modal
+    // ============================================
+    const modalHTML = `
+<div class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4 modal-kit-detalle">
+    <div class="absolute inset-0" onclick="cerrarModalKitDetalle()"></div>
+    
+    <div class="bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden flex flex-col relative z-10">
+        
+        <!-- HEADER -->
+        <div class="flex justify-between items-center p-6 border-b">
+            <h3 class="text-2xl font-bold text-gray-800">${producto.nombre}</h3>
+            <button onclick="cerrarModalKitDetalle()" class="text-gray-500 hover:text-gray-700 text-2xl p-2 hover:bg-gray-100 rounded-full transition">×</button>
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL - 2 COLUMNAS -->
+        <div class="flex-1 overflow-y-auto p-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- COLUMNA IZQUIERDA: CARRUSEL -->
+                <div class="space-y-4">
+                    <div class="relative bg-gray-100 rounded-xl overflow-hidden" style="height: 350px;">
+                        <img id="imagen-principal-detalle" src="${producto.img && producto.img[0] ? producto.img[0] : 'png/placeholder.png'}" alt="${producto.nombre}" class="w-full h-full object-contain p-4 cursor-zoom-in" onclick="ampliarImagenDetalle(this.src)">
+                        ${producto.img && producto.img.length > 1 ? `
+                        <button onclick="event.stopPropagation(); cambiarImagenDetalle(-1)" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 z-20">←</button>
+                        <button onclick="event.stopPropagation(); cambiarImagenDetalle(1)" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 z-20">→</button>
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm"><span id="contador-imagen-detalle">1</span> / <span id="total-imagenes-detalle">${producto.img.length}</span></div>
+                        ` : ''}
+                    </div>
+                    ${producto.img && producto.img.length > 1 ? `
+                    <div id="miniaturas-detalle" class="flex gap-2 overflow-x-auto py-2">
+                        ${producto.img.map((imgSrc, imgIndex) => `<img src="${imgSrc}" alt="Miniatura ${imgIndex + 1}" class="w-20 h-20 object-cover rounded-lg border-2 ${imgIndex === 0 ? 'border-blue-500' : 'border-transparent hover:border-blue-300'} cursor-pointer transition-all" onclick="event.stopPropagation(); seleccionarImagenDetalle(${imgIndex})">`).join('')}
+                    </div>
+                    ` : ''}
+                </div>
+                
+                <!-- COLUMNA DERECHA: INFORMACIÓN -->
+                <div class="space-y-5">
+                    <!-- Descripción introductoria -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2"><i class="fas fa-align-left text-blue-500"></i> Descripción completa</h4>
+                        <p class="text-gray-700 leading-relaxed">${descripcionIntro || 'Sin descripción disponible.'}</p>
+                    </div>
+                    
+                    <!-- Componentes incluidos (solo si hay) -->
+                    ${componentesLista.length > 0 ? `
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2"><i class="fas fa-box-open text-green-500"></i> Componentes incluidos</h4>
+                        <div class="bg-gray-50 rounded-lg p-4 max-h-48 overflow-y-auto">
+                            <ul class="space-y-1">
+                                ${componentesLista.map(comp => `<li class="flex items-start gap-2 text-sm"><span class="text-green-500 mt-0.5">•</span><span class="text-gray-700">${comp}</span></li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                    ` : ''}
+                    
+                    <!-- Especificaciones técnicas -->
+                    ${especificacionesHTML}
+                    
+                    <!-- Documentos (manuales) -->
+                    ${documentosHTML}
+                    
+                    <!-- Precio -->
+                    <div class="pt-2">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">💰 Precio</h4>
+                        <p class="text-3xl font-bold text-green-600">${producto.precio || 'Consultar'}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER CON 3 BOTONES -->
+        <div class="border-t p-6 bg-gray-50">
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button onclick="cerrarModalKitDetalle()" class="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg font-semibold transition flex-1">
+                    <i class="fas fa-times mr-2"></i>Cerrar
+                </button>
+                <button onclick="agregarAlCarritoSupabase(${producto.id || 0}, '${producto.nombre.replace(/'/g, "\\'")}', ${producto.precioNum || 0}, '${producto.img?.[0] || ''}'); cerrarModalKitDetalle();" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition flex-1 text-center">
+                    <i class="fas fa-cart-plus mr-2"></i>Agregar al carrito
+                </button>
+                <a href="https://wa.me/595972292392?text=${encodeURIComponent('¡Hola! Quiero información sobre: ' + producto.nombre + ' - ' + (producto.precio || 'Kit Innovakit'))}" target="_blank" class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition flex-1 text-center">
+                    <i class="fab fa-whatsapp mr-2"></i>Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-zoom-detalle" class="hidden fixed inset-0 bg-black bg-opacity-90 z-[60] flex items-center justify-center p-4" onclick="cerrarZoomDetalle()">
+    <div class="relative max-w-4xl w-full"><img id="imagen-zoom-detalle" src="" alt="Zoom" class="w-full h-auto max-h-[80vh] object-contain"><button onclick="cerrarZoomDetalle()" class="absolute top-4 right-4 text-white text-3xl bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center">×</button></div>
+</div>`;
+
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    productoDetalleActual = { producto: producto, imagenIndex: 0, totalImagenes: producto.img ? producto.img.length : 0 };
+    if (producto.img && producto.img.length > 1) setTimeout(() => actualizarMiniaturasActivas(), 100);
+    document.body.style.overflow = 'hidden';
+}
+    
+    function obtenerDescripcionSinComponentes(descripcion) { if (!descripcion) return ''; const idxComponentes = descripcion.toLowerCase().indexOf('como:'); return idxComponentes !== -1 ? descripcion.substring(0, idxComponentes + 5).trim() : descripcion; }
+    function obtenerComponentesDeDescripcion(descripcion) { if (!descripcion) return []; const componentes = []; const idxComo = descripcion.toLowerCase().indexOf('como:'); if (idxComo === -1) return []; const seccionComponentes = descripcion.substring(idxComo + 5).trim(); const separadores = /[-–—•]|\d+\./; const partes = seccionComponentes.split(separadores); partes.forEach(parte => { const componente = parte.replace(/^[\s:;,.]*/, '').replace(/[\s:;,.]*$/, '').trim(); if (componente && componente.length > 2 && !componente.match(/^\d+$/)) componentes.push(componente); }); return componentes; }
+    function cambiarImagenDetalle(direccion) { if (!productoDetalleActual || !productoDetalleActual.producto.img || productoDetalleActual.totalImagenes <= 1) return; productoDetalleActual.imagenIndex = (productoDetalleActual.imagenIndex + direccion + productoDetalleActual.totalImagenes) % productoDetalleActual.totalImagenes; actualizarImagenDetalle(); }
+    function seleccionarImagenDetalle(index) { if (!productoDetalleActual) return; productoDetalleActual.imagenIndex = index; actualizarImagenDetalle(); }
+    function actualizarImagenDetalle() { if (!productoDetalleActual || !productoDetalleActual.producto.img) return; const nuevaImagen = productoDetalleActual.producto.img[productoDetalleActual.imagenIndex]; const imgPrincipal = document.getElementById('imagen-principal-detalle'); if (imgPrincipal) imgPrincipal.src = nuevaImagen; const contador = document.getElementById('contador-imagen-detalle'); if (contador) contador.textContent = productoDetalleActual.imagenIndex + 1; actualizarMiniaturasActivas(); }
+    function actualizarMiniaturasActivas() { if (!productoDetalleActual) return; const miniaturas = document.querySelectorAll('#miniaturas-detalle img'); miniaturas.forEach((thumb, index) => { thumb.classList.toggle('border-blue-500', index === productoDetalleActual.imagenIndex); thumb.classList.toggle('border-transparent', index !== productoDetalleActual.imagenIndex); }); }
+    function ampliarImagenDetalle(src) { const modalZoom = document.getElementById('modal-zoom-detalle'); const imgZoom = document.getElementById('imagen-zoom-detalle'); if (modalZoom && imgZoom) { imgZoom.src = src; modalZoom.classList.remove('hidden'); } }
+    function cerrarModalKitDetalle() { const modal = document.querySelector('.modal-kit-detalle'); if (modal) { modal.style.opacity = '0'; setTimeout(() => { modal.remove(); document.body.style.overflow = ''; productoDetalleActual = null; }, 300); } }
+    function cerrarZoomDetalle() { const modalZoom = document.getElementById('modal-zoom-detalle'); if (modalZoom) modalZoom.classList.add('hidden'); }
+    function comprarProductoKitWhatsApp(nombreProducto, precioProducto) { window.open(`https://wa.me/595972292392?text=${encodeURIComponent(`¡Hola! Quiero comprar: ${nombreProducto} - ${precioProducto}`)}`, "_blank"); mostrarNotificacion('✅ Producto enviado a WhatsApp'); }
+    
+    // ============================================
+    // FILTRO POR CATEGORÍA
+    // ============================================
+    function aplicarFiltroCategoria(categoria) {
+        console.log('Filtrando por:', categoria);
+        mostrarNotificacion(`Filtrando por: ${categoria}`);
+        const dropdowns = document.querySelectorAll('.subcategory-panel');
+        dropdowns.forEach(panel => { panel.classList.add('opacity-0', 'invisible', 'scale-95'); });
+        paginaActual = 1;
+        const categoriasMap = { 'Temperatura': ['temperatura', 'termistor', 'lm35', 'dht11', 'dht22', 'ds18b20'], 'Humedad': ['humedad', 'dht11', 'dht22'], 'Movimiento': ['movimiento', 'pir', 'acelerómetro', 'giroscopio'], 'Luz': ['luz', 'fotorresistencia', 'ldr', 'fotosensible'], 'Servo Motores': ['servo', 'sg90'], 'Stepper': ['stepper', 'paso a paso'], 'DC Motors': ['motor dc', 'motor corriente continua'], 'LCD 16x2': ['lcd', '16x2', 'pantalla lcd'], 'Matriz LED': ['matriz led', 'max7219', '8x8'], 'OLED': ['oled', 'pantalla oled', 'display oled'], 'Módulos': ['módulo', 'module', 'shield'], 'Placas': ['placa', 'board', 'arduino', 'esp32', 'esp8266'], 'Raspberry Pi': ['raspberry', 'pi', 'rpi'], 'Sensores': ['sensor', 'detector', 'medidor'], 'Motores': ['motor', 'servo', 'stepper'], 'Displays': ['display', 'pantalla', 'lcd', 'oled', 'led'] };
+        const terminosBusqueda = categoriasMap[categoria] || [categoria.toLowerCase()];
+        const productosFiltrados = componentesSueltos.filter(comp => { const textoBusqueda = (comp.nombre.toLowerCase() + ' ' + (comp.descripcion || '').toLowerCase() + ' ' + (comp.categoria || '').toLowerCase() + ' ' + (comp.especificaciones ? comp.especificaciones.join(' ').toLowerCase() : '')); return terminosBusqueda.some(termino => textoBusqueda.includes(termino.toLowerCase())); });
+        const grid = document.getElementById('grid-componentes');
+        if (!grid) return;
+        if (productosFiltrados.length === 0) { grid.innerHTML = `<div class="col-span-full text-center py-8"><div class="text-gray-400 text-4xl mb-2">🔍</div><p class="text-gray-700 font-semibold">No se encontraron productos en "${categoria}"</p><button onclick="limpiarFiltros()" class="mt-3 px-4 py-2 bg-blue-500 text-white rounded">Mostrar todos</button></div>`; } else { grid.innerHTML = productosFiltrados.map(comp => `<div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition cursor-pointer flex flex-col h-full" onclick="mostrarModalProducto(${comp.id})"><div class="p-3"><img src="${comp.imagen}" alt="${comp.nombre}" class="w-full h-40 object-contain mb-2 rounded" loading="lazy"><h3 class="font-semibold text-base line-clamp-2 min-h-[48px]">${comp.nombre}</h3>${comp.categoria ? `<p class="text-xs text-gray-500 mt-1">${comp.categoria}</p>` : ''}</div><div class="px-3"><p class="text-green-600 font-bold text-base">${comp.precio}</p></div><div class="p-3 pt-1 mt-auto"><div class="flex items-center justify-between"><span class="px-2 py-1 text-xs rounded-full ${comp.stock === 'disponible' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">${comp.stock === 'disponible' ? 'En stock' : 'Sin stock'}</span><button class="text-blue-600 hover:text-blue-800 font-semibold text-xs">Ver detalles ›</button></div></div></div>`).join(''); }
+        const infoPaginacion = document.getElementById('info-paginacion'); const infoMobile = document.getElementById('info-paginacion-mobile'); const totalPaginas = Math.ceil(productosFiltrados.length / componentesPorPagina); if (infoPaginacion) infoPaginacion.innerHTML = `Página <span class="text-blue-600">${paginaActual}</span> de <span class="text-blue-600">${totalPaginas || 1}</span>`; if (infoMobile) infoMobile.innerHTML = `<span class="text-blue-600">${paginaActual}</span>/<span class="text-blue-600">${totalPaginas || 1}</span>`; mostrarNotificacion(`Filtrando por: ${categoria} (${productosFiltrados.length} productos)`);
+    }
+    
+    // ============================================
+    // CARRITO CON SUPABASE
+    // ============================================
+    async function cargarCarritoSupabase() {
+        if (!usuarioActual) { carritoGlobal = []; actualizarContadorCarrito(); return; }
+        try { const { data, error } = await supabaseClient.from('carrito').select('*, productos(nombre, precio, imagen_principal)').eq('usuario_id', usuarioActual.id); if (error) throw error; carritoGlobal = data.map(item => ({ id: item.id, producto_id: item.producto_id, nombre: item.productos.nombre, precio: item.productos.precio, cantidad: item.cantidad, imagen: item.productos.imagen_principal })); actualizarContadorCarrito(); } catch (error) { console.error('Error cargando carrito:', error); }
+    }
+    async function agregarAlCarritoSupabase(productoId, nombre, precio, imagen) { if (!usuarioActual) { mostrarNotificacion('Inicia sesión para guardar tu carrito', 'error'); mostrarModalLogin(); return; } try { const { error } = await supabaseClient.from('carrito').insert([{ usuario_id: usuarioActual.id, producto_id: productoId, cantidad: 1 }]); if (error) throw error; mostrarNotificacion(`📦 ${nombre} agregado al carrito`, 'success'); await cargarCarritoSupabase(); } catch (error) { mostrarNotificacion('Error al agregar', 'error'); } }
+    async function quitarDelCarritoSupabase(itemId) { if (!usuarioActual) return; await supabaseClient.from('carrito').delete().eq('id', itemId); await cargarCarritoSupabase(); renderizarCarritoModal(); }
+    async function vaciarCarritoSupabase() { if (!usuarioActual) return; if (confirm('¿Vaciar carrito?')) { await supabaseClient.from('carrito').delete().eq('usuario_id', usuarioActual.id); await cargarCarritoSupabase(); renderizarCarritoModal(); mostrarNotificacion('Carrito vaciado', 'info'); } }
+    function actualizarContadorCarrito() { const count = carritoGlobal.length; const desktop = document.getElementById('carrito-count-desktop'); const mobile = document.getElementById('carrito-count-mobile'); if (desktop) desktop.textContent = count; if (mobile) mobile.textContent = count; }
+    function renderizarCarritoModal() { const cont = document.getElementById('carrito-lista'); if (!cont) return; if (!carritoGlobal.length) { cont.innerHTML = `<p class="text-gray-500 py-6 text-center">Tu carrito está vacío.</p>`; document.getElementById('carrito-total').textContent = 'Gs. 0'; return; } let total = 0; cont.innerHTML = carritoGlobal.map(item => { total += item.precio; return `<div class="flex items-center justify-between py-3 border-b"><div class="flex-1"><p class="font-medium">${item.nombre}</p><p class="text-sm text-green-700">${item.precio.toLocaleString()} Gs.</p></div><button onclick="quitarDelCarritoSupabase(${item.id})" class="text-red-500 px-2 py-1 rounded hover:bg-red-50">✕</button></div>`; }).join(''); document.getElementById('carrito-total').textContent = `Gs. ${total.toLocaleString()}`; }
+    function verCarrito() { renderizarCarritoModal(); const modal = document.getElementById('modal-carrito'); if (modal) { modal.classList.remove('opacity-0', 'pointer-events-none'); document.body.classList.add('modal-active'); } }
+
+    function agregarProductoAlCarritoSupabase() { const producto = componentesSueltos.find(c => c.nombre === document.getElementById('modal-producto-nombre').textContent); if (producto) { agregarAlCarritoSupabase(producto.id, producto.nombre, producto.precioNum, producto.imagen); toggleModalProducto(); } }
+  
+    async function enviarCarritoWhatsAppMejorado() {
+        if (!carritoGlobal.length) { mostrarNotificacion('Carrito vacío', 'error'); return; }
+        if (!usuarioActual) { mostrarNotificacion('Inicia sesión para comprar', 'error'); mostrarModalLogin(); return; }
+        const total = carritoGlobal.reduce((s, p) => s + p.precio, 0);
+        let mensaje = "¡Hola! Quiero más información sobre estos productos:\n\n";
+        mensaje += "📋 *PRODUCTOS:*\n";
+        carritoGlobal.forEach((item, index) => { mensaje += `${index + 1}. ${item.nombre} - ${item.precio.toLocaleString()} Gs.\n`; });
+        mensaje += `\n💰 *TOTAL: ${total.toLocaleString()} Gs.*\n\n`;
+        mensaje += `👤 Cliente: ${usuarioActual.nombre || usuarioActual.email}\n`;
+        mensaje += `📅 Fecha: ${new Date().toLocaleDateString()}\n\n`;
+        mensaje += `✅ Espero su confirmación.`;
+        
+        try {
+            const { data: pedidoData, error: pedidoError } = await supabaseClient.from('pedidos').insert([{ usuario_id: usuarioActual.id, productos: carritoGlobal.map(p => ({ id: p.producto_id, nombre: p.nombre, precio: p.precio, cantidad: p.cantidad || 1 })), total: total, estado: 'pendiente', whatsapp: '595972292392' }]).select();
+            if (pedidoError) throw pedidoError;
+            const pedidoId = pedidoData?.[0]?.id || 'N/A';
+            const mensajeConPedido = mensaje.replace('✅ Espero su confirmación.', `📋 *N° de Pedido: #${pedidoId}*\n\n✅ Espero su confirmación.`);
+            window.open(`https://wa.me/595972292392?text=${encodeURIComponent(mensajeConPedido)}`, '_blank');
+            await vaciarCarritoSupabase();
+            mostrarNotificacion(`✅ Pedido #${pedidoId} registrado. Te contactaremos pronto.`, 'success');
+        } catch (error) { console.error('Error:', error); mostrarNotificacion('Error al procesar', 'error'); }
+    }
+    
+    // ============================================
+    // FUNCIONES DE LOGIN Y UI
+    // ============================================
+    function mostrarModalLogin() { const modal = document.getElementById('modal-login'); if (modal) { modal.classList.remove('hidden'); modal.style.display = 'flex'; } }
+    function cerrarModalLogin(event) { if (event && event.target !== event.currentTarget) return; const modal = document.getElementById('modal-login'); if (modal) { modal.classList.add('hidden'); modal.style.display = 'none'; } }
+    function mostrarModalRegistro() { const modal = document.getElementById('modal-registro'); if (modal) { modal.classList.remove('hidden'); modal.style.display = 'flex'; } }
+    function cerrarModalRegistro(event) { if (event && event.target !== event.currentTarget) return; const modal = document.getElementById('modal-registro'); if (modal) { modal.classList.add('hidden'); modal.style.display = 'none'; } }
+    
+    // ============================================
+    // NOTIFICACIÓN
+    // ============================================
+    function mostrarNotificacion(mensaje, tipo = 'success') { console.log(`📢 [${tipo}] ${mensaje}`); const notif = document.createElement('div'); notif.className = `fixed top-20 right-4 z-50 px-4 py-2 rounded-lg text-white text-sm transition-all duration-300 transform translate-x-full ${tipo === 'success' ? 'bg-green-500' : tipo === 'error' ? 'bg-red-500' : 'bg-blue-500'}`; notif.textContent = mensaje; document.body.appendChild(notif); setTimeout(() => notif.classList.remove('translate-x-full'), 100); setTimeout(() => { notif.classList.add('translate-x-full'); setTimeout(() => notif.remove(), 300); }, 3000); }
+    
+    // ============================================
+    // NAVEGACIÓN CON HISTORIAL (SOLUCIONA EL BOTÓN ATRÁS)
+    // ============================================
+    function volverAlInicio() { navegarA('inicio'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    function verAsesorias() { navegarA('asesorias'); }
+    function toggleModal() { const modal = document.getElementById('modal-descripcion'); const isOpening = modal.classList.contains('opacity-0'); modal.classList.toggle('opacity-0'); modal.classList.toggle('pointer-events-none'); document.body.classList.toggle('modal-active', isOpening); if (window.innerWidth <= 768) document.body.style.overflow = isOpening ? 'hidden' : ''; }
+    function enviarPorWhatsApp() { const nombre = document.querySelector('input[name="nombre"]')?.value || ''; const institucion = document.querySelector('input[name="institucion"]')?.value || ''; const email = document.querySelector('input[name="email"]')?.value || ''; const telefono = document.querySelector('input[name="telefono"]')?.value || ''; const tipo = document.querySelector('select[name="tipo_proyecto"]')?.value || ''; const proyecto = document.querySelector('textarea[name="proyecto"]')?.value || ''; window.open(`https://wa.me/595972292392?text=${encodeURIComponent(`¡Hola! Solicito asesoría:%0A%0ANombre: ${nombre}%0AInstitución: ${institucion}%0AEmail: ${email}%0ATeléfono: ${telefono}%0ATipo: ${tipo}%0A%0ADescripción: ${proyecto}`)}`, '_blank'); }
+    function trackEvent(categoria, accion, etiqueta = '') { if (typeof gtag !== 'undefined') gtag('event', accion, { 'event_category': categoria, 'event_label': etiqueta }); }
+    
+    function navegarA(vista, data = {}) {
+        if (navegando) return;
+        navegando = true;
+        
+        // Ocultar todas las vistas
+        document.getElementById('main-content').style.display = 'none';
+        document.getElementById('vista-productoskit').classList.add('hidden');
+        document.getElementById('vista-asesorias').classList.add('hidden');
+        document.getElementById('vista-componentes-sueltos').classList.add('hidden');
+        
+        // Mostrar la vista seleccionada
+        switch(vista) {
+            case 'inicio':
+                document.getElementById('main-content').style.display = '';
+                history.pushState({ vista: 'inicio' }, '', '#inicio');
+                setTimeout(() => { navegando = false; }, 100);
+                break;
+            case 'productoskit':
+                document.getElementById('vista-productoskit').classList.remove('hidden');
+                const url = `#productoskit-${data.kitId}`;
+                history.pushState({ vista: 'productoskit', kitId: data.kitId }, '', url);
+                if (data.kitId) {
+                    // Esperar a que la vista esté visible antes de cargar
+                    setTimeout(() => { 
+                        verProductosKit(data.kitId); 
+                        setTimeout(() => { navegando = false; }, 100);
+                    }, 50);
+                } else {
+                    setTimeout(() => { navegando = false; }, 100);
+                }
+                break;
+            case 'asesorias':
+                document.getElementById('vista-asesorias').classList.remove('hidden');
+                history.pushState({ vista: 'asesorias' }, '', '#asesorias');
+                setTimeout(() => { navegando = false; }, 100);
+                break;
+            case 'componentes':
+                document.getElementById('vista-componentes-sueltos').classList.remove('hidden');
+                history.pushState({ vista: 'componentes' }, '', '#componentes');
+                setTimeout(() => { 
+                    verComponentesSueltos(); 
+                    setTimeout(() => { navegando = false; }, 100);
+                }, 50);
+                break;
+        }
+    }
+    
+    // Manejar el botón "atrás" del navegador/celular
+    window.addEventListener('popstate', function(event) {
+        if (event.state) {
+            const vista = event.state.vista;
+            const kitId = event.state.kitId;
+            
+            // Ocultar todas las vistas
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('vista-productoskit').classList.add('hidden');
+            document.getElementById('vista-asesorias').classList.add('hidden');
+            document.getElementById('vista-componentes-sueltos').classList.add('hidden');
+            
+            switch(vista) {
+                case 'inicio':
+                    document.getElementById('main-content').style.display = '';
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                    break;
+                case 'productoskit':
+                    document.getElementById('vista-productoskit').classList.remove('hidden');
+                    if (kitId) {
+                        verProductosKit(kitId);
+                    }
+                    break;
+                case 'asesorias':
+                    document.getElementById('vista-asesorias').classList.remove('hidden');
+                    break;
+                case 'componentes':
+                    document.getElementById('vista-componentes-sueltos').classList.remove('hidden');
+                    verComponentesSueltos();
+                    break;
+                default:
+                    document.getElementById('main-content').style.display = '';
+            }
+        } else {
+            // Estado inicial - volver al inicio
+            document.getElementById('main-content').style.display = '';
+            document.getElementById('vista-productoskit').classList.add('hidden');
+            document.getElementById('vista-asesorias').classList.add('hidden');
+            document.getElementById('vista-componentes-sueltos').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+    });
+    
+    // ============================================
+    // FUNCIONES PARA COMPARTIR PROYECTO
+    // ============================================
+    
+    function initRatingStars() {
+        const stars = document.querySelectorAll('#rating-stars i');
+        if (!stars.length) return;
+        stars.forEach(star => {
+            star.removeEventListener('click', star._clickHandler);
+            const clickHandler = function(e) {
+                e.stopPropagation();
+                const rating = parseInt(this.dataset.rating);
+                if (isNaN(rating)) return;
+                ratingSeleccionado = rating;
+                const ratingInput = document.getElementById('proyecto-rating');
+                if (ratingInput) ratingInput.value = rating;
+                stars.forEach((s, i) => {
+                    if (i < rating) {
+                        s.classList.remove('far');
+                        s.classList.add('fas', 'text-yellow-400');
+                    } else {
+                        s.classList.remove('fas', 'text-yellow-400');
+                        s.classList.add('far');
+                    }
+                });
+            };
+            star._clickHandler = clickHandler;
+            star.addEventListener('click', clickHandler);
+            star.style.cursor = 'pointer';
+        });
+    }
+    
+    function mostrarModalProyecto() { 
+        const modal = document.getElementById('proyecto-modal'); 
+        if (modal) { 
+            modal.classList.remove('hidden'); 
+            modal.style.display = 'flex'; 
+            ratingSeleccionado = 0; 
+            document.getElementById('proyecto-rating').value = 0; 
+            document.querySelectorAll('#rating-stars i').forEach(s => { 
+                s.classList.remove('fas', 'text-yellow-400'); 
+                s.classList.add('far'); 
+            }); 
+            document.getElementById('foto-preview').classList.add('hidden'); 
+            document.getElementById('form-proyecto').reset(); 
+            setTimeout(initRatingStars, 100);
+        } 
+    }
+    
+    function cerrarModalProyecto(event) { 
+        if (event && event.target !== event.currentTarget) return; 
+        const modal = document.getElementById('proyecto-modal'); 
+        if (modal) { 
+            modal.classList.add('hidden'); 
+            modal.style.display = 'none'; 
+        } 
+    }
+    
+    function previewFotoProyecto(input) { 
+        const file = input.files[0]; 
+        if (file) { 
+            const reader = new FileReader(); 
+            reader.onload = function(e) { 
+                const preview = document.getElementById('foto-preview'); 
+                const img = document.getElementById('foto-preview-img'); 
+                img.src = e.target.result; 
+                preview.classList.remove('hidden'); 
+            }; 
+            reader.readAsDataURL(file); 
+        } 
     }
     
     async function enviarProyecto(event) {
-      event.preventDefault();
-      const nombre = document.getElementById('proyecto-nombre')?.value || '';
-      const rating = document.getElementById('proyecto-rating')?.value || 0;
-      const comentario = document.getElementById('proyecto-comentario')?.value || '';
-      const fotoInput = document.getElementById('foto-proyecto');
-      
-      if (rating == 0 || !fotoInput.files[0] || !nombre || comentario.length < 10) {
-        mostrarNotificacion('Completa todos los campos', 'error');
-        return;
-      }
-      
-      mostrarNotificacion('Proyecto enviado para revisión', 'success');
-      cerrarModalProyecto();
-      document.getElementById('form-proyecto')?.reset();
-      document.getElementById('foto-preview')?.classList.add('hidden');
+        event.preventDefault();
+        const nombre = document.getElementById('proyecto-nombre').value.trim();
+        const titulo = document.getElementById('proyecto-titulo').value.trim();
+        const rating = parseInt(document.getElementById('proyecto-rating').value);
+        const comentario = document.getElementById('proyecto-comentario').value.trim();
+        const fotoInput = document.getElementById('foto-proyecto');
+        if (rating === 0 || !fotoInput.files[0] || nombre.length < 2 || comentario.length < 20) { mostrarNotificacion('Complete todos los campos', 'error'); return; }
+        const submitBtn = event.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        try {
+            const file = fotoInput.files[0];
+            const reader = new FileReader();
+            reader.onload = async function(e) {
+                const fotoBase64 = e.target.result;
+                const { error } = await supabaseClient.from('reviews').insert([{ usuario_id: usuarioActual?.id || null, producto_id: null, rating: rating, comentario: comentario, foto: fotoBase64, tipo: 'proyecto', aprobada: false }]);
+                if (error) { mostrarNotificacion('Error al guardar. Intenta de nuevo.', 'error'); } else { mostrarNotificacion('¡Gracias por compartir tu proyecto! Lo revisaremos pronto.', 'success'); cerrarModalProyecto(); setTimeout(() => cargarTestimoniosReales(), 1000); }
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            };
+            reader.readAsDataURL(file);
+        } catch (error) { console.error('Error:', error); mostrarNotificacion('Error al enviar', 'error'); submitBtn.textContent = originalText; submitBtn.disabled = false; }
     }
     
-    // Inicializar estrellas
-    document.addEventListener('DOMContentLoaded', () => {
-      const stars = document.querySelectorAll('#rating-stars i');
-      stars.forEach(star => {
-        star.addEventListener('click', function() {
-          const rating = parseInt(this.dataset.rating);
-          document.getElementById('proyecto-rating').value = rating;
-          stars.forEach((s, i) => {
-            if (i < rating) {
-              s.classList.remove('far');
-              s.classList.add('fas', 'text-yellow-400');
-            } else {
-              s.classList.remove('fas', 'text-yellow-400');
-              s.classList.add('far');
+    // ============================================
+    // CARGAR TESTIMONIOS REALES
+    // ============================================
+    async function cargarTestimoniosReales() {
+        const container = document.getElementById('testimonios-reales');
+        if (!container) return;
+        try {
+            const { data, error } = await supabaseClient.from('reviews').select('*').eq('tipo', 'proyecto').eq('aprobada', true).order('created_at', { ascending: false }).limit(6);
+            if (error) throw error;
+            if (!data || data.length === 0) { container.innerHTML = `<div class="col-span-full text-center py-8"><i class="fas fa-camera text-4xl text-gray-300 mb-4"></i><p class="text-gray-500">Aún no hay proyectos compartidos</p><p class="text-gray-400 text-sm">Sé el primero en mostrar tu creación</p></div>`; return; }
+            container.innerHTML = data.map(proyecto => `<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"><div class="relative h-48 overflow-hidden"><img src="${proyecto.foto}" alt="Proyecto" class="w-full h-full object-cover"><div class="absolute top-2 right-2 bg-black/60 text-white px-2 py-1 rounded-lg text-sm">${'★'.repeat(proyecto.rating)}${'☆'.repeat(5 - proyecto.rating)}</div></div><div class="p-4"><h4 class="font-bold text-lg mb-1">${proyecto.comentario?.substring(0, 80)}${proyecto.comentario?.length > 80 ? '...' : ''}</h4><p class="text-gray-500 text-sm mt-2">${new Date(proyecto.created_at).toLocaleDateString('es-PY')}</p></div></div>`).join('');
+        } catch (error) { console.error('Error cargando testimonios:', error); container.innerHTML = `<div class="col-span-full text-center py-8 text-gray-500">Error cargando proyectos</div>`; }
+    }
+    
+    // ============================================
+    // INICIALIZACIÓN
+    // ============================================
+    document.addEventListener('DOMContentLoaded', async () => {
+        console.log('🚀 Inicializando Innovakit con Supabase...');
+        await cargarUsuarioActualSupabase();
+        await cargarKitsSupabase();
+        await cargarProductosSupabase();
+        await cargarCarritoSupabase();
+        cargarTestimoniosReales();
+        
+        const buscar = document.getElementById('buscar-componente');
+        if (buscar) { let timeout; buscar.addEventListener('input', () => { clearTimeout(timeout); timeout = setTimeout(() => { paginaActual = 1; renderizarComponentesSueltos(); }, 300); }); }
+        const precioFiltro = document.getElementById('filtro-precio');
+        if (precioFiltro) precioFiltro.addEventListener('change', () => { paginaActual = 1; renderizarComponentesSueltos(); });
+        
+        document.querySelectorAll('#modal-producto .modal-overlay, #modal-producto .modal-close').forEach(el => el.addEventListener('click', toggleModalProducto));
+        document.querySelectorAll('#modal-carrito .modal-overlay, #modal-carrito .modal-carrito-close').forEach(el => el.addEventListener('click', () => { const modal = document.getElementById('modal-carrito'); if (modal) { modal.classList.add('opacity-0', 'pointer-events-none'); document.body.classList.remove('modal-active'); } }));
+        
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') { toggleModalProducto(); const modal = document.getElementById('modal-carrito'); if (modal && !modal.classList.contains('pointer-events-none')) { modal.classList.add('opacity-0', 'pointer-events-none'); document.body.classList.remove('modal-active'); } } });
+        
+        // Estado inicial
+        if (!history.state) history.replaceState({ vista: 'inicio' }, '', '#inicio');
+        if (window.location.hash) { 
+            const hash = window.location.hash; 
+            if (hash.includes('productoskit')) { 
+                const kitId = hash.split('-')[1]; 
+                if (kitId) navegarA('productoskit', { kitId: parseInt(kitId) }); 
+            } else if (hash === '#asesorias') { 
+                navegarA('asesorias'); 
+            } else if (hash === '#componentes') { 
+                navegarA('componentes'); 
             }
-          });
-        });
-      });
+        }
+        console.log('✅ Innovakit inicializado');
     });
     
-    // Exponer funciones al window
+    document.getElementById('form-login-supabase')?.addEventListener('submit', async (e) => { e.preventDefault(); const email = document.getElementById('login-email').value; const password = document.getElementById('login-password').value; if (typeof iniciarSesionSupabase === 'function') { if (await iniciarSesionSupabase(email, password)) { cerrarModalLogin(); } } });
+    document.getElementById('form-registro-supabase')?.addEventListener('submit', async (e) => { e.preventDefault(); const nombre = document.getElementById('reg-nombre').value; const telefono = document.getElementById('reg-telefono').value; const email = document.getElementById('reg-email').value; const password = document.getElementById('reg-password').value; if (typeof registrarUsuarioSupabase === 'function') { if (await registrarUsuarioSupabase(email, password, nombre, telefono)) { cerrarModalRegistro(); mostrarModalLogin(); } } });
+    
+    // Funciones placeholder
+    function instalarPWA() {}
+    function mostrarModalFiltros() {}
+    function cerrarModalFiltros() {}
+    function aplicarFiltrosMovil() {}
+    
+    // Exponer funciones globalmente
+    window.verCarrito = verCarrito;
+    window.vaciarCarrito = vaciarCarritoSupabase;
+    window.enviarCarritoWhatsAppMejorado = enviarCarritoWhatsAppMejorado;
     window.verProductosKit = verProductosKit;
-    window.agregarProductoAlCarrito = agregarProductoAlCarrito;
-    window.comprarProductoWhatsApp = comprarProductoWhatsApp;
-    window.toggleModalProducto = toggleModalProducto;
+    window.verComponentesSueltos = verComponentesSueltos;
+    window.volverAlInicio = volverAlInicio;
+    window.verAsesorias = verAsesorias;
     window.toggleModal = toggleModal;
     window.enviarPorWhatsApp = enviarPorWhatsApp;
+    window.mostrarModalLogin = mostrarModalLogin;
+    window.cerrarModalLogin = cerrarModalLogin;
+    window.mostrarModalRegistro = mostrarModalRegistro;
+    window.cerrarModalRegistro = cerrarModalRegistro;
     window.mostrarModalProyecto = mostrarModalProyecto;
-    window.cerrarModalProyecto = cerrarModalProyecto;
-    window.previewFotoProyecto = previewFotoProyecto;
-    window.enviarProyecto = enviarProyecto;
+    window.comprarProductoWhatsApp = comprarProductoWhatsApp;
+    window.agregarProductoAlCarrito = agregarProductoAlCarritoSupabase;
+    window.cambiarPagina = cambiarPagina;
+    window.limpiarFiltros = limpiarFiltros;
+    window.aplicarFiltroCategoria = aplicarFiltroCategoria;
     window.mostrarModalFiltros = mostrarModalFiltros;
     window.cerrarModalFiltros = cerrarModalFiltros;
     window.aplicarFiltrosMovil = aplicarFiltrosMovil;
-    window.limpiarFiltros = limpiarFiltros;
-    window.aplicarFiltroCategoria = aplicarFiltroCategoria;
-    window.cambiarPagina = cambiarPagina;
     window.instalarPWA = instalarPWA;
   </script>
   
@@ -817,5 +1598,18 @@
       <i class="fas fa-crown text-xl"></i>
     </a>
   </div>
+  
+  <script>
+  async function mostrarBotonAdmin() {
+      if (typeof supabaseClient !== 'undefined' && supabaseClient) {
+          const { data: { user } } = await supabaseClient.auth.getUser();
+          if (user) {
+              const { data: perfil } = await supabaseClient.from('perfiles').select('es_admin').eq('id', user.id).single();
+              if (perfil?.es_admin) document.getElementById('admin-float-btn').style.display = 'block';
+          }
+      }
+  }
+  document.addEventListener('DOMContentLoaded', mostrarBotonAdmin);
+  </script>
 </body>
 </html>

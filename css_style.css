@@ -501,13 +501,13 @@ img {
 }
 
 /* ============================================
-   IMPRESORA DESTACADA PREMIUM - PUNTO MEDIO (+15% sobre la versión reducida)
+   IMPRESORA DESTACADA PREMIUM - VERSIÓN FINAL (+17% sobre reducida)
 ============================================ */
 
 #impresora-destacada {
     position: relative;
     overflow: hidden;
-    padding: 46px 18px;
+    padding: 47px 18px;
     background:
         radial-gradient(circle at top left, rgba(255,255,255,0.9), transparent 40%),
         linear-gradient(135deg, #eef2ff 0%, #dfe7ff 100%);
@@ -516,7 +516,7 @@ img {
 /* Container */
 
 .impresora-container {
-    max-width: 1242px;
+    max-width: 1265px;
     margin: auto;
     position: relative;
     z-index: 2;
@@ -528,7 +528,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 55px;
+    gap: 56px;
 }
 
 /* ============================================
@@ -537,7 +537,7 @@ img {
 
 .top-badge {
     width: fit-content;
-    margin: 0 auto 46px;
+    margin: 0 auto 47px;
     padding: 9px 16px;
     border-radius: 999px;
     background: rgba(255,255,255,0.75);
@@ -555,7 +555,7 @@ img {
 .product-side {
     position: relative;
     width: 58%;
-    min-height: 662px;
+    min-height: 675px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -565,8 +565,8 @@ img {
 
 .product-circle {
     position: absolute;
-    width: 304px;
-    height: 276px;
+    width: 310px;
+    height: 282px;
     border-radius: 30%;
     background: radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0.45));
     z-index: 1;
@@ -576,26 +576,25 @@ img {
 
 .product-platform {
     position: absolute;
-    bottom: 55px;
+    bottom: 56px;
     width: 88%;
-    height: 110px;
-    border-radius: 92px;
+    height: 112px;
+    border-radius: 94px;
     background: linear-gradient(to bottom, #ffffff, #e9eeff);
     box-shadow:
-        0 28px 55px rgba(120,140,255,0.12),
+        0 29px 56px rgba(120,140,255,0.12),
         inset 0 -7px 18px rgba(0,0,0,0.03);
     z-index: 2;
 }
 
-/* Imagen producto */
-
+/* Imagen producto - TAMAÑO PROPORCIONAL */
 .product-image {
     position: relative;
-    width: 92%;
-    max-width: 828px;
+    width: 88%;
+    max-width: 750px;
     z-index: 5;
     object-fit: contain;
-    filter: drop-shadow(0 32px 32px rgba(0,0,0,0.12));
+    filter: drop-shadow(0 33px 33px rgba(0,0,0,0.12));
     transition: transform .5s ease;
 }
 
@@ -607,8 +606,8 @@ img {
 
 .nuevo-badge {
     position: absolute;
-    top: 37px;
-    right: 55px;
+    top: 38px;
+    right: 56px;
     z-index: 20;
     background: #ffd43b;
     color: #111;
@@ -628,7 +627,7 @@ img {
 }
 
 .product-title {
-    font-size: 37px;
+    font-size: 38px;
     line-height: 1.1;
     font-weight: 800;
     color: #1f2937;
@@ -645,7 +644,7 @@ img {
     font-size: 15px;
     line-height: 1.66;
     color: #5b6475;
-    margin-bottom: 37px;
+    margin-bottom: 38px;
 }
 
 /* ============================================
@@ -656,7 +655,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 11px;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 }
 
 .feature-card {
@@ -687,28 +686,33 @@ img {
 }
 
 /* ============================================
-   BOTONES
+   BOTONES - TAMAÑO PROPORCIONAL
 ============================================ */
 
 .buttons-row {
     display: flex;
     gap: 18px;
-    margin-bottom: 37px;
+    margin-bottom: 38px;
 }
 
 .btn-primary,
 .btn-whatsapp {
     border: none;
     cursor: pointer;
-    padding: 16px 31px;
+    padding: 12px 24px;
     border-radius: 18px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 10px;
     transition: .3s ease;
     color: white;
+}
+
+.btn-primary i,
+.btn-whatsapp i {
+    font-size: 14px;
 }
 
 .btn-primary {
@@ -723,7 +727,7 @@ img {
 
 .btn-primary:hover,
 .btn-whatsapp:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 /* ============================================
@@ -751,27 +755,27 @@ img {
 .bg-glow {
     position: absolute;
     border-radius: 50%;
-    filter: blur(83px);
+    filter: blur(85px);
 }
 
 .bg-glow-1 {
-    width: 322px;
-    height: 322px;
+    width: 328px;
+    height: 328px;
     background: rgba(34,197,94,0.12);
-    top: -92px;
-    left: -92px;
+    top: -94px;
+    left: -94px;
 }
 
 .bg-glow-2 {
-    width: 414px;
-    height: 414px;
+    width: 422px;
+    height: 422px;
     background: rgba(37,99,235,0.10);
-    bottom: -184px;
-    right: -184px;
+    bottom: -188px;
+    right: -188px;
 }
 
 /* ============================================
-   RESPONSIVE (PUNTO MEDIO)
+   RESPONSIVE
 ============================================ */
 
 @media (max-width: 1100px) {
@@ -786,16 +790,16 @@ img {
     }
 
     .product-side {
-        min-height: 552px;
+        min-height: 563px;
     }
 
     .product-circle {
-        width: 552px;
-        height: 552px;
+        width: 563px;
+        height: 563px;
     }
 
     .product-title {
-        font-size: 39px;
+        font-size: 40px;
         text-align: center;
     }
 
@@ -816,25 +820,25 @@ img {
 @media (max-width: 768px) {
 
     #impresora-destacada {
-        padding: 64px 18px;
+        padding: 65px 18px;
     }
 
     .product-side {
-        min-height: 386px;
+        min-height: 394px;
     }
 
     .product-circle {
-        width: 350px;
-        height: 350px;
+        width: 357px;
+        height: 357px;
     }
 
     .product-platform {
-        height: 64px;
-        bottom: 37px;
+        height: 65px;
+        bottom: 38px;
     }
 
     .product-title {
-        font-size: 31px;
+        font-size: 32px;
     }
 
     .product-description {
@@ -857,5 +861,12 @@ img {
     .btn-whatsapp {
         width: 100%;
         justify-content: center;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .btn-primary i,
+    .btn-whatsapp i {
+        font-size: 14px;
     }
 }

@@ -501,13 +501,13 @@ img {
 }
 
 /* ============================================
-   IMPRESORA DESTACADA PREMIUM - REDUCIDA 20%
+   IMPRESORA DESTACADA PREMIUM - PUNTO MEDIO (+15% sobre la versión reducida)
 ============================================ */
 
 #impresora-destacada {
     position: relative;
     overflow: hidden;
-    padding: 40px 16px;
+    padding: 46px 18px;
     background:
         radial-gradient(circle at top left, rgba(255,255,255,0.9), transparent 40%),
         linear-gradient(135deg, #eef2ff 0%, #dfe7ff 100%);
@@ -516,7 +516,7 @@ img {
 /* Container */
 
 .impresora-container {
-    max-width: 1080px;
+    max-width: 1242px;
     margin: auto;
     position: relative;
     z-index: 2;
@@ -528,7 +528,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 48px;
+    gap: 55px;
 }
 
 /* ============================================
@@ -537,15 +537,15 @@ img {
 
 .top-badge {
     width: fit-content;
-    margin: 0 auto 40px;
-    padding: 8px 14px;
+    margin: 0 auto 46px;
+    padding: 9px 16px;
     border-radius: 999px;
     background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(9px);
     color: #3451d1;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
 }
 
 /* ============================================
@@ -555,7 +555,7 @@ img {
 .product-side {
     position: relative;
     width: 58%;
-    min-height: 576px;
+    min-height: 662px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -565,8 +565,8 @@ img {
 
 .product-circle {
     position: absolute;
-    width: 264px;
-    height: 240px;
+    width: 304px;
+    height: 276px;
     border-radius: 30%;
     background: radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0.45));
     z-index: 1;
@@ -576,14 +576,14 @@ img {
 
 .product-platform {
     position: absolute;
-    bottom: 48px;
+    bottom: 55px;
     width: 88%;
-    height: 96px;
-    border-radius: 80px;
+    height: 110px;
+    border-radius: 92px;
     background: linear-gradient(to bottom, #ffffff, #e9eeff);
     box-shadow:
-        0 24px 48px rgba(120,140,255,0.12),
-        inset 0 -6px 16px rgba(0,0,0,0.03);
+        0 28px 55px rgba(120,140,255,0.12),
+        inset 0 -7px 18px rgba(0,0,0,0.03);
     z-index: 2;
 }
 
@@ -592,31 +592,31 @@ img {
 .product-image {
     position: relative;
     width: 92%;
-    max-width: 720px;
+    max-width: 828px;
     z-index: 5;
     object-fit: contain;
-    filter: drop-shadow(0 28px 28px rgba(0,0,0,0.12));
+    filter: drop-shadow(0 32px 32px rgba(0,0,0,0.12));
     transition: transform .5s ease;
 }
 
 .product-image:hover {
-    transform: translateY(-6px) scale(1.016);
+    transform: translateY(-7px) scale(1.018);
 }
 
 /* Badge */
 
 .nuevo-badge {
     position: absolute;
-    top: 32px;
-    right: 48px;
+    top: 37px;
+    right: 55px;
     z-index: 20;
     background: #ffd43b;
     color: #111;
     font-weight: 800;
-    font-size: 11px;
-    padding: 8px 14px;
+    font-size: 13px;
+    padding: 9px 16px;
     border-radius: 999px;
-    box-shadow: 0 8px 20px rgba(255,212,59,0.35);
+    box-shadow: 0 9px 23px rgba(255,212,59,0.35);
 }
 
 /* ============================================
@@ -628,11 +628,11 @@ img {
 }
 
 .product-title {
-    font-size: 32px;
+    font-size: 37px;
     line-height: 1.1;
     font-weight: 800;
     color: #1f2937;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 }
 
 .product-title span {
@@ -642,10 +642,10 @@ img {
 }
 
 .product-description {
-    font-size: 13px;
-    line-height: 1.44;
+    font-size: 15px;
+    line-height: 1.66;
     color: #5b6475;
-    margin-bottom: 32px;
+    margin-bottom: 37px;
 }
 
 /* ============================================
@@ -655,33 +655,33 @@ img {
 .features-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 16px;
+    gap: 11px;
+    margin-bottom: 18px;
 }
 
 .feature-card {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 14px;
+    gap: 11px;
+    padding: 14px 16px;
     background: rgba(255,255,255,0.72);
-    backdrop-filter: blur(10px);
-    border-radius: 19px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    backdrop-filter: blur(11px);
+    border-radius: 22px;
+    box-shadow: 0 9px 23px rgba(0,0,0,0.04);
     transition: .3s ease;
 }
 
 .feature-card:hover {
-    transform: translateX(6px);
+    transform: translateX(7px);
 }
 
 .feature-card i {
-    font-size: 14px;
+    font-size: 16px;
     color: #22c55e;
 }
 
 .feature-card span {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     color: #374151;
 }
@@ -692,38 +692,38 @@ img {
 
 .buttons-row {
     display: flex;
-    gap: 16px;
-    margin-bottom: 32px;
+    gap: 18px;
+    margin-bottom: 37px;
 }
 
 .btn-primary,
 .btn-whatsapp {
     border: none;
     cursor: pointer;
-    padding: 14px 27px;
-    border-radius: 16px;
-    font-size: 14px;
+    padding: 16px 31px;
+    border-radius: 18px;
+    font-size: 16px;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
     transition: .3s ease;
     color: white;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    box-shadow: 0 12px 24px rgba(37,99,235,0.25);
+    box-shadow: 0 14px 28px rgba(37,99,235,0.25);
 }
 
 .btn-whatsapp {
     background: linear-gradient(135deg, #22c55e, #16a34a);
-    box-shadow: 0 12px 24px rgba(34,197,94,0.25);
+    box-shadow: 0 14px 28px rgba(34,197,94,0.25);
 }
 
 .btn-primary:hover,
 .btn-whatsapp:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 }
 
 /* ============================================
@@ -732,16 +732,16 @@ img {
 
 .bottom-info {
     display: flex;
-    gap: 24px;
+    gap: 28px;
     flex-wrap: wrap;
     color: #8a94a7;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .bottom-info div {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
 }
 
 /* ============================================
@@ -751,27 +751,27 @@ img {
 .bg-glow {
     position: absolute;
     border-radius: 50%;
-    filter: blur(72px);
+    filter: blur(83px);
 }
 
 .bg-glow-1 {
-    width: 280px;
-    height: 280px;
+    width: 322px;
+    height: 322px;
     background: rgba(34,197,94,0.12);
-    top: -80px;
-    left: -80px;
+    top: -92px;
+    left: -92px;
 }
 
 .bg-glow-2 {
-    width: 360px;
-    height: 360px;
+    width: 414px;
+    height: 414px;
     background: rgba(37,99,235,0.10);
-    bottom: -160px;
-    right: -160px;
+    bottom: -184px;
+    right: -184px;
 }
 
 /* ============================================
-   RESPONSIVE (REDUCIDO 20%)
+   RESPONSIVE (PUNTO MEDIO)
 ============================================ */
 
 @media (max-width: 1100px) {
@@ -786,16 +786,16 @@ img {
     }
 
     .product-side {
-        min-height: 480px;
+        min-height: 552px;
     }
 
     .product-circle {
-        width: 480px;
-        height: 480px;
+        width: 552px;
+        height: 552px;
     }
 
     .product-title {
-        font-size: 34px;
+        font-size: 39px;
         text-align: center;
     }
 
@@ -816,37 +816,37 @@ img {
 @media (max-width: 768px) {
 
     #impresora-destacada {
-        padding: 56px 16px;
+        padding: 64px 18px;
     }
 
     .product-side {
-        min-height: 336px;
+        min-height: 386px;
     }
 
     .product-circle {
-        width: 304px;
-        height: 304px;
+        width: 350px;
+        height: 350px;
     }
 
     .product-platform {
-        height: 56px;
-        bottom: 32px;
+        height: 64px;
+        bottom: 37px;
     }
 
     .product-title {
-        font-size: 27px;
+        font-size: 31px;
     }
 
     .product-description {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .feature-card {
-        padding: 13px;
+        padding: 15px;
     }
 
     .feature-card span {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .buttons-row {

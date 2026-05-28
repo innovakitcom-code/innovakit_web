@@ -740,6 +740,7 @@ img {
     flex-wrap: wrap;
     color: #8a94a7;
     font-size: 15px;
+    justify-content: flex-start; /* Esto fuerza a la izquierda */
 }
 
 .bottom-info div {
@@ -812,14 +813,9 @@ img {
         flex-wrap: wrap;
     }
 
-   .bottom-info {
-    display: flex;
-    gap: 28px;
-    flex-wrap: wrap;
-    color: #8a94a7;
-    font-size: 15px;
-    justify-content: flex-start; /* Esto fuerza a la izquierda */
-}
+    .bottom-info {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {

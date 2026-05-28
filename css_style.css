@@ -499,47 +499,7 @@ img {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
-/* ============================================
-   SKELETON LOADING MEJORADO
-   ============================================ */
 
-.skeleton-card {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: skeleton-loading 1.5s infinite;
-    border-radius: 12px;
-}
-
-@keyframes skeleton-loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-}
-
-.skeleton-image {
-    width: 100%;
-    height: 160px;
-    background: linear-gradient(90deg, #e0e0e0 25%, #d0d0d0 50%, #e0e0e0 75%);
-    background-size: 200% 100%;
-    animation: skeleton-loading 1.5s infinite;
-    border-radius: 8px;
-}
-
-.skeleton-title {
-    height: 20px;
-    width: 80%;
-    margin: 12px 0;
-}
-
-.skeleton-price {
-    height: 24px;
-    width: 50%;
-}
-
-.skeleton-button {
-    height: 36px;
-    width: 100%;
-    border-radius: 8px;
-}
 /* ============================================
    IMPRESORA DESTACADA PREMIUM
 ============================================ */
@@ -605,9 +565,9 @@ img {
 
 .product-circle {
     position: absolute;
-    width: 780px;
-    height: 780px;
-    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+    border-radius: 30%;
     background: radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0.45));
     z-index: 1;
 }
@@ -676,7 +636,7 @@ img {
 }
 
 .product-title {
-    font-size: 54px;
+    font-size: 34px;
     line-height: 1.1;
     font-weight: 800;
     color: #1f2937;
@@ -690,7 +650,7 @@ img {
 }
 
 .product-description {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1.8;
     color: #5b6475;
     margin-bottom: 40px;

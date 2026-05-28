@@ -541,185 +541,199 @@ img {
     border-radius: 8px;
 }
 /* ============================================
-   IMPRESORA DESTACADA PREMIUM
-============================================ */
+   IMPRESORA 3D DESTACADA - VERSIÓN MEJORADA
+   ============================================ */
 
-#impresora-destacada {
+/* Sección principal */
+.impresora-section {
     position: relative;
     overflow: hidden;
-    padding: 60px 20px;
-    background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.9), transparent 40%),
-        linear-gradient(135deg, #eef2ff 0%, #dfe7ff 100%);
+    padding: 80px 24px;
+    background: linear-gradient(135deg, #eef2ff 0%, #dfe7ff 100%);
 }
 
 /* Container */
-
 .impresora-container {
     max-width: 1350px;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
 }
 
-/* Layout */
-
+/* Layout flex */
 .impresora-layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 48px;
 }
 
-/* ============================================
-   BADGE SUPERIOR
-============================================ */
-
-.top-badge {
-    width: fit-content;
-    margin: 0 auto 50px;
-    padding: 10px 18px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(10px);
-    color: #3451d1;
-    font-size: 14px;
-    font-weight: 700;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-/* ============================================
-   PRODUCT SIDE
-============================================ */
+/* ========================================== */
+/* COLUMNA IZQUIERDA - IMAGEN */
+/* ========================================== */
 
 .product-side {
     position: relative;
-    width: 65%;
+    width: 60%;
     min-height: 580px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* Círculo */
-
+/* Círculo decorativo */
 .product-circle {
     position: absolute;
-
     width: 620px;
     height: 620px;
-
     border-radius: 50%;
-
-    background:
-        radial-gradient(circle,
-        rgba(255,255,255,0.95),
-        rgba(255,255,255,0.35));
-
+    background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,255,255,0.3));
     z-index: 1;
 }
 
-/* Plataforma */
-
+/* Plataforma/sombra */
 .product-platform {
     position: absolute;
-
     bottom: 115px;
-
     width: 82%;
     height: 95px;
-
     border-radius: 999px;
-
-    background:
-        linear-gradient(to bottom,
-        #ffffff,
-        #edf1ff);
-
-    box-shadow:
-        0 18px 40px rgba(120,140,255,0.12),
-        inset 0 -6px 10px rgba(0,0,0,0.03);
-
+    background: linear-gradient(to bottom, #ffffff, #edf1ff);
+    box-shadow: 0 18px 40px rgba(120, 140, 255, 0.12), inset 0 -6px 10px rgba(0, 0, 0, 0.03);
     z-index: 2;
 }
 
-/* Imagen producto */
-
+/* Imagen */
 .product-image {
     position: relative;
-
-    width: 95%;
-    max-width: 820px;
-
+    width: 90%;
+    max-width: 750px;
     z-index: 5;
-
     object-fit: contain;
-
-    filter:
-        drop-shadow(0 25px 30px rgba(0,0,0,0.12));
-
-    transition: transform .5s ease;
+    filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.12));
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 .product-image:hover {
     transform: translateY(-8px) scale(1.02);
 }
 
-/* Badge */
-
+/* Badge flotante */
 .nuevo-badge {
     position: absolute;
-    top: 40px;
-    right: 60px;
+    top: 30px;
+    right: 50px;
     z-index: 20;
-
     background: #ffd43b;
     color: #111;
-
     font-weight: 800;
     font-size: 14px;
-
-    padding: 10px 18px;
+    padding: 8px 18px;
     border-radius: 999px;
-
-    box-shadow: 0 10px 25px rgba(255,212,59,0.35);
+    box-shadow: 0 8px 20px rgba(255, 212, 59, 0.35);
 }
 
-/* ============================================
-   CONTENT SIDE
-============================================ */
+/* Botones debajo de la imagen */
+.buttons-row {
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-whatsapp {
+    border: none;
+    cursor: pointer;
+    padding: 14px 28px;
+    border-radius: 60px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+}
+
+/* Footer info */
+.bottom-info {
+    position: relative;
+    z-index: 10;
+    margin-top: 24px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.bottom-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ========================================== */
+/* COLUMNA DERECHA - CONTENIDO */
+/* ========================================== */
 
 .content-side {
-    width: 35%;
+    width: 40%;
 }
 
+/* Título - MUCHO MÁS GRANDE */
 .product-title {
-    font-size: 24px;
+    font-size: 48px;
     line-height: 1.2;
     font-weight: 800;
     color: #1f2937;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .product-title span {
     background: linear-gradient(90deg, #22c55e, #2563eb);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: block;
+    margin-top: 8px;
 }
 
+/* Descripción */
 .product-description {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #5b6475;
-    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 28px;
 }
 
-/* ============================================
-   FEATURES
-============================================ */
-
+/* Grid de características */
 .features-list {
     display: flex;
     flex-direction: column;
@@ -730,107 +744,48 @@ img {
     display: flex;
     align-items: center;
     gap: 14px;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
 
-    padding: 14px 18px;
-
-    background: rgba(255,255,255,0.72);
-
-    backdrop-filter: blur(10px);
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.04);
-
-    transition: .3s ease;
+.feature-card:hover {
+    transform: translateX(6px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .feature-card i {
-    font-size: 16px;
+    font-size: 20px;
     color: #22c55e;
+    width: 28px;
 }
 
 .feature-card span {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: #374151;
 }
 
-/* ============================================
-   BOTONES
-============================================ */
-
-.image-buttons {
-    position: relative;
-    z-index: 10;
-
-    margin-top: -10px;
-
-    display: flex;
-    gap: 16px;
-}
-
-.btn-primary,
-.btn-whatsapp {
-    border: none;
-    cursor: pointer;
-
-    padding: 14px 26px;
-
-    border-radius: 16px;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    transition: .3s ease;
-
-    color: white;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-}
-
-.btn-whatsapp {
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-}
-/* ============================================
-   FOOTER INFO
-============================================ */
-
-.bottom-info {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-
-    color: #8a94a7;
-    font-size: 16px;
-}
-
-.bottom-info div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* ============================================
-   GLOW DECORATIVO
-============================================ */
+/* ========================================== */
+/* GLOW DECORATIVO */
+/* ========================================== */
 
 .bg-glow {
     position: absolute;
     border-radius: 50%;
     filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .bg-glow-1 {
     width: 350px;
     height: 350px;
-    background: rgba(34,197,94,0.12);
+    background: rgba(34, 197, 94, 0.1);
     top: -100px;
     left: -100px;
 }
@@ -838,105 +793,153 @@ img {
 .bg-glow-2 {
     width: 450px;
     height: 450px;
-    background: rgba(37,99,235,0.10);
-    bottom: -200px;
-    right: -200px;
+    background: rgba(37, 99, 235, 0.08);
+    bottom: -150px;
+    right: -150px;
 }
-.image-info {
-    margin-top: 24px;
 
-    display: flex;
-    gap: 20px;
+/* ========================================== */
+/* BADGE SUPERIOR */
+/* ========================================== */
 
-    color: #9ca3af;
-    font-size: 13px;
+.top-badge {
+    width: fit-content;
+    margin: 0 auto 50px;
+    padding: 8px 20px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
-/* ============================================
-   RESPONSIVE
-============================================ */
+
+/* ========================================== */
+/* RESPONSIVE */
+/* ========================================== */
 
 @media (max-width: 1100px) {
-
     .impresora-layout {
         flex-direction: column;
+        gap: 30px;
     }
-
+    
     .product-side,
     .content-side {
         width: 100%;
     }
-
+    
     .product-side {
-        min-height: 600px;
+        min-height: auto;
+        padding-bottom: 20px;
     }
-
+    
     .product-circle {
-        width: 600px;
-        height: 600px;
+        width: 500px;
+        height: 500px;
     }
-
+    
     .product-title {
-        font-size: 42px;
+        font-size: 40px;
         text-align: center;
     }
-
+    
+    .product-title span {
+        display: inline-block;
+    }
+    
     .product-description {
         text-align: center;
+        font-size: 16px;
     }
-
+    
     .buttons-row {
         justify-content: center;
-        flex-wrap: wrap;
     }
-
+    
     .bottom-info {
         justify-content: center;
+    }
+    
+    .features-list {
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 768px) {
-
-    #impresora-destacada {
-        padding: 70px 20px;
+    .impresora-section {
+        padding: 50px 16px;
     }
-
+    
     .product-side {
-        min-height: 420px;
+        min-height: auto;
     }
-
+    
     .product-circle {
-        width: 380px;
-        height: 380px;
+        width: 320px;
+        height: 320px;
     }
-
+    
     .product-platform {
-        height: 70px;
-        bottom: 40px;
+        height: 60px;
+        bottom: 70px;
     }
-
+    
+    .product-image {
+        width: 95%;
+    }
+    
+    .nuevo-badge {
+        top: 10px;
+        right: 20px;
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+    
     .product-title {
-        font-size: 34px;
+        font-size: 32px;
     }
-
+    
     .product-description {
-        font-size: 16px;
+        font-size: 14px;
     }
-
+    
     .feature-card {
-        padding: 16px;
+        padding: 12px 16px;
     }
-
+    
+    .feature-card i {
+        font-size: 18px;
+        width: 24px;
+    }
+    
     .feature-card span {
-        font-size: 16px;
+        font-size: 14px;
     }
-
+    
     .buttons-row {
         flex-direction: column;
+        width: 100%;
+        gap: 12px;
     }
-
+    
     .btn-primary,
     .btn-whatsapp {
         width: 100%;
         justify-content: center;
+        padding: 12px 20px;
+    }
+    
+    .bottom-info {
+        gap: 20px;
+        font-size: 12px;
+    }
+    
+    .top-badge {
+        margin-bottom: 30px;
+        font-size: 12px;
     }
 }

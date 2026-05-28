@@ -750,7 +750,7 @@ img {
 
 /* ============================================
    GLOW DECORATIVO
-============================================ */
+============================================ 
 
 .bg-glow {
     position: absolute;
@@ -773,7 +773,7 @@ img {
     bottom: -188px;
     right: -188px;
 }
-
+*/
 /* ============================================
    RESPONSIVE
 ============================================ */
@@ -812,9 +812,14 @@ img {
         flex-wrap: wrap;
     }
 
-    .bottom-info {
-        justify-content: center;
-    }
+   .bottom-info {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    color: #8a94a7;
+    font-size: 15px;
+    justify-content: flex-start; /* Esto fuerza a la izquierda */
+}
 }
 
 @media (max-width: 768px) {

@@ -240,108 +240,80 @@
     
     <hr class="my-6 border-gray-300">
 <!-- ========================================== -->
-<!-- SECCIÓN IMPRESORA 3D DESTACADA - VERSIÓN MEJORADA -->
+<!-- SECCIÓN IMPRESORA 3D DESTACADA -->
 <!-- ========================================== -->
-<section id="impresora-destacada" class="impresora-section">
-    
-    <!-- Glow decorativo (sutil, sin romper armonía) -->
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
-    
-    <div class="impresora-container">
+<section id="impresora-destacada" class="py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="max-w-6xl mx-auto">
         
         <!-- Badge superior -->
-        <div class="top-badge">
-            🖨️ NOVEDAD | IMPRESORA 3D
+        <div class="text-center mb-8">
+            <span class="inline-block px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-sm font-semibold text-blue-700 shadow-sm">
+                🖨️ NOVEDAD | IMPRESORA 3D
+            </span>
         </div>
         
-        <div class="impresora-layout">
+        <div class="flex flex-col lg:flex-row items-center gap-8">
             
-            <!-- ==================== -->
-            <!-- COLUMNA IZQUIERDA: IMAGEN -->
-            <!-- ==================== -->
-            <div class="product-side">
+            <!-- ========== COLUMNA IZQUIERDA: IMAGEN ========== -->
+            <div class="lg:w-1/2 relative">
+                
+                <!-- Círculo decorativo (MUCHO MÁS PEQUEÑO) -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-tr from-green-100 to-blue-100 rounded-full opacity-50"></div>
                 
                 <!-- Badge flotante -->
-                <div class="nuevo-badge">
+                <div class="absolute -top-3 -right-3 z-10 bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-full text-sm font-bold shadow-lg flex items-center gap-1">
                     ✨ NUEVO
                 </div>
                 
-                <!-- Círculo decorativo -->
-                <div class="product-circle"></div>
+                <!-- Imagen -->
+                <div class="relative bg-white rounded-2xl shadow-xl p-6">
+                    <img src="TU-IMAGEN-AQUI.png" 
+                         alt="Impresora 3D Bambu Lab A1" 
+                         class="w-full h-auto object-contain rounded-xl"
+                         loading="lazy">
+                </div>
                 
-                <!-- Plataforma/sombra inferior -->
-                <div class="product-platform"></div>
-                
-                <!-- Imagen de la impresora -->
-                <img src="TU-IMAGEN.png" 
-                     alt="Impresora 3D Bambu Lab P1S" 
-                     class="product-image"
-                     loading="lazy">
-                
-                <!-- Botones debajo de la imagen -->
-                <div class="buttons-row">
-                    <button onclick="verPaginaImpresora()" class="btn-primary">
-                        <i class="fas fa-eye"></i>
-                        Ver página exclusiva
+                <!-- Botones DEBAJO de la imagen -->
+                <div class="flex flex-col sm:flex-row gap-3 mt-6 justify-center">
+                    <button onclick="verPaginaImpresora()" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fas fa-eye"></i> Ver página exclusiva
                     </button>
-                    <button onclick="consultarImpresoraWhatsApp()" class="btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        Consultar precio
+                    <button onclick="consultarImpresoraWhatsApp()" class="px-5 py-2.5 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fab fa-whatsapp"></i> Consultar precio
                     </button>
-                </div>              
-                <!-- Footer info (envíos, garantía) -->
-                <div class="bottom-info">
-                    <div>
-                        <i class="fas fa-truck"></i>
-                        Envíos a todo Paraguay
-                    </div>
-                    <div>
-                        <i class="fas fa-shield-alt"></i>
-                        Garantía incluida
-                    </div>
-                </div>                
-            </div>            
-            <!-- ==================== -->
-            <!-- COLUMNA DERECHA: CONTENIDO -->
-            <!-- ==================== -->
-            <div class="content-side">
+                </div>
                 
-                <h2 class="product-title">
-                    Impresora 3D
-                    <span>Bambu Lab P1S</span>
-                </h2>     
-                <p class="product-description">
-                    Hardware y software bien pulidos y maduros, con base en comentarios del mundo real.
-                    Lleva tus proyectos al siguiente nivel con precisión profesional y calidad excepcional.
-                </p>          
-                <div class="features-list">    
-                    <div class="feature-card">
-                        <i class="fas fa-bullseye"></i>
-                        <span>Precisión 0.1mm</span>
-                    </div>                   
-                    <div class="feature-card">
-                        <i class="fas fa-palette"></i>
-                        <span>Pantalla táctil a color</span>
-                    </div>                    
-                    <div class="feature-card">
-                        <i class="fas fa-fill-drip"></i>
-                        <span>Impresión multicolor</span>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-cube"></i>
-                        <span>Volumen 256×256×256mm</span>
-                    </div>             
-                    <div class="feature-card">
-                        <i class="fas fa-wifi"></i>
-                        <span>Conectividad WiFi + App</span>
-                    </div>                   
-                    <div class="feature-card">
-                        <i class="fas fa-camera"></i>
-                        <span>Cámara integrada</span>
-                    </div>        
-                </div>              
+                <!-- Información adicional -->
+                <div class="flex justify-center gap-6 mt-4 text-sm text-gray-500">
+                    <div class="flex items-center gap-2"><i class="fas fa-truck"></i> Envíos a todo Paraguay</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-shield-alt"></i> Garantía incluida</div>
+                </div>
+                
             </div>
+            
+            <!-- ========== COLUMNA DERECHA: TEXTO ========== -->
+            <div class="lg:w-1/2 text-center lg:text-left space-y-5">
+                
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800">
+                    Impresora 3D
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Bambu Lab A1</span>
+                </h3>
+                
+                <p class="text-gray-600 text-base leading-relaxed">
+                    Hardware y software bien pulidos y maduros, con base en comentarios del mundo real.
+                    Lleva tus proyectos al siguiente nivel con precisión profesional.
+                </p>
+                
+                <!-- Características -->
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                    <div class="flex items-center gap-2 text-sm"><i class="fas fa-check-circle text-green-500"></i> <span>Precisión 0.1mm</span></div>
+                    <div class="flex items-center gap-2 text-sm"><i class="fas fa-check-circle text-green-500"></i> <span>Pantalla táctil</span></div>
+                    <div class="flex items-center gap-2 text-sm"><i class="fas fa-check-circle text-green-500"></i> <span>WiFi + App</span></div>
+                    <div class="flex items-center gap-2 text-sm"><i class="fas fa-check-circle text-green-500"></i> <span>Cámara integrada</span></div>
+                </div>
+                
+            </div>
+            
         </div>
     </div>
 </section>

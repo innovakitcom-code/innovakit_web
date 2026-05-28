@@ -871,3 +871,63 @@ img {
         font-size: 14px;
     }
 }
+/* ============================================
+   BOTONES DENTRO DE PRODUCT-SIDE
+============================================ */
+
+.buttons-row-product {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 18px;
+    z-index: 20;
+    width: 100%;
+    justify-content: center;
+}
+
+.buttons-row-product .btn-primary,
+.buttons-row-product .btn-whatsapp {
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: .3s ease;
+    color: white;
+}
+
+.buttons-row-product .btn-primary i,
+.buttons-row-product .btn-whatsapp i {
+    font-size: 14px;
+}
+
+.buttons-row-product .btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 14px 28px rgba(37,99,235,0.25);
+}
+
+.buttons-row-product .btn-whatsapp {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 14px 28px rgba(34,197,94,0.25);
+}
+
+.buttons-row-product .btn-primary:hover,
+.buttons-row-product .btn-whatsapp:hover {
+    transform: translateY(-4px);
+}
+
+/* Ajuste responsive para los botones */
+@media (max-width: 1100px) {
+    .buttons-row-product {
+        position: relative;
+        bottom: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

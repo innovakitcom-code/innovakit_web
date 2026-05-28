@@ -565,8 +565,8 @@ img {
 
 .product-circle {
     position: absolute;
-    width: 550px;
-    height: 550px;
+    width: 330px;
+    height: 300px;
     border-radius: 30%;
     background: radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0.45));
     z-index: 1;
@@ -636,7 +636,7 @@ img {
 }
 
 .product-title {
-    font-size: 34px;
+    font-size: 40px;
     line-height: 1.1;
     font-weight: 800;
     color: #1f2937;
@@ -650,7 +650,7 @@ img {
 }
 
 .product-description {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.8;
     color: #5b6475;
     margin-bottom: 40px;
@@ -663,16 +663,16 @@ img {
 .features-list {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-bottom: 40px;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .feature-card {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
 
-    padding: 20px 24px;
+    padding: 15px 18px;
 
     background: rgba(255,255,255,0.72);
 
@@ -691,12 +691,12 @@ img {
 }
 
 .feature-card i {
-    font-size: 24px;
+    font-size: 18px;
     color: #22c55e;
 }
 
 .feature-card span {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 600;
     color: #374151;
 }

@@ -240,69 +240,101 @@
     
     <hr class="my-6 border-gray-300">
 <!-- ========================================== -->
-<!-- SECCIÓN IMPRESORA 3D - ESTILO LIMPIO -->
+<!-- IMPRESORA 3D DESTACADA -->
 <!-- ========================================== -->
-<section class="py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-    <div class="max-w-6xl mx-auto">
-        
-        <div class="flex flex-col lg:flex-row gap-10 items-start">
-            
-            <!-- ========== COLUMNA IZQUIERDA: IMAGEN + BOTONES ========== -->
-            <div class="lg:w-1/2">
-                <!-- Imagen -->
-                <div class="bg-white rounded-2xl shadow-xl p-6">
-                    <img src="png/impresora-a1.png" 
-                         alt="Bambu Lab A1" 
-                         class="w-full h-auto object-contain"
-                         loading="lazy">
+<section id="impresora-destacada" class="impresora-section">
+    <!-- Glow decorativo -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="impresora-container">
+        <!-- Badge superior -->
+        <div class="top-badge">
+            🖨️ NOVEDAD | IMPRESORA 3D
+        </div>
+        <div class="impresora-layout">
+            <!-- ================================= -->
+            <!-- COLUMNA IZQUIERDA -->
+            <!-- ================================= -->
+            <div class="product-side">
+                <!-- Badge nuevo -->
+                <div class="nuevo-badge">
+                    ✨ NUEVO
                 </div>
-                
-                <!-- Botones debajo de la imagen -->
-                <div class="flex gap-3 mt-6">
-                    <button onclick="verPaginaImpresora()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold transition flex items-center justify-center gap-2">
-                        <i class="fas fa-eye"></i> Ver página exclusiva
-                    </button>
-                    <button onclick="consultarImpresoraWhatsApp()" class="flex-1 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-semibold transition flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Consultar precio
-                    </button>
-                </div>
-                
-                <!-- Info adicional -->
-                <div class="text-center text-gray-500 text-sm mt-4">
-                    <span><i class="fas fa-truck mr-1"></i> Envíos a todo Paraguay</span>
-                    <span class="mx-2">·</span>
-                    <span><i class="fas fa-shield-alt mr-1"></i> Garantía incluida</span>
-                </div>
+                <!-- Círculo fondo -->
+                <div class="product-circle"></div>
+                <!-- Plataforma -->
+                <div class="product-platform"></div>
+                <!-- IMAGEN -->
+                <!-- AQUÍ VAS A PONER TU PNG -->
+                <img
+                    src="TU-IMAGEN.png"
+                    alt="Impresora 3D"
+                    class="product-image">
             </div>
-            
-            <!-- ========== COLUMNA DERECHA: TEXTO + CARACTERÍSTICAS ========== -->
-            <div class="lg:w-1/2">
-                
-                <!-- Título -->
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+            <!-- ================================= -->
+            <!-- COLUMNA DERECHA -->
+            <!-- ================================= -->
+            <div class="content-side">
+                <h2 class="product-title">
                     Impresora 3D
+                    <span>Bambu Lab P1S</span>
                 </h2>
-                <h3 class="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600 mb-4">
-                    Bambu Lab A1
-                </h3>
-                
-                <!-- Descripción -->
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Hardware y software bien pulidos y maduros, con base en comentarios del mundo real.
+                <p class="product-description">
+                    Hardware y software bien pulidos y maduros,
+                    con base en comentarios del mundo real.
+                    Lleva tus proyectos al siguiente nivel con
+                    precisión profesional.
                 </p>
-                
-                <!-- Características (grid 2 columnas) -->
-                <div class="grid grid-cols-2 gap-x-6 gap-y-3">
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500 w-5"></i> <span>Precisión 0.1mm</span></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500 w-5"></i> <span>Pantalla táctil a color</span></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500 w-5"></i> <span>Impresión multicolor</span></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500 w-5"></i> <span>Volumen 256×256×256mm</span></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500 w-5"></i> <span>Conectividad WiFi + App</span></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500 w-5"></i> <span>Cámara integrada</span></div>
+                <!-- FEATURES -->
+                <div class="features-list">
+                    <div class="feature-card">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Precisión 0.1mm</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-palette"></i>
+                        <span>Pantalla táctil a color</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-fill-drip"></i>
+                        <span>Impresión multicolor</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-cube"></i>
+                        <span>Volumen 256×256×256mm</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-wifi"></i>
+                        <span>Conectividad WiFi + App</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-camera"></i>
+                        <span>Cámara integrada</span>
+                    </div>
                 </div>
-                
+                <!-- BOTONES -->
+                <div class="buttons-row">
+                    <button onclick="verPaginaImpresora()" class="btn-primary">
+                        <i class="fas fa-eye"></i>
+                        Ver página exclusiva
+                    </button>
+                    <button onclick="consultarImpresoraWhatsApp()" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        Consultar precio
+                    </button>
+                </div>
+                <!-- Footer -->
+                <div class="bottom-info">
+                    <div>
+                        <i class="fas fa-truck"></i>
+                        Envíos a todo Paraguay
+                    </div>
+                    <div>
+                        <i class="fas fa-shield-alt"></i>
+                        Garantía incluida
+                    </div>
+                </div>
             </div>
-            
         </div>
     </div>
 </section>

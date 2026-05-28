@@ -547,7 +547,7 @@ img {
 #impresora-destacada {
     position: relative;
     overflow: hidden;
-    padding: 100px 20px;
+    padding: 60px 20px;
     background:
         radial-gradient(circle at top left, rgba(255,255,255,0.9), transparent 40%),
         linear-gradient(135deg, #eef2ff 0%, #dfe7ff 100%);
@@ -568,7 +568,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 20px;
 }
 
 /* ============================================
@@ -594,9 +594,11 @@ img {
 
 .product-side {
     position: relative;
-    width: 58%;
-    min-height: 720px;
+    width: 65%;
+    min-height: 580px;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -605,10 +607,17 @@ img {
 
 .product-circle {
     position: absolute;
-    width: 780px;
-    height: 780px;
+
+    width: 620px;
+    height: 620px;
+
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0.45));
+
+    background:
+        radial-gradient(circle,
+        rgba(255,255,255,0.95),
+        rgba(255,255,255,0.35));
+
     z-index: 1;
 }
 
@@ -616,14 +625,23 @@ img {
 
 .product-platform {
     position: absolute;
-    bottom: 60px;
-    width: 88%;
-    height: 120px;
-    border-radius: 100px;
-    background: linear-gradient(to bottom, #ffffff, #e9eeff);
+
+    bottom: 115px;
+
+    width: 82%;
+    height: 95px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(to bottom,
+        #ffffff,
+        #edf1ff);
+
     box-shadow:
-        0 30px 60px rgba(120,140,255,0.12),
-        inset 0 -8px 20px rgba(0,0,0,0.03);
+        0 18px 40px rgba(120,140,255,0.12),
+        inset 0 -6px 10px rgba(0,0,0,0.03);
+
     z-index: 2;
 }
 
@@ -631,14 +649,16 @@ img {
 
 .product-image {
     position: relative;
-    width: 92%;
-    max-width: 900px;
+
+    width: 95%;
+    max-width: 820px;
+
     z-index: 5;
 
     object-fit: contain;
 
     filter:
-        drop-shadow(0 35px 35px rgba(0,0,0,0.12));
+        drop-shadow(0 25px 30px rgba(0,0,0,0.12));
 
     transition: transform .5s ease;
 }
@@ -672,15 +692,15 @@ img {
 ============================================ */
 
 .content-side {
-    width: 42%;
+    width: 35%;
 }
 
 .product-title {
-    font-size: 54px;
-    line-height: 1.1;
+    font-size: 24px;
+    line-height: 1.2;
     font-weight: 800;
     color: #1f2937;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
 }
 
 .product-title span {
@@ -690,10 +710,10 @@ img {
 }
 
 .product-description {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1.8;
     color: #5b6475;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 
 /* ============================================
@@ -703,40 +723,35 @@ img {
 .features-list {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-bottom: 40px;
+    gap: 12px;
 }
 
 .feature-card {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 14px;
 
-    padding: 20px 24px;
+    padding: 14px 18px;
 
     background: rgba(255,255,255,0.72);
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
 
-    border-radius: 24px;
+    border-radius: 18px;
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,0.04);
+        0 8px 20px rgba(0,0,0,0.04);
 
     transition: .3s ease;
 }
 
-.feature-card:hover {
-    transform: translateX(8px);
-}
-
 .feature-card i {
-    font-size: 24px;
+    font-size: 16px;
     color: #22c55e;
 }
 
 .feature-card span {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     color: #374151;
 }
@@ -745,10 +760,14 @@ img {
    BOTONES
 ============================================ */
 
-.buttons-row {
+.image-buttons {
+    position: relative;
+    z-index: 10;
+
+    margin-top: -10px;
+
     display: flex;
-    gap: 20px;
-    margin-bottom: 40px;
+    gap: 16px;
 }
 
 .btn-primary,
@@ -756,16 +775,16 @@ img {
     border: none;
     cursor: pointer;
 
-    padding: 18px 34px;
+    padding: 14px 26px;
 
-    border-radius: 20px;
+    border-radius: 16px;
 
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
 
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 
     transition: .3s ease;
 
@@ -774,19 +793,11 @@ img {
 
 .btn-primary {
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    box-shadow: 0 15px 30px rgba(37,99,235,0.25);
 }
 
 .btn-whatsapp {
     background: linear-gradient(135deg, #22c55e, #16a34a);
-    box-shadow: 0 15px 30px rgba(34,197,94,0.25);
 }
-
-.btn-primary:hover,
-.btn-whatsapp:hover {
-    transform: translateY(-5px);
-}
-
 /* ============================================
    FOOTER INFO
 ============================================ */
@@ -831,7 +842,15 @@ img {
     bottom: -200px;
     right: -200px;
 }
+.image-info {
+    margin-top: 24px;
 
+    display: flex;
+    gap: 20px;
+
+    color: #9ca3af;
+    font-size: 13px;
+}
 /* ============================================
    RESPONSIVE
 ============================================ */

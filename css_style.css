@@ -541,37 +541,345 @@ img {
     border-radius: 8px;
 }
 /* ============================================
-   IMPRESORA DESTACADA - ESTILO COMPACTO
-   (Solo lo necesario, usando Tailwind como base)
+   IMPRESORA DESTACADA PREMIUM - VERSIÓN COMPACTA
 ============================================ */
 
 #impresora-destacada {
-    scroll-margin-top: 5rem;
+    position: relative;
+    overflow: hidden;
+    padding: 50px 20px;  /* ANTES: 100px 20px - REDUCIDO */
+    background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.9), transparent 40%),
+        linear-gradient(135deg, #eef2ff 0%, #dfe7ff 100%);
 }
 
-/* Solo efectos adicionales que no están en Tailwind */
-#impresora-destacada img {
-    transition: transform 0.3s ease;
+/* Container */
+.impresora-container {
+    max-width: 1000px;  /* ANTES: 1350px - REDUCIDO */
+    margin: auto;
+    position: relative;
+    z-index: 2;
 }
 
-#impresora-destacada img:hover {
-    transform: scale(1.05);
+/* Layout */
+.impresora-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;  /* ANTES: 60px - REDUCIDO */
 }
 
-/* Para el círculo decorativo si lo quieres mantener */
-.impresora-circle {
+/* ============================================
+   BADGE SUPERIOR
+============================================ */
+.top-badge {
+    width: fit-content;
+    margin: 0 auto 30px;  /* ANTES: 0 auto 50px - REDUCIDO */
+    padding: 6px 14px;  /* ANTES: 10px 18px - REDUCIDO */
+    border-radius: 999px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    color: #3451d1;
+    font-size: 11px;  /* ANTES: 14px - REDUCIDO */
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* ============================================
+   PRODUCT SIDE
+============================================ */
+.product-side {
+    position: relative;
+    width: 55%;  /* ANTES: 58% - LIGERAMENTE REDUCIDO */
+    min-height: 500px;  /* ANTES: 720px - REDUCIDO */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Círculo */
+.product-circle {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%);
+    width: 520px;  /* ANTES: 780px - REDUCIDO */
+    height: 520px;  /* ANTES: 780px - REDUCIDO */
     border-radius: 50%;
-    z-index: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0.45));
+    z-index: 1;
 }
 
-/* Responsive para el círculo */
+/* Plataforma */
+.product-platform {
+    position: absolute;
+    bottom: 40px;  /* ANTES: 60px - REDUCIDO */
+    width: 85%;  /* ANTES: 88% - LIGERAMENTE REDUCIDO */
+    height: 80px;  /* ANTES: 120px - REDUCIDO */
+    border-radius: 100px;
+    background: linear-gradient(to bottom, #ffffff, #e9eeff);
+    box-shadow:
+        0 30px 60px rgba(120,140,255,0.12),
+        inset 0 -8px 20px rgba(0,0,0,0.03);
+    z-index: 2;
+}
+
+/* Imagen producto */
+.product-image {
+    position: relative;
+    width: 85%;  /* ANTES: 92% - LIGERAMENTE REDUCIDO */
+    max-width: 600px;  /* ANTES: 900px - REDUCIDO */
+    z-index: 5;
+    object-fit: contain;
+    filter: drop-shadow(0 25px 25px rgba(0,0,0,0.12));  /* ANTES: 0 35px 35px - REDUCIDO */
+    transition: transform .5s ease;
+}
+
+.product-image:hover {
+    transform: translateY(-5px) scale(1.02);  /* ANTES: -8px - REDUCIDO */
+}
+
+/* Badge nuevo */
+.nuevo-badge {
+    position: absolute;
+    top: 25px;  /* ANTES: 40px - REDUCIDO */
+    right: 40px;  /* ANTES: 60px - REDUCIDO */
+    z-index: 20;
+    background: #ffd43b;
+    color: #111;
+    font-weight: 800;
+    font-size: 11px;  /* ANTES: 14px - REDUCIDO */
+    padding: 6px 14px;  /* ANTES: 10px 18px - REDUCIDO */
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(255,212,59,0.35);  /* ANTES: 0 10px 25px - REDUCIDO */
+}
+
+/* ============================================
+   CONTENT SIDE
+============================================ */
+.content-side {
+    width: 45%;  /* ANTES: 42% - AJUSTADO */
+}
+
+.product-title {
+    font-size: 34px;  /* ANTES: 54px - REDUCIDO */
+    line-height: 1.2;  /* ANTES: 1.1 - LIGERAMENTE AJUSTADO */
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 15px;  /* ANTES: 25px - REDUCIDO */
+}
+
+.product-title span {
+    background: linear-gradient(90deg, #22c55e, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.product-description {
+    font-size: 15px;  /* ANTES: 20px - REDUCIDO */
+    line-height: 1.6;  /* ANTES: 1.8 - REDUCIDO */
+    color: #5b6475;
+    margin-bottom: 25px;  /* ANTES: 40px - REDUCIDO */
+}
+
+/* ============================================
+   FEATURES
+============================================ */
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;  /* ANTES: 18px - REDUCIDO */
+    margin-bottom: 25px;  /* ANTES: 40px - REDUCIDO */
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;  /* ANTES: 18px - REDUCIDO */
+    padding: 12px 18px;  /* ANTES: 20px 24px - REDUCIDO */
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;  /* ANTES: 24px - REDUCIDO */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);  /* ANTES: 0 10px 25px - REDUCIDO */
+    transition: .3s ease;
+}
+
+.feature-card:hover {
+    transform: translateX(6px);  /* ANTES: 8px - REDUCIDO */
+}
+
+.feature-card i {
+    font-size: 18px;  /* ANTES: 24px - REDUCIDO */
+    color: #22c55e;
+}
+
+.feature-card span {
+    font-size: 15px;  /* ANTES: 20px - REDUCIDO */
+    font-weight: 600;
+    color: #374151;
+}
+
+/* ============================================
+   BOTONES
+============================================ */
+.buttons-row {
+    display: flex;
+    gap: 15px;  /* ANTES: 20px - REDUCIDO */
+    margin-bottom: 25px;  /* ANTES: 40px - REDUCIDO */
+}
+
+.btn-primary,
+.btn-whatsapp {
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;  /* ANTES: 18px 34px - REDUCIDO */
+    border-radius: 16px;  /* ANTES: 20px - REDUCIDO */
+    font-size: 14px;  /* ANTES: 18px - REDUCIDO */
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* ANTES: 12px - REDUCIDO */
+    transition: .3s ease;
+    color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 10px 20px rgba(37,99,235,0.25);  /* ANTES: 0 15px 30px - REDUCIDO */
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 10px 20px rgba(34,197,94,0.25);  /* ANTES: 0 15px 30px - REDUCIDO */
+}
+
+.btn-primary:hover,
+.btn-whatsapp:hover {
+    transform: translateY(-3px);  /* ANTES: -5px - REDUCIDO */
+}
+
+/* ============================================
+   FOOTER INFO
+============================================ */
+.bottom-info {
+    display: flex;
+    gap: 20px;  /* ANTES: 30px - REDUCIDO */
+    flex-wrap: wrap;
+    color: #8a94a7;
+    font-size: 13px;  /* ANTES: 16px - REDUCIDO */
+}
+
+.bottom-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;  /* ANTES: 10px - REDUCIDO */
+}
+
+/* ============================================
+   GLOW DECORATIVO
+============================================ */
+.bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);  /* ANTES: 90px - REDUCIDO */
+}
+
+.bg-glow-1 {
+    width: 250px;  /* ANTES: 350px - REDUCIDO */
+    height: 250px;  /* ANTES: 350px - REDUCIDO */
+    background: rgba(34,197,94,0.12);
+    top: -80px;  /* ANTES: -100px - REDUCIDO */
+    left: -80px;  /* ANTES: -100px - REDUCIDO */
+}
+
+.bg-glow-2 {
+    width: 320px;  /* ANTES: 450px - REDUCIDO */
+    height: 320px;  /* ANTES: 450px - REDUCIDO */
+    background: rgba(37,99,235,0.10);
+    bottom: -150px;  /* ANTES: -200px - REDUCIDO */
+    right: -150px;  /* ANTES: -200px - REDUCIDO */
+}
+
+/* ============================================
+   RESPONSIVE (AJUSTADO)
+============================================ */
+@media (max-width: 1100px) {
+    .impresora-layout {
+        flex-direction: column;
+    }
+    
+    .product-side,
+    .content-side {
+        width: 100%;
+    }
+    
+    .product-side {
+        min-height: 400px;  /* ANTES: 600px - REDUCIDO */
+    }
+    
+    .product-circle {
+        width: 400px;  /* ANTES: 600px - REDUCIDO */
+        height: 400px;  /* ANTES: 600px - REDUCIDO */
+    }
+    
+    .product-title {
+        font-size: 30px;  /* ANTES: 42px - REDUCIDO */
+        text-align: center;
+    }
+    
+    .product-description {
+        text-align: center;
+    }
+    
+    .buttons-row {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .bottom-info {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 768px) {
-    .impresora-circle {
-        width: 150px;
-        height: 150px;
+    #impresora-destacada {
+        padding: 40px 20px;  /* ANTES: 70px 20px - REDUCIDO */
+    }
+    
+    .product-side {
+        min-height: 300px;  /* ANTES: 420px - REDUCIDO */
+    }
+    
+    .product-circle {
+        width: 260px;  /* ANTES: 380px - REDUCIDO */
+        height: 260px;  /* ANTES: 380px - REDUCIDO */
+    }
+    
+    .product-platform {
+        height: 50px;  /* ANTES: 70px - REDUCIDO */
+        bottom: 25px;  /* ANTES: 40px - REDUCIDO */
+    }
+    
+    .product-title {
+        font-size: 24px;  /* ANTES: 34px - REDUCIDO */
+    }
+    
+    .product-description {
+        font-size: 13px;  /* ANTES: 16px - REDUCIDO */
+    }
+    
+    .feature-card {
+        padding: 10px 14px;  /* ANTES: 16px - REDUCIDO */
+    }
+    
+    .feature-card span {
+        font-size: 13px;  /* ANTES: 16px - REDUCIDO */
+    }
+    
+    .buttons-row {
+        flex-direction: column;
+    }
+    
+    .btn-primary,
+    .btn-whatsapp {
+        width: 100%;
+        justify-content: center;
     }
 }

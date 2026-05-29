@@ -507,7 +507,7 @@ img {
 #impresora-destacada {
     position: relative;
     overflow: hidden;
-    padding: 47px 18px;
+    padding: 35px 18px;
     background:
         radial-gradient(circle at top left, rgba(255,255,255,0.9), transparent 40%),
         linear-gradient(135deg, #eef2ff 0%, #dfe7ff 100%);
@@ -528,7 +528,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 56px;
+    gap: 40px;
 }
 
 /* ============================================
@@ -555,7 +555,7 @@ img {
 .product-side {
     position: relative;
     width: 58%;
-    min-height: 675px;
+    min-height: 550px;
     display: flex;
     align-items: center;
     justify-content: center;

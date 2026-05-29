@@ -877,7 +877,7 @@ img {
 
 .buttons-row-product {
     position: absolute;
-    bottom: -5px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;

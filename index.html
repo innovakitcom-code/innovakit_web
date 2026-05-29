@@ -243,9 +243,6 @@
 <!-- IMPRESORA 3D DESTACADA -->
 <!-- ========================================== -->
 <section id="impresora-destacada">
-    <!-- Glow decorativo -->
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
     <div class="impresora-container">
         <!-- Badge superior -->
         <div class="top-badge">
@@ -253,20 +250,21 @@
         </div>
         <div class="impresora-layout">
             <!-- ================================= -->
-            <!-- COLUMNA IZQUIERDA (product-side) -->
+            <!-- COLUMNA IZQUIERDA -->
             <!-- ================================= -->
             <div class="product-side">
                 <!-- Badge nuevo -->
                 <div class="nuevo-badge">
                     ✨ NUEVO
                 </div>
-
+                <!-- Círculo fondo -->
+                <div class="product-circle"></div>
+                <!-- Plataforma -->
+                <div class="product-platform"></div>
                 <!-- IMAGEN -->
                 <img src="TU-IMAGEN.png" alt="Impresora 3D" class="product-image">
                 
-                <!-- ======================== -->
-                <!-- BOTONES MOVIDOS AQUÍ (dentro de product-side, debajo de la imagen) -->
-                <!-- ======================== -->
+                <!-- BOTONES (ahora aquí, debajo de la imagen) -->
                 <div class="buttons-row-product">
                     <button onclick="verPaginaImpresora()" class="btn-primary">
                         <i class="fas fa-eye"></i>
@@ -280,7 +278,7 @@
             </div>
             
             <!-- ================================= -->
-            <!-- COLUMNA DERECHA (content-side) -->
+            <!-- COLUMNA DERECHA -->
             <!-- ================================= -->
             <div class="content-side">
                 <h2 class="product-title">
@@ -293,6 +291,7 @@
                     Lleva tus proyectos al siguiente nivel con
                     precisión profesional.
                 </p>
+                
                 <!-- FEATURES -->
                 <div class="features-list">
                     <div class="feature-card">
@@ -320,6 +319,7 @@
                         <span>Cámara integrada</span>
                     </div>
                 </div>
+                
                 <!-- Footer -->
                 <div class="bottom-info">
                     <div>
@@ -334,7 +334,8 @@
             </div>
         </div>
     </div>
-</section>    <hr class="my-6 border-gray-300">
+</section>   
+    <hr class="my-6 border-gray-300">
     <!-- MISIÓN -->
     <section id="mision" class="p-6 sm:p-12 text-center bg-white scroll-mt-20 card-elevated mx-4">
       <i class="fas fa-bullseye text-4xl sm:text-5xl text-green-600 mb-4 animate-bounce-subtle"></i>

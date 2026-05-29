@@ -537,7 +537,7 @@ img {
 
 .top-badge {
     width: fit-content;
-    margin: 0 auto 47px;
+    margin: 0 auto 20px;
     padding: 9px 16px;
     border-radius: 999px;
     background: rgba(255,255,255,0.75);
@@ -631,7 +631,7 @@ img {
     line-height: 1.1;
     font-weight: 800;
     color: #1f2937;
-    margin-bottom: 23px;
+    margin-bottom: 15px;
 }
 
 .product-title span {
@@ -644,7 +644,7 @@ img {
     font-size: 15px;
     line-height: 1.66;
     color: #5b6475;
-    margin-bottom: 38px;
+    margin-bottom: 28px;
 }
 
 /* ============================================

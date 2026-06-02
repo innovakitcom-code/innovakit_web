@@ -140,9 +140,9 @@
   <!-- ========================================== -->
   <!-- HEADER -->
   <!-- ========================================== -->
- <header class="bg-white shadow-md p-4 sticky top-0 z-20 backdrop-blur bg-white/95" role="banner">
+<header class="bg-white shadow-md p-4 sticky top-0 z-20 backdrop-blur bg-white/95" role="banner">
     
-    <!-- DESKTOP (visible en pantallas grandes) -->
+    <!-- DESKTOP -->
     <div class="hidden md:flex justify-between items-center">
         <a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded btn-hover ml-3" onclick="volverAlInicio(); return false;">
             <h1 class="text-3xl lg:text-4xl font-bold">
@@ -150,73 +150,83 @@
             </h1>
         </a>
         
-        <nav class="flex items-center text-base" aria-label="Navegación principal desktop">
-            <a href="#mision" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Misión |</a>
-            <a href="#vision" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Visión |</a>
-            <a href="#productos" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Productos |</a>
-            <a href="#impresora-destacada" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Impresora 3D |</a>
-            <a href="#asesorias-preview" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Asesoría |</a>
-            <a href="#contacto" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Contacto</a>
+        <nav class="flex items-center text-base gap-1" aria-label="Navegación principal">
+            <a href="#mision" class="nav-link-desktop hover:text-blue-600 px-2 py-1 rounded-lg transition">Misión</a>
+            <span class="text-gray-300">|</span>
+            <a href="#vision" class="nav-link-desktop hover:text-blue-600 px-2 py-1 rounded-lg transition">Visión</a>
+            <span class="text-gray-300">|</span>
+            <a href="#productos" class="nav-link-desktop hover:text-blue-600 px-2 py-1 rounded-lg transition">Productos</a>
+            <span class="text-gray-300">|</span>
+            <a href="#impresora-destacada" class="nav-link-desktop hover:text-blue-600 px-2 py-1 rounded-lg transition">Impresora 3D</a>
+            <span class="text-gray-300">|</span>
+            <a href="#asesorias-preview" class="nav-link-desktop hover:text-blue-600 px-2 py-1 rounded-lg transition">Asesoría</a>
+            <span class="text-gray-300">|</span>
+            <a href="#contacto" class="nav-link-desktop hover:text-blue-600 px-2 py-1 rounded-lg transition">Contacto</a>
             
-            <!-- Carrito Desktop -->
-            <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-3 py-2 rounded-lg shadow hover:bg-yellow-400 font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500 btn-hover" aria-label="Ver carrito de compras">
-                🛒 Carrito (<span id="carrito-count-desktop" aria-live="polite">0</span>)
+            <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-xl shadow hover:bg-yellow-400 font-semibold transition btn-hover" aria-label="Ver carrito">
+                🛒 Carrito (<span id="carrito-count-desktop">0</span>)
             </button>
             
-            <!-- Login/Usuario Desktop -->
-            <div id="user-desktop" class="ml-4">
-                <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-semibold btn-hover">
-                    <i class="fas fa-user"></i> Ingresar
+            <div id="user-desktop" class="ml-2">
+                <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-semibold btn-hover">
+                    <i class="fas fa-user mr-1"></i> Ingresar
                 </button>
             </div>
         </nav>
     </div>
     
-    <!-- MÓVIL (menú hamburguesa) -->
-    <div class="md:hidden">
-        <div class="flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="flex items-center" onclick="volverAlInicio(); return false;">
-                <h1 class="text-2xl font-bold">
-                    <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
-                </h1>
-            </a>
+    <!-- MÓVIL -->
+    <div class="md:hidden flex justify-between items-center">
+        <a href="#" onclick="volverAlInicio(); return false;">
+            <h1 class="text-2xl font-bold">
+                <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
+            </h1>
+        </a>
+        
+        <div class="flex items-center gap-3">
+            <button onclick="verCarrito()" class="bg-yellow-300 text-gray-900 px-3 py-1.5 rounded-xl text-sm font-semibold" aria-label="Ver carrito">
+                🛒 <span id="carrito-count-mobile">0</span>
+            </button>
             
-            <div class="flex items-center gap-3">
-                <!-- Carrito móvil -->
-                <button onclick="verCarrito()" class="bg-yellow-300 text-gray-900 px-2 py-1 rounded-lg text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400" aria-label="Ver carrito">
-                    🛍️ (<span id="carrito-count-mobile" aria-live="polite">0</span>)
-                </button>
-                
-                <!-- Usuario móvil -->
-                <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-2 py-1 rounded-lg text-sm font-semibold">
-                    <i class="fas fa-user"></i>
-                </button>
-                
-                <!-- Botón hamburguesa -->
-                <button class="menu-hamburguesa" id="menu-hamburguesa-btn" aria-label="Menú">
-                    ☰
-                </button>
-            </div>
+            <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-3 py-1.5 rounded-xl text-sm font-semibold">
+                <i class="fas fa-user"></i>
+            </button>
+            
+            <button class="menu-hamburguesa" id="menu-hamburguesa-btn" aria-label="Menú">
+                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
     </div>
 </header>
 
-<!-- Overlay y menú lateral para móvil -->
+<!-- Menú lateral móvil -->
 <div class="menu-overlay" id="menu-overlay"></div>
 <div class="menu-panel" id="menu-panel">
-    <div class="menu-panel-header">
-        <button class="menu-cerrar" id="menu-cerrar-btn">✕</button>
+    <div class="menu-header">
+        <button class="menu-cerrar" id="menu-cerrar-btn">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
     </div>
-    <nav>
-        <a href="#mision" onclick="volverAlInicio(); cerrarMenuMovil();">🎯 Misión</a>
-        <a href="#vision" onclick="volverAlInicio(); cerrarMenuMovil();">👁️ Visión</a>
-        <a href="#productos" onclick="volverAlInicio(); cerrarMenuMovil();">📦 Productos</a>
-        <a href="#impresora-destacada" onclick="volverAlInicio(); cerrarMenuMovil();">🖨️ Impresora 3D</a>
-        <a href="#asesorias-preview" onclick="volverAlInicio(); cerrarMenuMovil();">📋 Asesoría</a>
-        <a href="#contacto" onclick="volverAlInicio(); cerrarMenuMovil();">📞 Contacto</a>
+    <nav class="menu-nav">
+        <a href="#mision" onclick="cerrarMenuMovil()">Misión</a>
+        <a href="#vision" onclick="cerrarMenuMovil()">Visión</a>
+        <a href="#productos" onclick="cerrarMenuMovil()">Productos</a>
+        <a href="#impresora-destacada" onclick="cerrarMenuMovil()">Impresora 3D</a>
+        <a href="#asesorias-preview" onclick="cerrarMenuMovil()">Asesoría</a>
+        <a href="#contacto" onclick="cerrarMenuMovil()">Contacto</a>
     </nav>
-</div>  <!-- ========================================== -->
+    <div class="menu-footer">
+        Innovakit © 2025
+    </div>
+</div>
+  <!-- ========================================== -->
   <!-- CONTENIDO PRINCIPAL -->
   <!-- ========================================== -->
   <main id="main-content" role="main" class="page-transition">
@@ -1648,7 +1658,55 @@ async function cargarProductosSupabase() {
         }
         console.log('✅ Innovakit inicializado');
     });
-    
+    // ============================================
+// MENÚ HAMBURGUESA
+// ============================================
+function abrirMenuMovil() {
+    document.getElementById('menu-overlay')?.classList.add('active');
+    document.getElementById('menu-panel')?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function cerrarMenuMovil() {
+    document.getElementById('menu-overlay')?.classList.remove('active');
+    document.getElementById('menu-panel')?.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Event listeners
+document.getElementById('menu-hamburguesa-btn')?.addEventListener('click', abrirMenuMovil);
+document.getElementById('menu-cerrar-btn')?.addEventListener('click', cerrarMenuMovil);
+document.getElementById('menu-overlay')?.addEventListener('click', cerrarMenuMovil);
+
+// Cerrar menú al redimensionar a desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) {
+        cerrarMenuMovil();
+    }
+});
+
+// ============================================
+// SCROLL COMPENSADO (para que el header no tape)
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            const headerOffset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
     document.getElementById('form-login-supabase')?.addEventListener('submit', async (e) => { e.preventDefault(); const email = document.getElementById('login-email').value; const password = document.getElementById('login-password').value; if (typeof iniciarSesionSupabase === 'function') { if (await iniciarSesionSupabase(email, password)) { cerrarModalLogin(); } } });
     document.getElementById('form-registro-supabase')?.addEventListener('submit', async (e) => { e.preventDefault(); const nombre = document.getElementById('reg-nombre').value; const telefono = document.getElementById('reg-telefono').value; const email = document.getElementById('reg-email').value; const password = document.getElementById('reg-password').value; if (typeof registrarUsuarioSupabase === 'function') { if (await registrarUsuarioSupabase(email, password, nombre, telefono)) { cerrarModalRegistro(); mostrarModalLogin(); } } });
     // ============================================

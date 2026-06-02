@@ -140,68 +140,83 @@
   <!-- ========================================== -->
   <!-- HEADER -->
   <!-- ========================================== -->
-  <header class="bg-white shadow-md p-4 sticky top-0 z-20 backdrop-blur bg-white/95" role="banner">
+ <header class="bg-white shadow-md p-4 sticky top-0 z-20 backdrop-blur bg-white/95" role="banner">
     
-    <!-- Desktop -->
-    <div class="hidden sm:flex justify-between items-center">
-      <a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded btn-hover ml-3" onclick="volverAlInicio(); return false;">
-        <h1 class="text-3xl lg:text-4xl font-bold">
-          <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
-        </h1>
-      </a>
-      
-      <nav class="flex items-center text-base" aria-label="Navegación principal">
-        <a href="#mision" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Misión |</a>
-        <a href="#vision" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Visión |</a>
-        <a href="#productos" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Productos |</a>
-        <a href="#asesorias-preview" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Asesoría |</a>
-        <a href="#contacto" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Contacto</a>
-        
-        <!-- Carrito Desktop -->
-        <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-3 py-2 rounded-lg shadow hover:bg-yellow-400 font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500 btn-hover" aria-label="Ver carrito de compras">
-          🛒 Carrito (<span id="carrito-count-desktop" aria-live="polite">0</span>)
-        </button>
-        
-        <!-- Login/Usuario Desktop -->
-        <div id="user-desktop" class="ml-4">
-          <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-semibold btn-hover">
-            <i class="fas fa-user"></i> Ingresar
-          </button>
-        </div>
-      </nav>
-    </div>
-    
-    <!-- Móvil -->
-    <div class="sm:hidden">
-      <div class="flex justify-between items-center mb-3">
-        <div class="flex-1">
-          <a href="#" class="flex items-center" onclick="volverAlInicio(); return false;">
-            <h1 class="text-2xl font-bold">
-              <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
+    <!-- DESKTOP (visible en pantallas grandes) -->
+    <div class="hidden md:flex justify-between items-center">
+        <a href="#" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded btn-hover ml-3" onclick="volverAlInicio(); return false;">
+            <h1 class="text-3xl lg:text-4xl font-bold">
+                <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
             </h1>
-          </a>
-        </div>
+        </a>
         
-        <button onclick="verCarrito()" class="bg-yellow-300 text-gray-900 px-2 py-1 rounded-lg text-sm font-semibold ml-4 focus:outline-none focus:ring-2 focus:ring-yellow-400" aria-label="Ver carrito">
-          🛍️ (<span id="carrito-count-mobile" aria-live="polite">0</span>)
-        </button>
-        
-        <button onclick="mostrarModalLogin()" class="auth-mobile-btn bg-blue-600 text-white px-2 py-1 rounded-lg text-sm font-semibold ml-2">
-          <i class="fas fa-user"></i>
-        </button>
-      </div>
-      
-      <nav class="flex flex-wrap justify-center gap-0.5 items-center text-sm overflow-x-auto py-1.5" aria-label="Navegación móvil">
-        <a href="#mision" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Misión |</a>
-        <a href="#vision" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Visión |</a>
-        <a href="#productos" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Productos |</a>
-        <a href="#asesorias-preview" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Asesoría |</a>
-        <a href="#contacto" onclick="volverAlInicio()" class="px-1 py-0.5 hover:text-blue-600">Contacto</a>
-      </nav>
+        <nav class="flex items-center text-base" aria-label="Navegación principal desktop">
+            <a href="#mision" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Misión |</a>
+            <a href="#vision" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Visión |</a>
+            <a href="#productos" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Productos |</a>
+            <a href="#impresora-destacada" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Impresora 3D |</a>
+            <a href="#asesorias-preview" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Asesoría |</a>
+            <a href="#contacto" onclick="volverAlInicio()" class="hover:text-blue-600 focus:text-blue-600 px-2">Contacto</a>
+            
+            <!-- Carrito Desktop -->
+            <button onclick="verCarrito()" class="ml-4 bg-yellow-300 text-gray-900 px-3 py-2 rounded-lg shadow hover:bg-yellow-400 font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500 btn-hover" aria-label="Ver carrito de compras">
+                🛒 Carrito (<span id="carrito-count-desktop" aria-live="polite">0</span>)
+            </button>
+            
+            <!-- Login/Usuario Desktop -->
+            <div id="user-desktop" class="ml-4">
+                <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-semibold btn-hover">
+                    <i class="fas fa-user"></i> Ingresar
+                </button>
+            </div>
+        </nav>
     </div>
-  </header>
-  
-  <!-- ========================================== -->
+    
+    <!-- MÓVIL (menú hamburguesa) -->
+    <div class="md:hidden">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center" onclick="volverAlInicio(); return false;">
+                <h1 class="text-2xl font-bold">
+                    <span style="color:#7eb74a">Inn</span><span style="color:#fdc344">o</span><span style="color:#7eb74a">va</span><span class="text-blue-600">kit</span>
+                </h1>
+            </a>
+            
+            <div class="flex items-center gap-3">
+                <!-- Carrito móvil -->
+                <button onclick="verCarrito()" class="bg-yellow-300 text-gray-900 px-2 py-1 rounded-lg text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400" aria-label="Ver carrito">
+                    🛍️ (<span id="carrito-count-mobile" aria-live="polite">0</span>)
+                </button>
+                
+                <!-- Usuario móvil -->
+                <button onclick="mostrarModalLogin()" class="bg-blue-600 text-white px-2 py-1 rounded-lg text-sm font-semibold">
+                    <i class="fas fa-user"></i>
+                </button>
+                
+                <!-- Botón hamburguesa -->
+                <button class="menu-hamburguesa" id="menu-hamburguesa-btn" aria-label="Menú">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Overlay y menú lateral para móvil -->
+<div class="menu-overlay" id="menu-overlay"></div>
+<div class="menu-panel" id="menu-panel">
+    <div class="menu-panel-header">
+        <button class="menu-cerrar" id="menu-cerrar-btn">✕</button>
+    </div>
+    <nav>
+        <a href="#mision" onclick="volverAlInicio(); cerrarMenuMovil();">🎯 Misión</a>
+        <a href="#vision" onclick="volverAlInicio(); cerrarMenuMovil();">👁️ Visión</a>
+        <a href="#productos" onclick="volverAlInicio(); cerrarMenuMovil();">📦 Productos</a>
+        <a href="#impresora-destacada" onclick="volverAlInicio(); cerrarMenuMovil();">🖨️ Impresora 3D</a>
+        <a href="#asesorias-preview" onclick="volverAlInicio(); cerrarMenuMovil();">📋 Asesoría</a>
+        <a href="#contacto" onclick="volverAlInicio(); cerrarMenuMovil();">📞 Contacto</a>
+    </nav>
+</div>  <!-- ========================================== -->
   <!-- CONTENIDO PRINCIPAL -->
   <!-- ========================================== -->
   <main id="main-content" role="main" class="page-transition">
@@ -1636,7 +1651,32 @@ async function cargarProductosSupabase() {
     
     document.getElementById('form-login-supabase')?.addEventListener('submit', async (e) => { e.preventDefault(); const email = document.getElementById('login-email').value; const password = document.getElementById('login-password').value; if (typeof iniciarSesionSupabase === 'function') { if (await iniciarSesionSupabase(email, password)) { cerrarModalLogin(); } } });
     document.getElementById('form-registro-supabase')?.addEventListener('submit', async (e) => { e.preventDefault(); const nombre = document.getElementById('reg-nombre').value; const telefono = document.getElementById('reg-telefono').value; const email = document.getElementById('reg-email').value; const password = document.getElementById('reg-password').value; if (typeof registrarUsuarioSupabase === 'function') { if (await registrarUsuarioSupabase(email, password, nombre, telefono)) { cerrarModalRegistro(); mostrarModalLogin(); } } });
-    
+    // ============================================
+// MENÚ HAMBURGUESA PARA MÓVIL
+// ============================================
+function abrirMenuMovil() {
+    document.getElementById('menu-overlay').classList.add('active');
+    document.getElementById('menu-panel').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function cerrarMenuMovil() {
+    document.getElementById('menu-overlay').classList.remove('active');
+    document.getElementById('menu-panel').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Event listeners
+document.getElementById('menu-hamburguesa-btn')?.addEventListener('click', abrirMenuMovil);
+document.getElementById('menu-cerrar-btn')?.addEventListener('click', cerrarMenuMovil);
+document.getElementById('menu-overlay')?.addEventListener('click', cerrarMenuMovil);
+
+// Cerrar menú al redimensionar a desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) {
+        cerrarMenuMovil();
+    }
+});
     // Funciones placeholder
     function instalarPWA() {}
     function mostrarModalFiltros() {}
@@ -1688,5 +1728,6 @@ async function cargarProductosSupabase() {
   }
   document.addEventListener('DOMContentLoaded', mostrarBotonAdmin);
   </script>
+  
 </body>
 </html>

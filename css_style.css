@@ -984,33 +984,42 @@ img {
     }
 }
 /* ============================================
-   MENÚ HAMBURGUESA PARA MÓVIL
+   MENÚ HAMBURGUESA PROFESIONAL - VERSIÓN ÚNICA
 ============================================ */
 
 /* Botón hamburguesa */
 .menu-hamburguesa {
     background: none;
     border: none;
-    font-size: 28px;
     cursor: pointer;
-    color: #1f2937;
     padding: 8px;
     border-radius: 8px;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-hamburguesa:hover {
     background-color: #f3f4f6;
 }
 
-/* Overlay del menú */
+.menu-hamburguesa svg {
+    width: 24px;
+    height: 24px;
+    stroke: #1f2937;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Overlay */
 .menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 998;
     opacity: 0;
     visibility: hidden;
@@ -1022,94 +1031,7 @@ img {
     visibility: visible;
 }
 
-/* Panel del menú lateral */
-.menu-panel {
-    position: fixed;
-    top: 0;
-    right: -280px;
-    width: 280px;
-    height: 100%;
-    background: white;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    transition: right 0.3s ease;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.menu-panel.active {
-    right: 0;
-}
-
-.menu-panel-header {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 30px;
-}
-
-.menu-cerrar {
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #6b7280;
-    padding: 5px;
-}
-
-.menu-panel nav {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.menu-panel nav a {
-    text-decoration: none;
-    color: #1f2937;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 0;
-    border-bottom: 1px solid #e5e7eb;
-    transition: color 0.2s ease;
-}
-
-.menu-panel nav a:hover {
-    color: #3b82f6;
-}
-
-/* Ocultar navegación móvil antigua */
-.sm-hamburguesa .nav-movil-antigua {
-    display: none !important;
-}
-
-/* Ajustes para desktop */
-@media (min-width: 769px) {
-    .menu-hamburguesa {
-        display: none !important;
-    }
-    .menu-overlay, .menu-panel {
-        display: none !important;
-    }
-}
-
-/* Ajustes para móvil */
-@media (max-width: 768px) {
-    .nav-desktop {
-        display: none !important;
-    }
-}
-/* ============================================
-   SCROLL COMPENSADO (para que el header no tape)
-============================================ */
-html {
-    scroll-padding-top: 80px;
-    scroll-behavior: smooth;
-}
-
-/* ============================================
-   MENÚ HAMBURGUESA PROFESIONAL - VERSIÓN MEJORADA
-============================================ */
-
-/* Panel lateral con gradiente sutil */
+/* Panel lateral */
 .menu-panel {
     position: fixed;
     top: 0;
@@ -1128,7 +1050,7 @@ html {
     right: 0;
 }
 
-/* Header del menú con borde decorativo */
+/* Header del menú */
 .menu-header {
     padding: 24px 20px 16px 20px;
     border-bottom: 2px solid #eef2ff;
@@ -1137,7 +1059,6 @@ html {
     position: relative;
 }
 
-/* Logo pequeño dentro del menú (opcional) */
 .menu-header::before {
     content: "Innovakit";
     position: absolute;
@@ -1151,7 +1072,7 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
-/* Botón cerrar mejorado */
+/* Botón cerrar */
 .menu-cerrar {
     background: #f1f5f9;
     border: none;
@@ -1177,7 +1098,7 @@ html {
     fill: none;
 }
 
-/* Navegación con iconos y efecto hover */
+/* Navegación */
 .menu-nav {
     flex: 1;
     padding: 24px 16px;
@@ -1197,28 +1118,25 @@ html {
     font-weight: 500;
     border-radius: 14px;
     transition: all 0.25s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Iconos personalizados para cada sección (sin emojis) */
+/* Iconos */
 .menu-nav a::before {
     font-family: 'Font Awesome 6 Free';
     font-weight: 400;
     font-size: 18px;
     width: 24px;
     text-align: center;
-    transition: all 0.25s ease;
 }
 
-.menu-nav a[href="#mision"]::before { content: "\f0e4"; }      /* diana */
-.menu-nav a[href="#vision"]::before { content: "\f0eb"; }      /* bombilla */
-.menu-nav a[href="#productos"]::before { content: "\f1b3"; }   /* microchip */
-.menu-nav a[href="#impresora-destacada"]::before { content: "\f5b2"; } /* impresora */
-.menu-nav a[href="#asesorias-preview"]::before { content: "\f4e1"; }  /* mensaje */
-.menu-nav a[href="#contacto"]::before { content: "\f0e0"; }     /* sobre */
+.menu-nav a[href="#mision"]::before { content: "\f0e4"; }
+.menu-nav a[href="#vision"]::before { content: "\f0eb"; }
+.menu-nav a[href="#productos"]::before { content: "\f1b3"; }
+.menu-nav a[href="#impresora-destacada"]::before { content: "\f5b2"; }
+.menu-nav a[href="#asesorias-preview"]::before { content: "\f4e1"; }
+.menu-nav a[href="#contacto"]::before { content: "\f0e0"; }
 
-/* Hover y active state */
+/* Hover */
 .menu-nav a:hover {
     background: linear-gradient(90deg, #eff6ff 0%, #dbeafe 100%);
     color: #2563eb;
@@ -1230,7 +1148,7 @@ html {
     transform: scale(1.1);
 }
 
-/* Separador sutil entre secciones */
+/* Separador */
 .menu-nav a:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -1241,7 +1159,7 @@ html {
     background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
 }
 
-/* Footer con gradiente y datos de contacto */
+/* Footer */
 .menu-footer {
     padding: 20px;
     border-top: 1px solid #e2e8f0;
@@ -1271,4 +1189,19 @@ html {
 .menu-footer .social-icons a:hover {
     color: #2563eb;
     transform: translateY(-2px);
+}
+
+/* Desktop: ocultar menú hamburguesa */
+@media (min-width: 769px) {
+    .menu-hamburguesa,
+    .menu-overlay,
+    .menu-panel {
+        display: none !important;
+    }
+}
+
+/* Scroll compensado */
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
 }

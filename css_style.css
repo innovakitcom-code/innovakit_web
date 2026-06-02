@@ -983,3 +983,117 @@ img {
         font-size: 10px;
     }
 }
+/* ============================================
+   MENÚ HAMBURGUESA PARA MÓVIL
+============================================ */
+
+/* Botón hamburguesa */
+.menu-hamburguesa {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1f2937;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-hamburguesa:hover {
+    background-color: #f3f4f6;
+}
+
+/* Overlay del menú */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Panel del menú lateral */
+.menu-panel {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transition: right 0.3s ease;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.menu-panel.active {
+    right: 0;
+}
+
+.menu-panel-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.menu-cerrar {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 5px;
+}
+
+.menu-panel nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-panel nav a {
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+    transition: color 0.2s ease;
+}
+
+.menu-panel nav a:hover {
+    color: #3b82f6;
+}
+
+/* Ocultar navegación móvil antigua */
+.sm-hamburguesa .nav-movil-antigua {
+    display: none !important;
+}
+
+/* Ajustes para desktop */
+@media (min-width: 769px) {
+    .menu-hamburguesa {
+        display: none !important;
+    }
+    .menu-overlay, .menu-panel {
+        display: none !important;
+    }
+}
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none !important;
+    }
+}

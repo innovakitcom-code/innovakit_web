@@ -500,6 +500,190 @@ img {
     100% { background-position: -200% 0; }
 }
 /* ============================================
+   MEJORAS SECCIÓN ASESORÍA
+============================================ */
+
+/* Scroll compensado para que no quede tapado */
+#vista-asesorias {
+    scroll-margin-top: 80px;
+}
+
+/* Contenedor principal más limpio */
+#vista-asesorias .bg-white.bg-opacity-90 {
+    background: white !important;
+    backdrop-filter: none;
+    border-radius: 24px;
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+}
+
+/* Títulos más elegantes */
+#vista-asesorias h3,
+#vista-asesorias .text-3xl,
+#vista-asesorias .text-4xl {
+    background: linear-gradient(135deg, #1e2937, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Botón volver al inicio */
+#vista-asesorias .bg-blue-600 {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border-radius: 40px;
+    padding: 8px 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#vista-asesorias .bg-blue-600:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Tarjetas de asesores - más compactas y elegantes */
+#vista-asesorias .card-elevated {
+    background: white;
+    border-radius: 20px;
+    padding: 20px !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+#vista-asesorias .card-elevated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen de asesores */
+#vista-asesorias .rounded-full {
+    width: 90px !important;
+    height: 90px !important;
+    border-width: 3px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Títulos dentro de tarjetas */
+#vista-asesorias .card-elevated h5 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+#vista-asesorias .card-elevated .text-sm {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+
+#vista-asesorias .card-elevated .text-readable {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Etiquetas de especialidad */
+#vista-asesorias .flex.justify-center.space-x-3 span {
+    padding: 4px 10px;
+    font-size: 0.65rem;
+    border-radius: 30px;
+}
+
+/* Formulario mejorado */
+#vista-asesorias form {
+    border-radius: 24px;
+    padding: 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eef2ff;
+}
+
+#vista-asesorias .form-input-enhanced {
+    border-radius: 14px;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+#vista-asesorias .form-input-enhanced:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Botones del formulario */
+#vista-asesorias button[type="submit"],
+#vista-asesorias button[onclick*="enviarPorWhatsApp"] {
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 40px;
+    font-weight: 600;
+}
+
+#vista-asesorias button[type="submit"] {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+#vista-asesorias button[onclick*="enviarPorWhatsApp"] {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* Etiquetas del formulario */
+#vista-asesorias label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 5px;
+}
+
+/* Título de la sección de asesores */
+#vista-asesorias h4 {
+    font-size: 1.6rem;
+    margin-bottom: 25px !important;
+    position: relative;
+    display: inline-block;
+}
+
+#vista-asesorias h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #7eb74a, #3b82f6);
+    border-radius: 3px;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    #vista-asesorias .bg-white.bg-opacity-90 {
+        padding: 25px 15px;
+    }
+    
+    #vista-asesorias .rounded-full {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    #vista-asesorias .card-elevated {
+        padding: 15px !important;
+    }
+    
+    #vista-asesorias form {
+        padding: 20px !important;
+    }
+    
+    #vista-asesorias button[type="submit"],
+    #vista-asesorias button[onclick*="enviarPorWhatsApp"] {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    
+    #vista-asesorias h4 {
+        font-size: 1.3rem;
+    }
+}
+/* ============================================
    IMPRESORA DESTACADA PREMIUM - VERSIÓN FINAL (+17% sobre reducida)
 ============================================ */
 

@@ -1524,3 +1524,236 @@ img {
 html {
     scroll-padding-top: 80px;
 }
+/* ============================================
+   ESTILO UNIFICADO - COMPACTO Y MODERNO
+   (Inspirado en la sección Impresora 3D)
+============================================ */
+
+/* === MISIÓN Y VISIÓN === */
+#mision, #vision {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px;
+    padding: 30px 20px !important;
+    transition: all 0.3s ease;
+}
+
+#mision {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+#vision {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+#mision i, #vision i {
+    font-size: 2.5rem !important;
+    margin-bottom: 15px !important;
+}
+
+#mision h3, #vision h3 {
+    font-size: 1.6rem !important;
+    margin-bottom: 10px !important;
+}
+
+#mision p, #vision p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    color: #475569 !important;
+}
+
+/* === BENEFICIOS === */
+section:has(.grid-cols-1.md:grid-cols-3) {
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 20px 15px !important;
+}
+
+section:has(.grid-cols-1.md:grid-cols-3) h3 {
+    font-size: 1.8rem !important;
+    margin-bottom: 25px !important;
+    background: linear-gradient(135deg, #1e2937, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section:has(.grid-cols-1.md:grid-cols-3) .card-elevated {
+    background: white;
+    border-radius: 20px;
+    padding: 20px 15px !important;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+}
+
+section:has(.grid-cols-1.md:grid-cols-3) .card-elevated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+section:has(.grid-cols-1.md:grid-cols-3) .card-elevated i {
+    font-size: 2rem !important;
+    margin-bottom: 12px !important;
+}
+
+section:has(.grid-cols-1.md:grid-cols-3) .card-elevated h4 {
+    font-size: 1.2rem !important;
+    margin-bottom: 10px !important;
+}
+
+section:has(.grid-cols-1.md:grid-cols-3) .card-elevated p {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    color: #475569 !important;
+}
+
+/* === PRODUCTOS (KITS) === */
+#productos {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+    border-radius: 40px;
+    margin: 20px 10px !important;
+    padding: 30px 20px !important;
+}
+
+#productos h3 {
+    font-size: 1.8rem !important;
+    margin-bottom: 25px !important;
+    background: linear-gradient(135deg, #1e2937, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#productos .bg-white.rounded-xl {
+    border-radius: 20px !important;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eef2ff;
+    height: auto !important;
+    min-height: 350px !important;
+    padding: 20px 15px !important;
+}
+
+#productos .bg-white.rounded-xl:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+#productos img {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 15px !important;
+}
+
+#productos h4 {
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+}
+
+#productos p {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 12px !important;
+}
+
+#productos button {
+    padding: 8px 16px !important;
+    font-size: 0.7rem !important;
+    border-radius: 40px !important;
+}
+
+/* === TESTIMONIOS === */
+#testimonios {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%) !important;
+    border-radius: 40px;
+    margin: 20px 10px !important;
+    padding: 30px 20px !important;
+}
+
+#testimonios h3 {
+    font-size: 1.8rem !important;
+    background: linear-gradient(135deg, #1e2937, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#testimonios .bg-white.rounded-xl {
+    border-radius: 20px !important;
+    overflow: hidden;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#testimonios .bg-white.rounded-xl:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* === CONTACTO === */
+#contacto {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+    border-radius: 24px;
+    margin: 20px 10px 40px !important;
+    padding: 30px 20px !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef2ff;
+}
+
+#contacto h3 {
+    font-size: 1.8rem !important;
+    background: linear-gradient(135deg, #1e2937, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* === RESPONSIVE MÓVIL PARA TODO === */
+@media (max-width: 768px) {
+    #mision, #vision {
+        padding: 20px 15px !important;
+        margin: 15px !important;
+    }
+    
+    #mision h3, #vision h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    #mision p, #vision p {
+        font-size: 0.85rem !important;
+    }
+    
+    #productos {
+        padding: 20px 15px !important;
+        margin: 15px 10px !important;
+    }
+    
+    #productos h3 {
+        font-size: 1.4rem !important;
+    }
+    
+    #productos img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    
+    #testimonios {
+        padding: 20px 15px !important;
+        margin: 15px 10px !important;
+    }
+    
+    #testimonios h3 {
+        font-size: 1.4rem !important;
+    }
+    
+    #contacto {
+        margin: 15px 10px 30px !important;
+        padding: 20px 15px !important;
+    }
+    
+    #contacto h3 {
+        font-size: 1.4rem !important;
+    }
+}

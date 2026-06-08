@@ -1,6 +1,7 @@
 /* ============================================
    ESTILOS EXCLUSIVOS PARA IMPRESORA 3D
    OPCIÓN 2: Verde + Negro (Industrial elegante)
+   CON MEJORAS: títulos blancos + animación gradiente en hero
 ============================================ */
 
 body {
@@ -32,14 +33,43 @@ body {
     background: #008a35;
 }
 
-/* Hero */
+/* Hero con animación de gradiente al hover */
 .hero-impresora {
     background: #2D2D2D;
     border-radius: 32px;
     padding: 40px;
     margin-bottom: 40px;
     box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
 }
+
+/* Efecto de gradiente plateado que se mueve al hacer hover */
+.hero-impresora::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.03),
+        rgba(200, 200, 200, 0.08),
+        rgba(255, 255, 255, 0.03),
+        transparent
+    );
+    transition: left 0.8s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-impresora:hover::before {
+    left: 100%;
+}
+
 .hero-impresora h1, .hero-impresora p {
     color: #E5E5E5;
 }
@@ -48,9 +78,26 @@ body {
 }
 .hero-image {
     transition: transform 0.5s ease;
+    position: relative;
+    z-index: 2;
 }
 .hero-image:hover {
     transform: scale(1.02);
+}
+
+/* Títulos principales en blanco (arreglado) */
+h2:not(.product-title):not(.modelo-texto h3) {
+    color: #FFFFFF !important;
+}
+
+/* Título "Impresión 3D Educativa por Horas" en blanco */
+.text-2xl.md\:text-3xl.font-bold.text-center.mb-12.scroll-animate {
+    color: #FFFFFF !important;
+}
+
+/* Título "¿Por qué elegir este modelo?" en blanco */
+.bg-gradient-to-br.from-blue-50.to-indigo-100 h2 {
+    color: #FFFFFF !important;
 }
 
 /* Especificaciones técnicas */

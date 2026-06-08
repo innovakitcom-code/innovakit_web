@@ -1,10 +1,10 @@
 /* ============================================
    ESTILOS EXCLUSIVOS PARA IMPRESORA 3D
-   OPCIÓN 3: Verde + Azul marino (Profesional técnico)
+   OPCIÓN 2: Verde + Negro (Industrial elegante)
 ============================================ */
 
 body {
-    background: #EDF2F7;
+    background: #1A1A1A;
 }
 
 .impresora-exclusiva-container {
@@ -34,11 +34,17 @@ body {
 
 /* Hero */
 .hero-impresora {
-    background: #FFFFFF;
+    background: #2D2D2D;
     border-radius: 32px;
     padding: 40px;
     margin-bottom: 40px;
-    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.3);
+}
+.hero-impresora h1, .hero-impresora p {
+    color: #E5E5E5;
+}
+.hero-impresora .text-blue-600 {
+    color: #00AE42 !important;
 }
 .hero-image {
     transition: transform 0.5s ease;
@@ -55,33 +61,31 @@ body {
     margin: 30px 0;
 }
 .spec-card {
-    background: #FFFFFF;
+    background: #2D2D2D;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #404040;
 }
 .spec-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     border-color: #00AE42;
 }
 .spec-card i {
     font-size: 2.5rem;
-    color: #2B6CB0;
+    color: #00AE42;
     margin-bottom: 15px;
 }
 .spec-card h3 {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 8px;
-    color: #1A365D;
+    color: #FFFFFF;
 }
 .spec-card p {
     font-size: 0.85rem;
-    color: #4A5568;
+    color: #ADB5BD;
 }
 
 @media (max-width: 768px) {
@@ -127,18 +131,18 @@ body {
 .modelo-imagen .icon-circle {
     width: 100px;
     height: 100px;
-    background: #EDF2F7;
+    background: #2D2D2D;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #404040;
 }
 
 .modelo-imagen i {
     font-size: 3rem;
-    color: #2B6CB0;
+    color: #00AE42;
 }
 
 .modelo-texto {
@@ -149,11 +153,11 @@ body {
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 15px;
-    color: #1A365D;
+    color: #FFFFFF;
 }
 
 .modelo-texto p {
-    color: #4A5568;
+    color: #ADB5BD;
     line-height: 1.6;
     margin-bottom: 15px;
     font-size: 1rem;
@@ -170,7 +174,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 12px;
-    color: #4A5568;
+    color: #ADB5BD;
 }
 
 .modelo-texto li i {
@@ -181,11 +185,12 @@ body {
 
 /* Tarifas destacadas */
 .tarifas-section {
-    background: #1A365D;
+    background: #2D2D2D;
     border-radius: 32px;
     padding: 50px 40px;
     text-align: center;
     margin: 40px 0;
+    border: 1px solid #404040;
 }
 .tarifas-section h2 {
     font-size: 2rem;
@@ -202,30 +207,30 @@ body {
 .tarifas-section .precio span {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #A0AEC0;
+    color: #ADB5BD;
 }
 .tarifas-section p {
-    color: #A0AEC0;
+    color: #ADB5BD;
     max-width: 600px;
     margin: 0 auto;
 }
 
 /* Mantenimiento */
 .mantenimiento-section {
-    background: #EDF2F7;
+    background: #2D2D2D;
     border-radius: 32px;
     padding: 40px;
     margin: 40px 0;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #404040;
 }
 .mantenimiento-section h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #1A365D;
+    color: #FFFFFF;
 }
 .mantenimiento-section p {
-    color: #4A5568;
+    color: #ADB5BD;
     line-height: 1.6;
 }
 
@@ -250,11 +255,15 @@ body {
 
 /* Beneficios extra */
 .bg-gradient-to-br.from-blue-50.to-indigo-100 {
-    background: #EDF2F7 !important;
-    border: 1px solid #E2E8F0;
+    background: #2D2D2D !important;
+    border: 1px solid #404040;
 }
 .bg-gradient-to-br.from-blue-50.to-indigo-100 i {
-    color: #2B6CB0 !important;
+    color: #00AE42 !important;
+}
+.bg-gradient-to-br.from-blue-50.to-indigo-100 h3,
+.bg-gradient-to-br.from-blue-50.to-indigo-100 p {
+    color: #E5E5E5 !important;
 }
 
 /* Animaciones */

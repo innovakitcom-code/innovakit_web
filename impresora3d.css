@@ -61,11 +61,11 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
-.spec-card:hover {
+.spec-card:hover i {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
-.spec-card i {
+.spec-card {
     font-size: 2.5rem;
     color: #3b82f6;
     margin-bottom: 15px;

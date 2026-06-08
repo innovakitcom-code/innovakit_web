@@ -64,7 +64,7 @@
         <div class="spec-card scroll-animate"><i class="fas fa-tachometer-alt"></i><h3>Alta velocidad</h3><p>Hasta 500mm/s de impresión</p></div>
     </div>
     
-       <!-- ========================================== -->
+    <!-- ========================================== -->
     <!-- MODELO DE NEGOCIO - SECCIONES ALTERNADAS -->
     <!-- ========================================== -->
     <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 scroll-animate">🎓 Impresión 3D Educativa por Horas</h2>
@@ -152,7 +152,17 @@
         </div>
     </div>
     
-    <!-- Botón final -->
+    <!-- Beneficios extra -->
+    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 mb-8 scroll-animate">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">✨ ¿Por qué elegir este modelo?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center"><i class="fas fa-chalkboard-user text-3xl text-blue-600 mb-3"></i><h3 class="font-bold mb-2">Educativo</h3><p class="text-sm">Ideal para colegios, universidades y talleres</p></div>
+            <div class="text-center"><i class="fas fa-hand-holding-usd text-3xl text-green-600 mb-3"></i><h3 class="font-bold mb-2">Sin barreras</h3><p class="text-sm">Democratizamos el acceso a tecnología de fabricación digital</p></div>
+            <div class="text-center"><i class="fas fa-chart-line text-3xl text-purple-600 mb-3"></i><h3 class="font-bold mb-2">Escalable</h3><p class="text-sm">Crece según la demanda de tu institución</p></div>
+        </div>
+    </div>
+    
+    <!-- Cierre con botón -->
     <div class="text-center scroll-animate">
         <div class="inline-flex flex-wrap gap-4 justify-center mb-6">
             <div class="flex items-center gap-2 text-gray-600"><i class="fas fa-truck text-green-600"></i> Envíos a todo Paraguay</div>
@@ -164,13 +174,17 @@
             <i class="fab fa-whatsapp"></i> Solicitar más información
         </a>
     </div>
+</div>
+
 <script>
     // Animación al hacer scroll
-    const animatedElements = document.querySelectorAll('.scroll-animate');
+    const animatedElements = document.querySelectorAll('.scroll-animate, .fade-left, .fade-right');
     function checkScroll() {
         animatedElements.forEach(el => {
             const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) el.classList.add('visible');
+            if (rect.top < window.innerHeight - 100) {
+                el.classList.add('visible');
+            }
         });
     }
     window.addEventListener('load', checkScroll);

@@ -3,7 +3,7 @@
    ============================================ */
 
 body {
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
 }
 
 .impresora-exclusiva-container {
@@ -17,7 +17,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    background: linear-gradient(135deg, #00AE42, #008a35);
     color: white;
     padding: 10px 24px;
     border-radius: 40px;
@@ -28,12 +28,12 @@ body {
 }
 .btn-volver:hover {
     transform: translateX(-5px);
-    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 174, 66, 0.3);
 }
 
 /* Hero */
 .hero-impresora {
-    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #e8f5e9 100%);
     border-radius: 32px;
     padding: 40px;
     margin-bottom: 40px;
@@ -67,7 +67,7 @@ body {
 }
 .spec-card i {
     font-size: 2.5rem;
-    color: #3b82f6;
+    color: #00AE42;
     margin-bottom: 15px;
 }
 .spec-card h3 {
@@ -116,7 +116,7 @@ body {
 .modelo-imagen .icon-circle {
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -126,7 +126,7 @@ body {
 
 .modelo-imagen i {
     font-size: 3rem;
-    color: #3b82f6;
+    color: #00AE42;
 }
 
 .modelo-imagen img {
@@ -142,7 +142,7 @@ body {
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 15px;
-    background: linear-gradient(135deg, #1e2937, #3b82f6);
+    background: linear-gradient(135deg, #1e2937, #00AE42);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -169,14 +169,14 @@ body {
 }
 
 .modelo-texto li i {
-    color: #22c55e;
+    color: #00AE42;
     font-size: 1.1rem;
     width: 24px;
 }
 
 /* Tarifas destacadas - sección especial */
 .tarifas-section {
-    background: linear-gradient(135deg, #1e2937, #0f172a);
+    background: linear-gradient(135deg, #00AE42, #008a35);
     border-radius: 32px;
     padding: 50px 40px;
     text-align: center;
@@ -191,23 +191,23 @@ body {
 .tarifas-section .precio {
     font-size: 3rem;
     font-weight: 800;
-    color: #fbbf24;
+    color: #ffffff;
     margin: 25px 0;
 }
 .tarifas-section .precio span {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #94a3b8;
+    color: #d1fae5;
 }
 .tarifas-section p {
-    color: #cbd5e1;
+    color: #d1fae5;
     max-width: 600px;
     margin: 0 auto;
 }
 
 /* Mantenimiento - sección con fondo sutil */
 .mantenimiento-section {
-    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
     border-radius: 32px;
     padding: 40px;
     margin: 40px 0;
@@ -216,7 +216,7 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #1e2937;
+    color: #00AE42;
 }
 .mantenimiento-section p {
     color: #475569;
@@ -225,7 +225,7 @@ body {
 
 /* Botón WhatsApp */
 .btn-whatsapp-large {
-    background: linear-gradient(135deg, #22c55e, #16a34a);
+    background: linear-gradient(135deg, #00AE42, #008a35);
     color: white;
     padding: 14px 32px;
     border-radius: 50px;
@@ -239,7 +239,7 @@ body {
 }
 .btn-whatsapp-large:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 174, 66, 0.3);
 }
 
 /* Animaciones scroll */

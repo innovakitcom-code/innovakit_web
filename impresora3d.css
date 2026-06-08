@@ -1,0 +1,311 @@
+/* ============================================
+   ESTILOS EXCLUSIVOS PARA IMPRESORA 3D
+   ============================================ */
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+.impresora-exclusiva-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Botón volver */
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+.btn-volver:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Hero */
+.hero-impresora {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    border-radius: 32px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+}
+.hero-image {
+    transition: transform 0.5s ease;
+}
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+/* Especificaciones técnicas */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+.spec-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+.spec-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.spec-card i {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+.spec-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.spec-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* ========================================== */
+/* MODELO DE NEGOCIO - SECCIONES ALTERNADAS */
+/* ========================================== */
+
+.modelo-section {
+    margin-bottom: 60px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.modelo-row {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .modelo-row {
+        flex-direction: row;
+        gap: 50px;
+    }
+    .modelo-row.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.modelo-imagen {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.modelo-imagen .icon-circle {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.modelo-imagen i {
+    font-size: 3rem;
+    color: #3b82f6;
+}
+
+.modelo-imagen img {
+    max-width: 100%;
+    border-radius: 24px;
+}
+
+.modelo-texto {
+    flex: 1;
+}
+
+.modelo-texto h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #1e2937, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modelo-texto p {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.modelo-texto ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.modelo-texto li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #334155;
+}
+
+.modelo-texto li i {
+    color: #22c55e;
+    font-size: 1.1rem;
+    width: 24px;
+}
+
+/* Tarifas destacadas - sección especial */
+.tarifas-section {
+    background: linear-gradient(135deg, #1e2937, #0f172a);
+    border-radius: 32px;
+    padding: 50px 40px;
+    text-align: center;
+    margin: 40px 0;
+}
+.tarifas-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 15px;
+}
+.tarifas-section .precio {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fbbf24;
+    margin: 25px 0;
+}
+.tarifas-section .precio span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #94a3b8;
+}
+.tarifas-section p {
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Mantenimiento - sección con fondo sutil */
+.mantenimiento-section {
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    border-radius: 32px;
+    padding: 40px;
+    margin: 40px 0;
+}
+.mantenimiento-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1e2937;
+}
+.mantenimiento-section p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp-large {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.btn-whatsapp-large:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+/* Animaciones scroll */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación difuminado para secciones */
+.fade-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.fade-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .impresora-exclusiva-container {
+        padding: 20px 15px;
+    }
+    .hero-impresora {
+        padding: 25px;
+    }
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-whatsapp-large {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    .modelo-texto h3 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .modelo-texto p, .modelo-texto li {
+        text-align: center;
+        justify-content: center;
+    }
+    .tarifas-section {
+        padding: 30px 20px;
+    }
+    .tarifas-section h2 {
+        font-size: 1.5rem;
+    }
+    .tarifas-section .precio {
+        font-size: 2rem;
+    }
+    .mantenimiento-section {
+        padding: 25px;
+    }
+}

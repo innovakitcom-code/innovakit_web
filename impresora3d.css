@@ -1,10 +1,10 @@
 /* ============================================
    ESTILOS EXCLUSIVOS PARA IMPRESORA 3D
-   PALETA: Verde Bambu (#00AE42) + Azul (#0077B6)
+   OPCIÓN 1: Verde + Blanco + Gris (Minimalista)
 ============================================ */
 
 body {
-    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+    background: #F8F9FA;
 }
 
 .impresora-exclusiva-container {
@@ -13,12 +13,12 @@ body {
     padding: 40px 20px;
 }
 
-/* Botón volver - Verde */
+/* Botón volver */
 .btn-volver {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #00AE42, #008a35);
+    background: #00AE42;
     color: white;
     padding: 10px 24px;
     border-radius: 40px;
@@ -29,16 +29,16 @@ body {
 }
 .btn-volver:hover {
     transform: translateX(-5px);
-    box-shadow: 0 5px 15px rgba(0, 174, 66, 0.3);
+    background: #008a35;
 }
 
 /* Hero */
 .hero-impresora {
-    background: linear-gradient(135deg, #ffffff 0%, #e8f5e9 100%);
+    background: #FFFFFF;
     border-radius: 32px;
     padding: 40px;
     margin-bottom: 40px;
-    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.05);
 }
 .hero-image {
     transition: transform 0.5s ease;
@@ -55,16 +55,18 @@ body {
     margin: 30px 0;
 }
 .spec-card {
-    background: white;
+    background: #FFFFFF;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
 }
 .spec-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 174, 66, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #00AE42;
 }
 .spec-card i {
     font-size: 2.5rem;
@@ -75,37 +77,23 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 8px;
+    color: #212529;
 }
 .spec-card p {
     font-size: 0.85rem;
-    color: #64748b;
+    color: #6C757D;
 }
 
-/* Móvil: especificaciones más compactas */
 @media (max-width: 768px) {
-    .specs-grid {
-        gap: 12px;
-        margin: 20px 0;
-    }
-    .spec-card {
-        padding: 12px 10px;
-        border-radius: 16px;
-    }
-    .spec-card i {
-        font-size: 1.8rem;
-        margin-bottom: 8px;
-    }
-    .spec-card h3 {
-        font-size: 0.9rem;
-        margin-bottom: 4px;
-    }
-    .spec-card p {
-        font-size: 0.7rem;
-    }
+    .specs-grid { gap: 12px; margin: 20px 0; }
+    .spec-card { padding: 12px 10px; }
+    .spec-card i { font-size: 1.8rem; margin-bottom: 8px; }
+    .spec-card h3 { font-size: 0.9rem; }
+    .spec-card p { font-size: 0.7rem; }
 }
 
 /* ========================================== */
-/* MODELO DE NEGOCIO - SECCIONES ALTERNADAS */
+/* MODELO DE NEGOCIO */
 /* ========================================== */
 
 .modelo-section {
@@ -134,28 +122,23 @@ body {
 .modelo-imagen {
     flex: 1;
     text-align: center;
-    position: relative;
 }
 
 .modelo-imagen .icon-circle {
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    background: #F8F9FA;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    border: 1px solid #E5E7EB;
 }
 
 .modelo-imagen i {
     font-size: 3rem;
-    color: #0077B6;  /* AZUL para iconos grandes */
-}
-
-.modelo-imagen img {
-    max-width: 100%;
-    border-radius: 24px;
+    color: #00AE42;
 }
 
 .modelo-texto {
@@ -166,13 +149,11 @@ body {
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 15px;
-    background: linear-gradient(135deg, #1e2937, #0077B6);  /* AZUL en gradiente */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #212529;
 }
 
 .modelo-texto p {
-    color: #475569;
+    color: #6C757D;
     line-height: 1.6;
     margin-bottom: 15px;
     font-size: 1rem;
@@ -189,18 +170,18 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 12px;
-    color: #334155;
+    color: #6C757D;
 }
 
 .modelo-texto li i {
-    color: #00AE42;  /* VERDE para checks */
+    color: #00AE42;
     font-size: 1.1rem;
     width: 24px;
 }
 
-/* Tarifas destacadas - sección especial */
+/* Tarifas destacadas */
 .tarifas-section {
-    background: linear-gradient(135deg, #0077B6, #005a8a);  /* AZUL degradado */
+    background: #212529;
     border-radius: 32px;
     padding: 50px 40px;
     text-align: center;
@@ -215,41 +196,42 @@ body {
 .tarifas-section .precio {
     font-size: 3rem;
     font-weight: 800;
-    color: #fbbf24;  /* AMARILLO para destacar precio */
+    color: #00AE42;
     margin: 25px 0;
 }
 .tarifas-section .precio span {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #d1fae5;
+    color: #ADB5BD;
 }
 .tarifas-section p {
-    color: #d1fae5;
+    color: #ADB5BD;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Mantenimiento - sección con fondo sutil */
+/* Mantenimiento */
 .mantenimiento-section {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    background: #F8F9FA;
     border-radius: 32px;
     padding: 40px;
     margin: 40px 0;
+    border: 1px solid #E5E7EB;
 }
 .mantenimiento-section h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #0077B6;  /* AZUL */
+    color: #212529;
 }
 .mantenimiento-section p {
-    color: #475569;
+    color: #6C757D;
     line-height: 1.6;
 }
 
-/* Botón WhatsApp - VERDE */
+/* Botón WhatsApp */
 .btn-whatsapp-large {
-    background: linear-gradient(135deg, #00AE42, #008a35);
+    background: #00AE42;
     color: white;
     padding: 14px 32px;
     border-radius: 50px;
@@ -262,19 +244,17 @@ body {
     text-decoration: none;
 }
 .btn-whatsapp-large:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 174, 66, 0.3);
+    background: #008a35;
+    transform: scale(1.02);
 }
 
-/* Beneficios extra - fondo con azul suave */
+/* Beneficios extra */
 .bg-gradient-to-br.from-blue-50.to-indigo-100 {
-    background: linear-gradient(135deg, #e8f5e9, #dbeafe) !important;
-}
-.bg-gradient-to-br.from-blue-50.to-indigo-100 i {
-    color: #0077B6 !important;
+    background: #F8F9FA !important;
+    border: 1px solid #E5E7EB;
 }
 
-/* Animaciones scroll */
+/* Animaciones */
 .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
@@ -284,8 +264,6 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Animación difuminado para secciones */
 .fade-left {
     opacity: 0;
     transform: translateX(-40px);
@@ -305,36 +283,15 @@ body {
     transform: translateX(0);
 }
 
-/* Responsive general */
+/* Responsive */
 @media (max-width: 768px) {
-    .impresora-exclusiva-container {
-        padding: 20px 15px;
-    }
-    .hero-impresora {
-        padding: 25px;
-    }
-    .btn-whatsapp-large {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-    }
-    .modelo-texto h3 {
-        font-size: 1.4rem;
-        text-align: center;
-    }
-    .modelo-texto p, .modelo-texto li {
-        text-align: center;
-        justify-content: center;
-    }
-    .tarifas-section {
-        padding: 30px 20px;
-    }
-    .tarifas-section h2 {
-        font-size: 1.5rem;
-    }
-    .tarifas-section .precio {
-        font-size: 2rem;
-    }
-    .mantenimiento-section {
-        padding: 25px;
-    }
+    .impresora-exclusiva-container { padding: 20px 15px; }
+    .hero-impresora { padding: 25px; }
+    .btn-whatsapp-large { padding: 12px 24px; font-size: 0.9rem; }
+    .modelo-texto h3 { font-size: 1.4rem; text-align: center; }
+    .modelo-texto p, .modelo-texto li { text-align: center; justify-content: center; }
+    .tarifas-section { padding: 30px 20px; }
+    .tarifas-section h2 { font-size: 1.5rem; }
+    .tarifas-section .precio { font-size: 2rem; }
+    .mantenimiento-section { padding: 25px; }
 }

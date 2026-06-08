@@ -341,7 +341,32 @@ h2:not(.product-title):not(.modelo-texto h3) {
     opacity: 1;
     transform: translateX(0);
 }
+body {
+    background: linear-gradient(135deg, #0F1217 0%, #1A1D24 100%);
+}
 
+.spec-card,
+.modelo-imagen .icon-circle,
+.tarifas-section,
+.mantenimiento-section,
+.bg-gradient-to-br.from-blue-50.to-indigo-100 {
+    background: #1C2128 !important;
+    border: 1px solid rgba(0, 174, 66, 0.1);
+}
+
+.spec-card:hover,
+.tarifas-section:hover,
+.mantenimiento-section:hover {
+    border-color: rgba(0, 174, 66, 0.3);
+    box-shadow: 0 0 25px rgba(0, 174, 66, 0.08);
+}
+
+.modelo-texto p,
+.modelo-texto li,
+.spec-card p,
+.tarifas-section p {
+    color: #9CA3AF;
+}
 /* Responsive */
 @media (max-width: 768px) {
     .impresora-exclusiva-container { padding: 20px 15px; }

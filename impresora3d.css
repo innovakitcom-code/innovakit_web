@@ -425,14 +425,14 @@ body {
     pointer-events: none;
     border-radius: 0 0 24px 24px;
 }
-/* Ajuste para que el difuminado sea más suave en móvil */
+/* Ajuste para que el difuminado sea más suave en móvil 
 @media (max-width: 768px) {
     .hero-video-container::before {
         left: -40px;
         width: 80px;
         filter: blur(6px);
     }
-}
+}*/
 /* ============================================
    MEJORAS RESPONSIVE - ALINEACIÓN IZQUIERDA
 ============================================ */
